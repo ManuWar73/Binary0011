@@ -454,6 +454,7 @@ public class Bin0011Blocks implements ContentList {
             		limitRange(0f);
 			shots = 5;
 			rotateSpeed = 12f;
+			heatColor = Color.valueOf("FFFFFF55");
 			shootSound = Sounds.missile;
             		ammo(
 				Bin0011Items.item00, new MissileBulletType(4f, 11){{
