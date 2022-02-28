@@ -40,7 +40,7 @@ public class Bin0011Blocks implements ContentList {
 		// power
 		node000, node001, gen0000, gen0001, burner000, burner001, panel00, panel01, battery00, battery01,
 		// turrets
-		turret0000, turret0001, turret0010, turret0011, turret0100, turret0101, turret0110, turret0111, turret1000,
+		turret0000, turret0001, turret0010, turret0011, turret0100, turret0101, turret0110, turret0111, turret1000, turret1001,
 		// production
 		crafter0000, crafter0001, crafterLarge0000, crafterLarge0001, crafterLarge0010, crafterLarge0011;
 
@@ -434,6 +434,60 @@ public class Bin0011Blocks implements ContentList {
 				}}
 			);
 		}}; // iya, gw bikin code shoot types barengan sama turret, gw males
+        	turret1001 = new ItemTurret("turret1001") {{
+            		requirements(Category.turret, with(
+				Bin0011Items.item00, 300, 
+				Bin0011Items.item01, 275, 
+				Bin0011Items.item10, 195,
+				Bin0011Items.item11, 75
+			));
+			health = 275 * size * size;
+			localizedName = "turret1001";
+			size = 3;
+			targetAir = true;
+            		reloadTime = 2f;
+            		recoilAmount = 2f;
+			restitution = 0.15f;
+            		range = 240f;
+            		inaccuracy = 2f;
+            		shootCone = 10f;
+            		limitRange(0f);
+			shots = 5;
+			rotateSpeed = 12f;
+			shootSound = Sounds.missile;
+            		ammo(
+				Bin0011Items.item00, new MissileBulletType(4f, 11){{
+            	 	 		width = 10f;
+            				height = 10f;
+            				shrinkY = 0f;
+            				splashDamageRadius = 35f;
+            				splashDamage = 58f * 1.5f;
+            				ammoMultiplier = 6f;
+            				hitEffect = Fx.blastExplosion;
+            				despawnEffect = Fx.blastExplosion;
+            				lightningDamage = 10;
+            				lightning = 3;
+            				lightningLength = 10;
+            				status = StatusEffects.unmoving;
+            				statusDuration = 240f;
+        			}},
+				Bin0011Items.item01, new MissileBulletType(4f, 11){{
+            	 	 		width = 10f;
+            				height = 10f;
+            				shrinkY = 0f;
+            				splashDamageRadius = 37.5f;
+            				splashDamage = 65f * 1.5f;
+            				ammoMultiplier = 6f;
+            				hitEffect = Fx.blastExplosion;
+            				despawnEffect = Fx.blastExplosion;
+            				lightningDamage = 15;
+            				lightning = 3;
+            				lightningLength = 10;
+            				status = StatusEffects.unmoving;
+            				statusDuration = 240f;
+        			}}
+			);
+        	}};
 		// end turret
 		// reg production
 		crafter0000 = new GenericCrafter("mcrft0000") {{
