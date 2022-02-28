@@ -445,14 +445,14 @@ public class Bin0011Blocks implements ContentList {
 			localizedName = "turret1001";
 			size = 3;
 			targetAir = true;
-            		reloadTime = 2f;
+            		reloadTime = 6f;
             		recoilAmount = 2f;
 			restitution = 0.15f;
             		range = 240f;
             		inaccuracy = 2f;
             		shootCone = 10f;
             		limitRange(0f);
-			shots = 5;
+			shots = 3;
 			rotateSpeed = 12f;
 			heatColor = Color.valueOf("FFFFFF55");
 			shootSound = Sounds.missile;
