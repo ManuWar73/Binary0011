@@ -106,8 +106,8 @@ public class Bin0011Blocks implements ContentList {
 		wallHuge10 =  new Wall("wall-huge10") {{
 			requirements(Category.defense, with(Bin0011Items.item10, 6));
 			localizedName = "wallHuge10";
-			size = 525 * 4;
-			health = 350 * 4;
+			size = 3; //bjirrr
+			health = 525 * 4;
 			chanceDeflect = 35f;
             		flashHit = true;
 			insulated = true;
