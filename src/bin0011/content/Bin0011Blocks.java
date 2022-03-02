@@ -632,7 +632,7 @@ public class Bin0011Blocks implements ContentList {
 			constructTime = 60f * 15f;
 
 			upgrades.addAll(
-				new UnitType[]{Bin0011UnitTypes.guram, Bin0011UnitTypes.majuh},
+				new UnitType[]{Bin0011UnitTypes.guram, Bin0011UnitTypes.majuh}
 			);
 		}};
 	}
