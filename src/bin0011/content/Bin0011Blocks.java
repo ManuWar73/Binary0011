@@ -27,6 +27,7 @@ import mindustry.world.meta.*;
 import mindustry.world.draw.*;
 
 import bin0011.content.*;
+import bin0011.content.Bin0011UnitTypes; /* hmmm */
 
 import static mindustry.type.ItemStack.with;
 
