@@ -621,7 +621,7 @@ public class Bin0011Blocks implements ContentList {
 			health = 300;
 			consumes.power(1.05f);
 			plans = Seq.with(
-				new UnitPlan(guram, 60f * 7f, with(Bin0011Items.item00, 15))
+				new UnitPlan(Bin0011UnitTypes.guram, 60f * 7f, with(Bin0011Items.item00, 15))
 			);
 		}};
 		r1 = new Reconstructor("r1") {{
