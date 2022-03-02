@@ -16,6 +16,7 @@ import mindustry.entities.bullet.*;
 import mindustry.entities.*;
 import mindustry.world.*;
 import mindustry.world.blocks.*;
+import mindustry.world.blocks.payloads.*;
 import mindustry.world.blocks.power.*;
 import mindustry.world.blocks.units.*;
 import mindustry.world.blocks.defense.*;
