@@ -610,13 +610,17 @@ public class Bin0011Blocks implements ContentList {
 		}};
 		// end production
 		// reg unit factories
-		binaryFactory = new UnitFactory("binary-factory"){{
-	            	requirements(Category.units, with(Bin0011Items.item00, 50, Bin0011Items.item01, 120));
-            	 	plans = Seq.with(
-                        	 new UnitPlan(Bin0011UnitTypes.guram, 60f * 20, with(Bin0011Items.item00, 10, Bin0011Items.item01, 7))
+		binaryFactory = new UnitFactory("binary-factory") {{
+			requirements(Category.units, with(
+				Items.copper, 120,
+				Items.lead, 75
+			));
+			size = 3;
+			health = 300;
+			consumes.power(1.05f);
+			plans = Seq.with(
+				new UnitPlan(Bin0011UnitTypes.guram, 60f * 7f, with(Bin0011Items.item00, 15))
 			);
-            	 	size = 3;
-            	 	consumes.power(1.1f);
-       		}};
+		}};
 	}
 }
