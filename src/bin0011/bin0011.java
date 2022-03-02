@@ -20,6 +20,7 @@ public class bin0011 extends Mod{
 		new Bin0011Blocks().load();
 		new Bin0011TechTree().load();
 		new Bin0011Planets().load();
+		new Bin0011UnitTypes().load();
 /* no		new Bin0011SectorPresets().load();
 		new Bin0011Bullets().load(); */
 	}
