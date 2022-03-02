@@ -73,11 +73,10 @@ public class Bin0011UnitTypes implements ContentList{
 			speed = 0.67f;
             	 	drag = 0.4f;
 		        hitSize = 13f;
-            	 	rotateSpeed = 3f;
-            	 	targetAir = false;
+            	 	rotateSpeed = 4.5f;
             	 	health = 600;
 	 	 	legCount = 4;
-            	 	legLength = 9.5f;
+            	 	legLength = 10f;
             	 	legTrns = 0.6f;
             	 	legMoveSpace = 1.4f;
             	 	hovering = true;
