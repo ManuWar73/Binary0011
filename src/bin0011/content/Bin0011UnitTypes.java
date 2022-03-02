@@ -25,7 +25,7 @@ import static mindustry.Vars.*;
 
 public class Bin0011UnitTypes implements ContentList{
 	public static UnitType 
-		guram, /* majuh, belit, rantas, caruk */;
+		guram /* , majuh, belit, rantas, caruk */;
 /*
          atrax = new UnitType("atrax"){{
             speed = 0.57f;
