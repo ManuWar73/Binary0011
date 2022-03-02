@@ -67,7 +67,7 @@ public class Bin0011UnitTypes implements ContentList{
             }});
         }};
 */
-/*	@Override
+	@Override
 	public void load() {
 		guram = new UnitType("guram"){{
 			speed = 0.67f;
@@ -78,11 +78,13 @@ public class Bin0011UnitTypes implements ContentList{
             	 	health = 600;
 			immunities = ObjectSet.with(StatusEffects.burning, StatusEffects.melting);
 	 	 	legCount = 4;
-            	 	legLength = 9f;
+            	 	legLength = 9.5f;
             	 	legTrns = 0.6f;
             	 	legMoveSpace = 1.4f;
             	 	hovering = true;
             	 	armor = 3f;
-            	 	ammoType = new ItemAmmoType(Items.coal);
             	 	visualElevation = 0.2f;
-	 	 	groundLayer = Layer.legUnit - 1f; */
+	 	 	groundLayer = Layer.legUnit - 1f;
+		}};
+	}
+}
