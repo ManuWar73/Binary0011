@@ -21,7 +21,7 @@ import bin0011.content.*;
 public class Bin0011UnitTypes implements ContentList{
 	public static UnitType
 		// malar
-	 	guram;
+	 	guram, majuh;
 	@Override
 	public void load() {
 		// malar start
@@ -39,7 +39,24 @@ public class Bin0011UnitTypes implements ContentList{
             	 	legMoveSpace = 1.4f;
             	 	hovering = true;
             	 	armor = 4f;
-            	 	visualElevation = 0.3f;
+            	 	visualElevation = 0.2f;
+	 	 	groundLayer = Layer.legUnit - 1f;
+		}};
+		majuh = new UnitType("majuh"){{
+			localizedName = "Majuh";
+	 	 	speed = 0.78f;
+            	 	drag = 0.51f;
+		        hitSize = 13f;
+		        flying = false;
+            	 	rotateSpeed = 5f;
+            	 	health = 700;
+	 	 	legCount = 5;
+            	 	legLength = 16f;
+            	 	legTrns = 0.7f;
+            	 	legMoveSpace = 1.57f;
+            	 	hovering = true;
+            	 	armor = 4.5f;
+            	 	visualElevation = 0.2f;
 	 	 	groundLayer = Layer.legUnit - 1f;
 		}};
 		// malar end
