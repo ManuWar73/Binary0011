@@ -46,7 +46,7 @@ public class Bin0011Blocks implements ContentList {
 		// production
 		crafter0000, crafter0001, crafterLarge0000, crafterLarge0001, crafterLarge0010, crafterLarge0011,
 		// unit factories
-		binaryFactory;
+		binaryFactory, r1;
 
 	@Override
 	public void load() {
@@ -622,6 +622,17 @@ public class Bin0011Blocks implements ContentList {
 			consumes.power(1.05f);
 			plans = Seq.with(
 				new UnitPlan(Bin0011UnitTypes.guram, 60f * 7f, with(Bin0011Items.item00, 15))
+			);
+		}};
+		r1 = new Reconstructor("r1") {{
+			requirements(Category.units, with(Items.copper, 165, Items.lead, 120));
+			size = 3;
+			consumes.power(1.7f);
+			consumes.items(with(Items.silicon, 40, Items.graphite, 40));
+			constructTime = 60f * 15f;
+
+			upgrades.addAll(
+				new UnitType[]{Bin0011UnitTypes.guram, Bin0011UnitTypes.majuh},
 			);
 		}};
 	}
