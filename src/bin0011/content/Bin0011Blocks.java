@@ -613,8 +613,8 @@ public class Bin0011Blocks implements ContentList {
 		binaryFactory = new UnitFactory("binary-factory"){{
 	            	requirements(Category.units, with(Bin0011Items.item00, 50, Bin0011Items.item01, 120));
             	 	plans = Seq.with(
-                        	 new UnitPlan(UnitTypes.dagger, 60f * 20, with(Bin0011Items.item00, 10, Bin0011Items.item01, 7)),
-            		);
+                        	 new UnitPlan(UnitTypes.dagger, 60f * 20, with(Bin0011Items.item00, 10, Bin0011Items.item01, 7))
+			);
             	 	size = 3;
             	 	consumes.power(1.1f);
        		}};
