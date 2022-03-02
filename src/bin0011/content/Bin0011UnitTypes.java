@@ -24,49 +24,9 @@ import static mindustry.Vars.*;
 import bin0011.content.*;
 
 public class Bin0011UnitTypes implements ContentList{
-	public static UnitType 
-		guram /* , majuh, belit, rantas, caruk */;
-/*
-         atrax = new UnitType("atrax"){{
-            speed = 0.57f;
-            drag = 0.4f;
-            hitSize = 13f;
-            rotateSpeed = 3f;
-            targetAir = false;
-            health = 600;
-            immunities = ObjectSet.with(StatusEffects.burning, StatusEffects.melting);
+	// reg malar(binary ground legs)
+	public static @EntityDef({Unitc.class, Legsc.class}) UnitType guram;
 
-            legCount = 4;
-            legLength = 9f;
-            legTrns = 0.6f;
-            legMoveSpace = 1.4f;
-            hovering = true;
-            armor = 3f;
-            ammoType = new ItemAmmoType(Items.coal);
-
-            visualElevation = 0.2f;
-            groundLayer = Layer.legUnit - 1f;
-
-            weapons.add(new Weapon("eruption"){{
-                top = false;
-                shootY = 3f;
-                reload = 9f;
-                ejectEffect = Fx.none;
-                recoil = 1f;
-                x = 7f;
-                shootSound = Sounds.flame;
-
-                bullet = new LiquidBulletType(Liquids.slag){{
-                    damage = 13;
-                    speed = 2.5f;
-                    drag = 0.009f;
-                    shootEffect = Fx.shootSmall;
-                    lifetime = 57f;
-                    collidesAir = false;
-                }};
-            }});
-        }};
-*/
 	@Override
 	public void load() {
 		guram = new UnitType("guram"){{
