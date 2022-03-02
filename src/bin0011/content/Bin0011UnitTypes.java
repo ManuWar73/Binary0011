@@ -28,7 +28,6 @@ public class Bin0011UnitTypes implements ContentList{
 		// malar start
 		guram = new UnitType("guram"){{
 			localizedName = "Guram";
-			constructor = Bin0011Blocks.binaryFactory;
 	 	 	speed = 0.67f;
             	 	drag = 0.4f;
 		        hitSize = 13f;
