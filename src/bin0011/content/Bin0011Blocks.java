@@ -42,7 +42,9 @@ public class Bin0011Blocks implements ContentList {
 		// turrets
 		turret0000, turret0001, turret0010, turret0011, turret0100, turret0101, turret0110, turret0111, turret1000, turret1001,
 		// production
-		crafter0000, crafter0001, crafterLarge0000, crafterLarge0001, crafterLarge0010, crafterLarge0011;
+		crafter0000, crafter0001, crafterLarge0000, crafterLarge0001, crafterLarge0010, crafterLarge0011,
+		// unit factories
+		binaryFactory;
 
 	@Override
 	public void load() {
@@ -607,5 +609,14 @@ public class Bin0011Blocks implements ContentList {
 			outputItem = new ItemStack(Bin0011Items.item11, 2);
 		}};
 		// end production
+		// reg unit factories
+		binaryFactory = new UnitFactory("binary-factory"){{
+	            	requirements(Category.units, with(Bin0011Items.item00, 50, Bin0011Items.item01, 120));
+            	 	plans = Seq.with(
+                        	 new UnitPlan(UnitTypes.dagger, 60f * 20, with(Bin0011Items.item00, 10, Bin0011Items.item01, 7)),
+            		);
+            	 	size = 3;
+            	 	consumes.power(1.1f);
+       		}};
 	}
 }
