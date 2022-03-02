@@ -1,7 +1,5 @@
 package bin0011.content;
 
-package abyss.content;
-
 import arc.graphics.Color;
 import arc.struct.*;
 import mindustry.graphics.*;
