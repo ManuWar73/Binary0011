@@ -76,13 +76,12 @@ public class Bin0011UnitTypes implements ContentList{
             	 	rotateSpeed = 3f;
             	 	targetAir = false;
             	 	health = 600;
-			immunities = ObjectSet.with(StatusEffects.burning, StatusEffects.melting);
 	 	 	legCount = 4;
             	 	legLength = 9.5f;
             	 	legTrns = 0.6f;
             	 	legMoveSpace = 1.4f;
             	 	hovering = true;
-            	 	armor = 3f;
+            	 	armor = 4f;
             	 	visualElevation = 0.2f;
 	 	 	groundLayer = Layer.legUnit - 1f;
 		}};
