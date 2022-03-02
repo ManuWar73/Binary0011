@@ -17,6 +17,7 @@ import static arc.graphics.g2d.Lines.*;
 import static arc.math.Angles.*;
 import static mindustry.Vars.*;
 import bin0011.content.*;
+import static bin0011.content.Bin0011Blocks.*;
 
 public class Bin0011UnitTypes implements ContentList{
 	public static UnitType
@@ -27,6 +28,7 @@ public class Bin0011UnitTypes implements ContentList{
 		// malar start
 		guram = new UnitType("guram"){{
 			localizedName = "Guram";
+			constructor = Bin0011Blocks.binaryFactory;
 	 	 	speed = 0.67f;
             	 	drag = 0.4f;
 		        hitSize = 13f;
