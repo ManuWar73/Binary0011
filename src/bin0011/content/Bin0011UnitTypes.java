@@ -17,7 +17,7 @@ import static arc.graphics.g2d.Lines.*;
 import static arc.math.Angles.*;
 import static mindustry.Vars.*;
 import bin0011.content.*;
-import static bin0011.content.Bin0011Blocks.*;
+import bin0011.content.Bin0011Blocks.*;
 
 public class Bin0011UnitTypes implements ContentList{
 	public static UnitType
