@@ -618,16 +618,16 @@ public class Bin0011Blocks implements ContentList {
 		}};
 		// end production
 		// reg unit factories
-		binaryFactory = new UnitFactory("binary-factory") {{
+		binaryFactory  = new UnitFactory("binary-factory") {{
 			requirements(Category.units, with(
 				Items.copper, 120,
-				Items.lead, 75
+				Items.lead, 100
 			));
 			size = 3;
-			health = 300;
-			consumes.power(1.05f);
+			health = 220;
+			consumes.power(1.01f);
 			plans = Seq.with(
-				new UnitPlan(Bin0011UnitTypes.guram, 60f * 7f, with(Bin0011Items.item00, 15))
+				new UnitPlan (Bin0011UnitTypes.guram, 60f * 30, with(Items.copper, 10, Items.silicon, 25))
 			);
 		}};
 		r1 = new Reconstructor("r1") {{
@@ -635,7 +635,7 @@ public class Bin0011Blocks implements ContentList {
 			size = 3;
 			consumes.power(1.7f);
 			consumes.items(with(Items.silicon, 40, Items.graphite, 40));
-			constructTime = 60f * 15f;
+			constructTime = 60f * 30f;
 
 			upgrades.addAll(
 				new UnitType[]{Bin0011UnitTypes.guram, Bin0011UnitTypes.majuh}
