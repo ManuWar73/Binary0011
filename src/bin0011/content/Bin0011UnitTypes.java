@@ -28,6 +28,7 @@ public class Bin0011UnitTypes implements ContentList{
 		// malar start
 		guram = new UnitType("guram"){{
 			localizedName = "Guram";
+			constructor = LegsUnit::create;
 	 	 	speed = 0.67f;
             	 	drag = 0.4f;
 		        hitSize = 13f;
@@ -45,6 +46,7 @@ public class Bin0011UnitTypes implements ContentList{
 		}};
 		majuh = new UnitType("majuh"){{
 			localizedName = "Majuh";
+			constructor = LegsUnit::create;
 	 	 	speed = 0.78f;
             	 	drag = 0.51f;
 		        hitSize = 13f;
