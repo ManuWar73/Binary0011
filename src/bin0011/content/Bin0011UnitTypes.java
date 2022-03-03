@@ -41,7 +41,7 @@ public class Bin0011UnitTypes implements ContentList{
             	 	hovering = true;
             	 	armor = 4f;
             	 	visualElevation = 0.2f;
-	 	 	groundLayer = Layer.legUnit - 1f;
+	 	 	groundLayer = Layer.legUnit;
 		}};
 		majuh = new UnitType("majuh"){{
 			localizedName = "Majuh";
@@ -58,7 +58,7 @@ public class Bin0011UnitTypes implements ContentList{
             	 	hovering = true;
             	 	armor = 4.5f;
             	 	visualElevation = 0.2f;
-	 	 	groundLayer = Layer.legUnit - 1f;
+	 	 	groundLayer = Layer.legUnit;
 		}};
 		// malar end
 	}
