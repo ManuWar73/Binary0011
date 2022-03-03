@@ -49,7 +49,7 @@ public class Bin0011UnitTypes implements ContentList{
 			constructor = LegsUnit::create;
 	 	 	speed = 0.78f;
             	 	drag = 0.51f;
-		        hitSize = 13f;
+		        hitSize = 26f;
 		        flying = false;
             	 	rotateSpeed = 5f;
             	 	health = 700;
