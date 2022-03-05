@@ -50,8 +50,9 @@ public class Bin0011Blocks implements ContentList {
 		// turrets
 		turret0000, turret0001, turret0010, turret0011, turret0100, turret0101, turret0110, turret0111, turret1000, turret1001,
 		// production
-		crafter0000, crafter0001, crafterLarge0000, crafterLarge0001, crafterLarge0010, crafterLarge0011
-		;
+		crafter0000, crafter0001, crafterLarge0000, crafterLarge0001, crafterLarge0010, crafterLarge0011,
+		// unit factories
+		binaryFactory, r1;
 
 	@Override
 	public void load() {
@@ -221,124 +222,6 @@ public class Bin0011Blocks implements ContentList {
 			baseExplosiveness = 5f;
 			size = 3;
 		}};
-		// end power
-		// reg production
-		crafter0000 = new GenericCrafter("mcrft0000") {{
-			requirements(Category.crafting, with(
-				Items.copper, 35,
-				Items.lead, 12
-			));
-			size = 2;
-			localizedName = "crafter0000";
-			health = 145 * size * size;
-			itemCapacity = 25;
-			craftTime = 90f;
-			craftEffect = Fx.smelt;
-			consumes.items(with(
-				Items.copper, 1,
-				Items.coal, 1
-			));
-			outputItem = new ItemStack(Bin0011Items.item00, 1);
-		}};
-		crafter0001 = new GenericCrafter("mcrft0001") {{
-			requirements(Category.crafting, with(
-				Items.copper, 50,
-				Items.graphite, 30,
-				Items.lead, 45
-			));
-			size = 2;
-			localizedName = "crafter0001";
-			health = 150 * size * size;
-			itemCapacity = 25;
-			craftTime = 90f;
-			craftEffect = Fx.smokeCloud;
-			consumes.items(with(
-				Items.copper, 1,
-				Items.lead, 2,
-				Items.metaglass, 1
-			));
-			outputItem = new ItemStack(Bin0011Items.item01, 1);
-		}};
-		crafterLarge0000 = new GenericCrafter("crft0000") {{
-			requirements(Category.crafting, with(
-				Items.copper, 60,
-				Items.lead, 35
-			));
-			size = 3;
-			localizedName = "crafterLarge0000";
-			health = 280 * size * size;
-			itemCapacity = 50;
-			craftTime = 60f;
-			craftEffect = Fx.smelt;
-			drawer = new DrawSmelter(Color.valueOf("FFFFFF"));
-			consumes.items(with(
-				Items.copper, 2,
-				Items.coal, 1
-			));
-			consumes.power(1.2f);
-			outputItem = new ItemStack(Bin0011Items.item00, 2);
-		}};
-		crafterLarge0001 = new GenericCrafter("crft0001") {{
-			requirements(Category.crafting, with(
-				Items.copper, 45,
-				Items.lead, 25,
-				Items.silicon, 15
-			));
-			size = 3;
-			localizedName = "crafterLarge0001";
-			health = 290 * size * size;
-			itemCapacity = 50;
-			craftTime = 60f;
-			craftEffect = Fx.smelt;
-			drawer = new DrawSmelter(Color.valueOf("FFFFFF"));
-			consumes.items(with(
-				Items.copper, 2,
-				Items.metaglass, 1,
-				Items.lead, 1
-			));
-			consumes.power(1.3f);
-			outputItem = new ItemStack(Bin0011Items.item01, 2);
-		}};
-		crafterLarge0010 = new GenericCrafter("crft0010") {{
-			requirements(Category.crafting, with(
-				Items.copper, 60,
-				Items.lead, 45,
-				Items.silicon, 40,
-				Items.titanium, 35
-			));
-			size = 3;
-			localizedName = "crafterLarge0010";
-			health = 300 * size * size;
-			itemCapacity = 65;
-			craftTime = 45f;
-			craftEffect = Fx.smokeCloud;
-			consumes.items(with(
-				Items.graphite, 2,
-				Items.titanium, 1
-			));
-			consumes.power(1.4f);
-			outputItem = new ItemStack(Bin0011Items.item10, 2);
-		}};
-		crafterLarge0011 = new GenericCrafter("crft0011") {{
-			requirements(Category.crafting, with(
-				Items.copper, 85,
-				Items.silicon, 75,
-				Items.titanium, 50
-			));
-			size = 3;
-			localizedName = "crafterLarge0011";
-			health = 325 * size * size;
-			itemCapacity = 65;
-			craftTime = 45f;
-			craftEffect = Fx.smokeCloud;
-			consumes.items(with(
-				Items.titanium, 2,
-				Items.silicon, 1
-			));
-			consumes.power(1.5f);
-			outputItem = new ItemStack(Bin0011Items.item11, 2);
-		}};
-		// end production
 		// reg turret
 		turret0000 = new ItemTurret("turret0000"){{
 			requirements(Category.turret, with(Bin0011Items.item00, 28), true);
@@ -520,11 +403,47 @@ public class Bin0011Blocks implements ContentList {
 			shootSound = Sounds.bang;
 			
 			ammo(
-				Bin0011Items.item00, Bin0011Bullets.t8b1,
-				Bin0011Items.item01, Bin0011Bullets.t8b2,
-				Bin0011Items.item10, Bin0011Bullets.t8b3
+				Bin0011Items.item00, new ArtilleryBulletType(){{
+					hitEffect = Fx.flakExplosion;
+					speed = 6.5f;
+					knockback = 1f;
+					lifetime = 80f;
+					width = height = 11f;
+					collidesTiles = false;
+					splashDamageRadius = 30f * 0.75f;
+					splashDamage = 45f;
+				}},
+				Bin0011Items.item01, new ArtilleryBulletType(){{
+					hitEffect = Fx.flakExplosion;
+            				knockback = 0.8f;
+					speed = 6.8f;
+            				lifetime = 80f;
+            				width = height = 11f;
+            				collidesTiles = false;
+            				splashDamageRadius = 25f * 0.75f;
+            				splashDamage = 54f;
+            				reloadMultiplier = 1.2f;
+            				ammoMultiplier = 3f;
+            				homingPower = 1f;
+            				homingRange = 50f;
+				}},
+				Bin0011Items.item10, new ArtilleryBulletType(){{
+					hitEffect = Fx.blastExplosion;
+            				knockback = 0.8f;
+					speed = 7.2f;
+            				lifetime = 80f;
+            				width = height = 14f;
+            				collidesTiles = false;
+            				ammoMultiplier = 4f;
+            				splashDamageRadius = 45f * 0.75f;
+            				splashDamage = 55f;
+            				backColor = Color.valueOf("ffffff");
+            				frontColor = Pal.darkishGray;
+
+            				status = StatusEffects.shocked;
+				}}
 			);
-		}}; 
+		}}; // iya, gw bikin code shoot types barengan sama turret, gw males
         	turret1001 = new ItemTurret("turret1001") {{
             		requirements(Category.turret, with(
 				Bin0011Items.item00, 300, 
@@ -548,10 +467,155 @@ public class Bin0011Blocks implements ContentList {
 			heatColor = Color.valueOf("FFFFFF55");
 			shootSound = Sounds.missile;
             		ammo(
-				Bin0011Items.item00, Bin0011Bullets.t9b1,
-				Bin0011Items.item01, Bin0011Bullets.t9b2
+				Bin0011Items.item00, new MissileBulletType(4f, 11){{
+            	 	 		width = 10f;
+            				height = 10f;
+            				shrinkY = 0f;
+            				splashDamageRadius = 35f;
+            				splashDamage = 58f * 1.5f;
+            				ammoMultiplier = 6f;
+            				hitEffect = Fx.blastExplosion;
+            				despawnEffect = Fx.blastExplosion;
+            				lightningDamage = 10;
+            				lightning = 3;
+            				lightningLength = 10;
+            				status = StatusEffects.unmoving;
+            				statusDuration = 240f;
+        			}},
+				Bin0011Items.item01, new MissileBulletType(4f, 11){{
+            	 	 		width = 10f;
+            				height = 10f;
+            				shrinkY = 0f;
+            				splashDamageRadius = 37.5f;
+            				splashDamage = 65f * 1.5f;
+            				ammoMultiplier = 6f;
+            				hitEffect = Fx.blastExplosion;
+            				despawnEffect = Fx.blastExplosion;
+            				lightningDamage = 15;
+            				lightning = 3;
+            				lightningLength = 10;
+            				status = StatusEffects.unmoving;
+            				statusDuration = 240f;
+        			}}
 			);
         	}};
 		// end turret
+		// reg production
+		crafter0000 = new GenericCrafter("mcrft0000") {{
+			requirements(Category.crafting, with(
+				Items.copper, 35,
+				Items.lead, 12
+			));
+			size = 2;
+			localizedName = "crafter0000";
+			health = 145 * size * size;
+			itemCapacity = 25;
+			craftTime = 90f;
+			craftEffect = Fx.smelt;
+			consumes.items(with(
+				Items.copper, 1,
+				Items.coal, 1
+			));
+			outputItem = new ItemStack(Bin0011Items.item00, 1);
+		}};
+		crafter0001 = new GenericCrafter("mcrft0001") {{
+			requirements(Category.crafting, with(
+				Items.copper, 50,
+				Items.graphite, 30,
+				Items.lead, 45
+			));
+			size = 2;
+			localizedName = "crafter0001";
+			health = 150 * size * size;
+			itemCapacity = 25;
+			craftTime = 90f;
+			craftEffect = Fx.smokeCloud;
+			consumes.items(with(
+				Items.copper, 1,
+				Items.lead, 2,
+				Items.metaglass, 1
+			));
+			outputItem = new ItemStack(Bin0011Items.item01, 1);
+		}};
+		crafterLarge0000 = new GenericCrafter("crft0000") {{
+			requirements(Category.crafting, with(
+				Items.copper, 60,
+				Items.lead, 35
+			));
+			size = 3;
+			localizedName = "crafterLarge0000";
+			health = 280 * size * size;
+			itemCapacity = 50;
+			craftTime = 60f;
+			craftEffect = Fx.smelt;
+			drawer = new DrawSmelter(Color.valueOf("FFFFFF"));
+			consumes.items(with(
+				Items.copper, 2,
+				Items.coal, 1
+			));
+			consumes.power(1.2f);
+			outputItem = new ItemStack(Bin0011Items.item00, 2);
+		}};
+		crafterLarge0001 = new GenericCrafter("crft0001") {{
+			requirements(Category.crafting, with(
+				Items.copper, 45,
+				Items.lead, 25,
+				Items.silicon, 15
+			));
+			size = 3;
+			localizedName = "crafterLarge0001";
+			health = 290 * size * size;
+			itemCapacity = 50;
+			craftTime = 60f;
+			craftEffect = Fx.smelt;
+			drawer = new DrawSmelter(Color.valueOf("FFFFFF"));
+			consumes.items(with(
+				Items.copper, 2,
+				Items.metaglass, 1,
+				Items.lead, 1
+			));
+			consumes.power(1.3f);
+			outputItem = new ItemStack(Bin0011Items.item01, 2);
+		}};
+		crafterLarge0010 = new GenericCrafter("crft0010") {{
+			requirements(Category.crafting, with(
+				Items.copper, 60,
+				Items.lead, 45,
+				Items.silicon, 40,
+				Items.titanium, 35
+			));
+			size = 3;
+			localizedName = "crafterLarge0010";
+			health = 300 * size * size;
+			itemCapacity = 65;
+			craftTime = 45f;
+			craftEffect = Fx.smokeCloud;
+			consumes.items(with(
+				Items.graphite, 2,
+				Items.titanium, 1
+			));
+			consumes.power(1.4f);
+			outputItem = new ItemStack(Bin0011Items.item10, 2);
+		}};
+		crafterLarge0011 = new GenericCrafter("crft0011") {{
+			requirements(Category.crafting, with(
+				Items.copper, 85,
+				Items.silicon, 75,
+				Items.titanium, 50
+			));
+			size = 3;
+			localizedName = "crafterLarge0011";
+			health = 325 * size * size;
+			itemCapacity = 65;
+			craftTime = 45f;
+			craftEffect = Fx.smokeCloud;
+			consumes.items(with(
+				Items.titanium, 2,
+				Items.silicon, 1
+			));
+			consumes.power(1.5f);
+			outputItem = new ItemStack(Bin0011Items.item11, 2);
+		}};
+		// end production
 	}
 }
