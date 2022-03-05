@@ -1,6 +1,6 @@
 # Binary0011 Java
 
-an example of a ""simple"" java mod for mindustry v7.
+an example of a ""simple"" java mod for [Mindustry](https://github.com/anuken/mindustry) V7.
 
 ![Discord](https://img.shields.io/discord/943445343926906930?color=7289da&label=Binary0011&logo=discord&logoColor=7289da&style=for-the-badge)
 
