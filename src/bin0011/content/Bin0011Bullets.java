@@ -9,7 +9,7 @@ import bin0011.content.*;
 
 public class Bin0011Bullets implements ContentList{
 	public static BulletType
-		t8b1, t8b2, t8b3, t9b1;
+		t8b1, t8b2, t8b3, t9b1, t9b2;
 
 	@Override
     	public void load(){
