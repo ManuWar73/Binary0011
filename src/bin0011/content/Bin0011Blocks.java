@@ -49,7 +49,7 @@ public class Bin0011Blocks implements ContentList {
 		// turrets
 		turret0000, turret0001, turret0010, turret0011, turret0100, turret0101, turret0110, turret0111, turret1000, turret1001,
 		// production
-		crafter0000, crafter0001, crafterLarge0000, crafterLarge0001, crafterLarge0010, crafterLarge0011,
+		crafter0000, crafter0001, crafterLarge0000, crafterLarge0001, crafterLarge0010, crafterLarge0011, itemextractor,
 		// storage
 		binarycontainer, binaryvault
 		;
@@ -616,6 +616,21 @@ public class Bin0011Blocks implements ContentList {
 			consumes.power(1.5f);
 			outputItem = new ItemStack(Bin0011Items.item11, 2);
 		}};
+	        itemextractor = new Separator("itemextractor"){{
+            	 	requirements(Category.crafting, with(Bin0011Items.item00, 20, Bin0011Items.item01, 35));
+            	 	results = with(
+                                Bin0011Items.item00, 5,
+                                Bin0011Items.item01, 5,
+                                Bin0011Items.item10, 5,
+                                Bin0011Items.item11, 5
+            		);
+                        hasPower = true;
+                        craftTime = 30f;
+                        size = 2;
+
+          	  	consumes.power(1.0f);
+            	 	consumes.liquid(Liquids.water, 4.75f / 60f);
+                }};
 		// end production
 		// reg storage
 	        binarycontainer = new StorageBlock("binarycontainer"){{
