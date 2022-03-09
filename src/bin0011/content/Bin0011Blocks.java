@@ -50,8 +50,9 @@ public class Bin0011Blocks implements ContentList {
 		turret0000, turret0001, turret0010, turret0011, turret0100, turret0101, turret0110, turret0111, turret1000, turret1001,
 		// production
 		crafter0000, crafter0001, crafterLarge0000, crafterLarge0001, crafterLarge0010, crafterLarge0011,
-		// unit factories
-		binaryFactory, r1;
+		// storage
+		binarycontainer
+		;
 
 	@Override
 	public void load() {
@@ -616,5 +617,13 @@ public class Bin0011Blocks implements ContentList {
 			outputItem = new ItemStack(Bin0011Items.item11, 2);
 		}};
 		// end production
+		// reg storage
+	        binarycontainer = new StorageBlock("binarycontainer"){{
+	 	 	localizedName = "Binary Container";
+	 	 	requirements(Category.effect, with(Bin0011Items.item00, 25, Bin0011Items.item11, 75));
+	 	 	size = 2;
+	 	 	itemCapacity = 375;
+                        health = size * size * 75;
+                }};
 	}
 }
