@@ -1,8 +1,7 @@
-(+) turret1000, turret1001
-(+) wall10, wallLarge10, wallHuge10
+(+) binary containers & vaults
+(+) binary item extractor
+(/) still not fixed some blocks not appearing on techtree
 
 to do list
-binary container & vault
-more 2x2 and 3x3 turrets
 techtree fix(es)
 more burner gens*
