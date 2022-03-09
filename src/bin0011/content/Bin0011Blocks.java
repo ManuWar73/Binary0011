@@ -51,7 +51,7 @@ public class Bin0011Blocks implements ContentList {
 		// production
 		crafter0000, crafter0001, crafterLarge0000, crafterLarge0001, crafterLarge0010, crafterLarge0011,
 		// storage
-		binarycontainer
+		binarycontainer, binaryvault
 		;
 
 	@Override
@@ -624,6 +624,13 @@ public class Bin0011Blocks implements ContentList {
 	 	 	size = 2;
 	 	 	itemCapacity = 375;
                         health = size * size * 75;
+                }};
+	        binaryvault = new StorageBlock("binaryvault"){{
+	 	 	localizedName = "Binary Vault";
+	 	 	requirements(Category.effect, with(Bin0011Items.item00, 75, Bin0011Items.item11, 225));
+	 	 	size = 4;
+	 	 	itemCapacity = 2250;
+                        health = size * size * 85;
                 }};
 	}
 }
