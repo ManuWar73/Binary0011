@@ -624,6 +624,7 @@ public class Bin0011Blocks implements ContentList {
                                 Bin0011Items.item10, 5,
                                 Bin0011Items.item11, 5
             		);
+                        localizedName = "Binary Item Extractor";
                         hasPower = true;
                         craftTime = 30f;
                         size = 2;
