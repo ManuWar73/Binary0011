@@ -94,7 +94,6 @@ public class Bin0011TechTree implements ContentList {
 		// liquid
 		extendNode(Liquids.water, () -> {
 			nodeProduce(Bin0011Liquids.liquid0, () -> {
-
 				 nodeProduce(Bin0011Liquids.liquid1);
 	 		});
 		});
