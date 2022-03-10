@@ -45,7 +45,7 @@ public class Bin0011Blocks implements ContentList {
 		// defense
 		wall00, wallLarge00, wall01, wallLarge01, wall10, wallLarge10, wallHuge10,
 		// distr
-		binaryconveyor, junction00, router00, router01, router10, bridge00,
+		binaryconveyor, junction00, router00, router01, router10, bridge00, binaryduct,
 		// power
 		node000, node001, gen0000, gen0001, burner000, burner001, panel00, panel01, battery00, battery01,
 		// turrets
@@ -178,6 +178,10 @@ public class Bin0011Blocks implements ContentList {
 			range = 12;
 			bufferCapacity = 34;
 		}};
+                binaryduct = new Duct("ductbin"){{
+                        requirements(Category.distribution, with(Bin0011Items.item00, 5));
+                        speed = 6f;
+                }};
 		// end distr
 		// reg power
 		node000 = new PowerNode("node000") {{
