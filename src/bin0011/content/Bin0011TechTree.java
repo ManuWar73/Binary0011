@@ -165,5 +165,22 @@ public class Bin0011TechTree implements ContentList {
 				});
 			});
 		});
+		// distr
+		extendNode(Blocks.conveyor, () -> {
+			node(Bin0011Blocks.binaryconveyor, () -> {
+				node(Bin0011Blocks.junction00, () -> {
+					node(Bin0011Blocks.router00, () -> {
+						node(Bin0011Blocks.router01, () -> {
+							node(Bin0011Blocks.router10, () -> {
+								node(Bin0011Blocks.bridge00);
+								node(Bin0011Blocks.binaryduct, () -> {
+									node(Bin0011Blocks.binaryductrouter);
+								});
+							});
+						});
+					});
+				});
+			});
+		});
 	}
 }
