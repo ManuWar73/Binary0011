@@ -182,5 +182,11 @@ public class Bin0011TechTree implements ContentList {
 				});
 			});
 		});
+		// storage
+		extendNode(Blocks.container, () -> {
+			node(Bin0011Blocks.binarycontainer, () -> {
+				node(Bin0011Blocks.binaryvault);
+			});
+		});
 	}
 }
