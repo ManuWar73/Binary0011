@@ -128,7 +128,7 @@ public class Bin0011Blocks implements ContentList {
 		// end defense
 		// region distr
 	        binaryconveyor = new Conveyor("binconv"){{
-                        requirements(Category.distribution, with(Bin0011Items.item10, 2), true);
+                        requirements(Category.distribution, with(Bin0011Items.item01, 2), true);
             	 	health = 100;
                         speed = 0.09f;
                         displayedSpeed = 12.6f;
