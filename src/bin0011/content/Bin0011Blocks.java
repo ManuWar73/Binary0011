@@ -180,11 +180,11 @@ public class Bin0011Blocks implements ContentList {
 		}};
                 binaryduct = new Duct("ductbin"){{
                         requirements(Category.distribution, with(Bin0011Items.item00, 5));
-                        speed = 6f;
+                        speed = 7f;
                 }};
-                binaryductrouter = new Duct("duct-routerbin"){{
+                binaryductrouter = new DuctRouter("duct-routerbin"){{
                         requirements(Category.distribution, with(Bin0011Items.item00, 5));
-                        speed = 6.5f;
+                        speed = 7.5f;
                 }};
 		// end distr
 		// reg power
