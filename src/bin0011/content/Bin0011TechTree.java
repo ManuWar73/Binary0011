@@ -134,5 +134,22 @@ public class Bin0011TechTree implements ContentList {
 				});
 			});
 		});
+		// pawer
+		extendNode(Blocks.powerNode, () -> {
+			node(Bin0011Blocks.node00);
+			node(Bin0011Blocks.node01, () -> {
+				node(Bin0011Blocks.gen0000);
+				node(Bin0011Blocks.gen0001);
+				node(Bin0011Blocks.burner000, () -> {
+					node(Bin0011Blocks.burner001, () -> {
+						node(Bin0011Blocks.panel00);
+						node(Bin0011Blocks.panel01);
+						node(Bin0011Blocks.battery00, () -> {
+							node(Bin0011Blocks.battery01);
+						});
+					});
+				});
+			});
+		});
 	}
 }
