@@ -20,9 +20,9 @@ public class bin0011 extends Mod{
                 //show dialog upon startup
                         Time.runTask(10f, () -> {
 				BaseDialog dialog = new BaseDialog("icon");
-				dialog.cont.add("0011.").row();
-				dialog.cont.image(Core.atlas.find("binary0011-icon")).pad(20f).row();
-				dialog.cont.button("0011.", dialog::hide).size(100f, 50f);
+				dialog.cont.add("Welcome to Binary0011.").row();
+				dialog.cont.image(Core.atlas.find("binary0011-icon")).pad(10f).row();
+				dialog.cont.button("OK", dialog::hide).size(100f, 50f);
 				dialog.show();
                  	});
             	});
@@ -30,6 +30,7 @@ public class bin0011 extends Mod{
 	// load mod content
 	@Override
 	public void loadContent(){
+	 	new Bin0011Liquids().load();
 		new Bin0011Items().load();
 		new Bin0011Blocks().load();
 		new Bin0011Planets().load();
