@@ -45,7 +45,7 @@ public class Bin0011Blocks implements ContentList {
 		// defense
 		wall00, wallLarge00, wall01, wallLarge01, wall10, wallLarge10, wallHuge10,
 		// distr
-		binaryconveyor, router00, bridge00,
+		binaryconveyor, router00, router01, router10, bridge00,
 		// power
 		node000, node001, gen0000, gen0001, burner000, burner001, panel00, panel01, battery00, battery01,
 		// turrets
@@ -141,6 +141,24 @@ public class Bin0011Blocks implements ContentList {
 			localizedName = "router00";
 			speed = 0.1f;
 			health = 200;
+		}};
+		router01 = new Router("router01") {{
+			requirements(Category.distribution, with(
+				Bin0011Items.item01, 4
+			));
+			localizedName = "router01";
+			speed = 0.1f;
+			size = 2;
+			health = 200 * size;
+		}};
+		router10 = new Router("router10") {{
+			requirements(Category.distribution, with(
+				Bin0011Items.item01, 8
+			));
+			localizedName = "router10";
+			speed = 0.1f;
+			health = 200 * size;
+			size = 4;
 		}};
 		bridge00 = new BufferedItemBridge("bridge-conveyorbin") {{
 			requirements(Category.distribution, with(
