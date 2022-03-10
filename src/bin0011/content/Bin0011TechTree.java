@@ -129,8 +129,8 @@ public class Bin0011TechTree implements ContentList {
 				node(Bin0011Blocks.wall01);
 				node(Bin0011Blocks.wallLarge01, () -> {
 					node(Bin0011Blocks.wall10);
-					node(Bin0011Blocks.wallLarge01);
-					node(Bin0011Blocks.wallHuge01);
+					node(Bin0011Blocks.wallLarge10);
+					node(Bin0011Blocks.wallHuge10);
 				});
 			});
 		});
