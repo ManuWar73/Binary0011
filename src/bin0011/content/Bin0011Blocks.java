@@ -44,6 +44,8 @@ public class Bin0011Blocks implements ContentList {
 		oreItem00, oreItem10,
 		// defense
 		wall00, wallLarge00, wall01, wallLarge01, wall10, wallLarge10, wallHuge10,
+		// distr
+		binaryconveyor,
 		// power
 		node000, node001, gen0000, gen0001, burner000, burner001, panel00, panel01, battery00, battery01,
 		// turrets
@@ -124,6 +126,14 @@ public class Bin0011Blocks implements ContentList {
 			absorbLasers = true; // bjirr
 		}};
 		// end defense
+		// region distr
+	        binaryconveyor = new Conveyor("binconv"){{
+                        requirements(Category.distribution, with(Bin0011Items.item10, 2), true);
+            	 	health = 100;
+                        speed = 0.09f;
+                        displayedSpeed = 12.6f;
+                }};
+		// end distr
 		// reg power
 		node000 = new PowerNode("node000") {{
 			requirements(Category.power, with(
