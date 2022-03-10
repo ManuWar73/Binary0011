@@ -159,7 +159,7 @@ public class Bin0011TechTree implements ContentList{
                 });
             });
             node(Bin0011Blocks.crafter0000, () -> {
-                node(Bin0011Blocks.crafter0001, Seq.with(new Research(Bin0011Items.item00), () -> {
+                node(Bin0011Blocks.crafter0001, Seq.with(new Research(Bin0011Items.item00)), () -> {
                     node(Bin0011Blocks.crafterLarge0000, () -> {
                         node(Bin0011Blocks.crafterLarge0001);
                         node(Bin0011Blocks.crafterLarge0010, () -> {
