@@ -49,7 +49,7 @@ public class Bin0011Blocks implements ContentList {
 		// power
 		node000, node001, gen0000, gen0001, burner000, burner001, panel00, panel01, battery00, battery01,
 		// turrets
-		turret0000, turret0001, turret0010, turret0011, turret0100, turret0101, turret0110, turret0111, turret1000, turret1001,
+		turret0000, turret0001, turret0010, turret0011, turret0100, turret0101, turret0110, turret0111, turret1000, turret1001, turret1010,
 		// production
 		crafter0000, crafter0001, crafterLarge0000, crafterLarge0001, crafterLarge0010, crafterLarge0011, itemextractor,
 		// storage
@@ -562,6 +562,26 @@ public class Bin0011Blocks implements ContentList {
         			}}
 			);
         	}};
+                turret1010 = new LiquidTurret("turret1010"){{
+                        requirements(Category.turret, with(Bin0011Items.item00, 45, Bin0011Items.item01, 75));
+                        ammo(
+                                Bin0011Liquids.liquid0, new LiquidBulletType(Bin0011Liquids.liquid0){{
+                                        knockback = 3f;
+                                        drag = 0.01f;
+                                        damage = 12f;
+                                }}
+                        );
+                        size = 1;
+                        recoilAmount = 1f;
+                        reloadTime = 2f;
+                        inaccuracy = 0f;
+                        shootCone = 50f;
+                        liquidCapacity = 7.5f;
+                        shootEffect = Fx.shootLiquid;
+                        range = 192f;
+                        health = 275;
+                        flags = EnumSet.of(BlockFlag.turret, BlockFlag.extinguisher);
+                }};
 		// end turret
 		// reg production
 		crafter0000 = new GenericCrafter("mcrft0000") {{
