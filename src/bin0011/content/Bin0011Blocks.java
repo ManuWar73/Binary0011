@@ -130,6 +130,7 @@ public class Bin0011Blocks implements ContentList {
 	        binaryconveyor = new Conveyor("binconv"){{
                         requirements(Category.distribution, with(Bin0011Items.item01, 2), true);
             	 	health = 100;
+			localizedName = "Binary Conveyor";
                         speed = 0.09f;
                         displayedSpeed = 12.6f;
                 }};
