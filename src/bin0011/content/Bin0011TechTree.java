@@ -122,5 +122,17 @@ public class Bin0011TechTree implements ContentList {
 				});
 			});
 		});
+		// walls
+		extendNode(Blocks.copperWall, () -> {
+			node(Bin0011Blocks.wall00);
+			node(Bin0011Blocks.wallLarge00, () -> {
+				node(Bin0011Blocks.wall01);
+				node(Bin0011Blocks.wallLarge01, () -> {
+					node(Bin0011Blocks.wall10);
+					node(Bin0011Blocks.wallLarge01);
+					node(Bin0011Blocks.wallHuge01);
+				});
+			});
+		});
 	}
 }
