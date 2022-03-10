@@ -138,6 +138,7 @@ public class Bin0011Blocks implements ContentList {
 			requirements(Category.distribution, with(
 				Bin0011Items.item01, 2
 			));
+			localizedName = "router00";
 			speed = 0.1f;
 			health = 200;
 		}};
@@ -147,6 +148,7 @@ public class Bin0011Blocks implements ContentList {
 				Bin0011Items.item00, 2
 			));
 			speed = 82.5f;
+			localizedName = "bridge00";
 			health = 250;
 			range = 12;
 			bufferCapacity = 34;
