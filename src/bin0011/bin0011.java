@@ -12,7 +12,21 @@ import mindustry.ui.dialogs.*;
 import bin0011.content.*;
 
 public class bin0011 extends Mod{
-	public bin0011(){}
+	public bin0011(){
+                Log.info("Loaded ExampleJavaMod constructor.");
+
+                //listen for game load event
+                Events.on(ClientLoadEvent.class, e -> {
+                //show dialog upon startup
+                        Time.runTask(10f, () -> {
+				BaseDialog dialog = new BaseDialog("icon");
+				dialog.cont.add("0011.").row();
+				dialog.cont.image(Core.atlas.find("binary0011-icon")).pad(20f).row();
+				dialog.cont.button("0011.", dialog::hide).size(100f, 50f);
+				dialog.show();
+                 	});
+            	});
+        }
 	// load mod content
 	@Override
 	public void loadContent(){
