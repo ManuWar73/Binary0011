@@ -18,14 +18,15 @@ public class Bin0011UnitTypes implements ContentList {
 
 	@Override
 	public void load() {
-		asteroid = new UnitType("asteroid") {{
-			health = 520;
-			speed = 1.7f;
+		unit000 = new UnitType("unit000") {{
+			localizedName = "unit000";
+	 	 	health = 520;
+			speed = 1.8f;
 			flying = true;
 			lowAltitude = true;
 			constructor = UnitEntity::create;
 			range = maxRange = 144f;
 			hitSize = 9f;
-		}}
+		}};
 	}
 }
