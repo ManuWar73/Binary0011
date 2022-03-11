@@ -13,15 +13,15 @@ import bin0011.content.*;
 
 public class bin0011 extends Mod{
 	public bin0011(){
-                Log.info("Loaded ExampleJavaMod constructor.");
+                Log.info("Loaded Binary0011 constructor.");
 
                 //listen for game load event
                 Events.on(ClientLoadEvent.class, e -> {
                 //show dialog upon startup
                         Time.runTask(10f, () -> {
-				BaseDialog dialog = new BaseDialog("icon");
+				BaseDialog dialog = new BaseDialog("binary");
 				dialog.cont.add("Welcome to Binary0011.").row();
-				dialog.cont.image(Core.atlas.find("binary0011-icon")).pad(10f).row();
+				dialog.cont.image(Core.atlas.find("binary0011-binary")).pad(10f).row();
 				dialog.cont.button("OK", dialog::hide).size(100f, 50f);
 				dialog.show();
                  	});
