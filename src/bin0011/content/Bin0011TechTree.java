@@ -155,7 +155,8 @@ public class Bin0011TechTree implements ContentList {
 		extendNode(Blocks.graphitePress, () -> {
 			node(Bin0011Blocks.itemextractor);
 			node(Bin0011Blocks.crafter0000, () -> {
-				node(Bin0011Blocks.crafter0001, () -> {
+				node(Bin0011Blocks.crafter0001);
+				node(Bin0011Blocks.crafter0010, () -> {
 					node(Bin0011Blocks.crafterLarge0000, () -> {
 						node(Bin0011Blocks.crafterLarge0001, () -> {
 							node(Bin0011Blocks.crafterLarge0010, () -> {
