@@ -45,7 +45,7 @@ public class Bin0011Blocks implements ContentList {
 		// defense
 		wall00, wallLarge00, wall01, wallLarge01, wall10, wallLarge10, wallHuge10,
 		// distr
-		binaryconveyor, junction00, router00, router01, router10, bridge00, binaryduct, binaryductrouter,
+		binaryconveyor, junction00, junction01, router00, router01, router10, bridge00, binaryduct, binaryductrouter,
 		// power
 		node000, node001, gen0000, gen0001, burner000, burner001, panel00, panel01, battery00, battery01,
 		// turrets
@@ -140,6 +140,13 @@ public class Bin0011Blocks implements ContentList {
                         capacity = 36;
                         health = 135;
                         buildCostMultiplier = 6f;
+                }};
+	        junction01 = new Junction("ljunction"){{
+           		requirements(Category.distribution, with(Bin0011Items.item01, 1), true);
+                        speed = 52 * 2;
+                        capacity = 36 * 2;
+                        health = 135 * 2;
+			size = 2;
                 }};
 		router00 = new Router("routerbin") {{
 			requirements(Category.distribution, with(
