@@ -51,7 +51,7 @@ public class Bin0011Blocks implements ContentList {
 		// turrets
 		turret0000, turret0001, turret0010, turret0011, turret0100, turret0101, turret0110, turret0111, turret1000, turret1001, turret1010,
 		// production
-		crafter0000, crafter0001, crafterLarge0000, crafterLarge0001, crafterLarge0010, crafterLarge0011, itemextractor,
+		crafter0000, crafter0001, crafter0010, crafterLarge0000, crafterLarge0001, crafterLarge0010, crafterLarge0011, itemextractor,
 		// storage
 		binarycontainer, binaryvault
 		;
@@ -620,6 +620,22 @@ public class Bin0011Blocks implements ContentList {
 			));
 			outputItem = new ItemStack(Bin0011Items.item01, 1);
 		}};
+        	crafter0010 = new LiquidConverter("crafter0010"){{
+            		requirements(Category.crafting, with(Bin0011Items.item00, 90, Bin0011Items.item01, 75));
+            		outputLiquid = new LiquidStack(Bin0011Liquids.liquid0, 1f);
+            		craftTime = 90f;
+            		size = 2;
+            		hasPower = true;
+            		hasItems = true;
+            		hasLiquids = true;
+            		rotate = false;
+            		solid = true;
+            		outputsLiquid = true;
+            		drawer = new DrawMixer(true);
+            		consumes.power(0.94f);
+            		consumes.item(Bin0011Items.item00);
+            		consumes.liquid(Liquids.water, 0.12f);
+        	}};
 		crafterLarge0000 = new GenericCrafter("crft0000") {{
 			requirements(Category.crafting, with(
 				Items.copper, 60,
