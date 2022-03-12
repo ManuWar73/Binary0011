@@ -33,7 +33,21 @@ public class Bin0011UnitTypes implements ContentList {
                 		reload = 10f;
                 		ejectEffect = Fx.casing1;
 				shootSound = Sounds.pew;
-                		bullet = new BasicBulletType(2.75f, 17){{
+                		bullet = new BasicBulletType(10f, 17){{
+                                	width = height = 7f;
+					top = true;
+                    			lifetime = 85f;
+                    			shootEffect = Fx.shootSmall;
+                    			smokeEffect = Fx.shootSmallSmoke;
+                		}};
+                	}});
+			weapons.add(new Weapon("binary0011-basic-weapon-1"){{
+                		y = x = 0;
+				top = true;
+                		reload = 10f;
+                		ejectEffect = Fx.casing1;
+				shootSound = Sounds.pew;
+                		bullet = new BasicBulletType(10f, 17){{
                                 	width = height = 7f;
 					top = true;
                     			lifetime = 85f;
