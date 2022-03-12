@@ -104,15 +104,27 @@ public class Bin0011UnitTypes implements ContentList {
 				mirror = true;
 				top = true;
                 		reload = 60f;
-                		bullet = new LaserBulletType(){{
-                    			damage = 55f;
-                    			recoil = 0.5f;
-					hitEffect = Fx.hitLancer;
-                			hitSize = 4;
-                			lifetime = 16f;
-					collidesAir = true;
-                    			length = 200f;
-                    			colors = new Color[]{Pal.lancerLaser.cpy().a(0.4f), Pal.lancerLaser, Color.white};
+                		bullet = new LightningBulletType(){{
+                			damage = 28;
+                			lightningLength = 50;
+                			collidesAir = true;
+                			ammoMultiplier = 1f;
+                		}};
+                	}});
+			weapons.add(new Weapon("binary0011-basic-weapon-2"){{
+                		y = -4;
+				x = 9;
+				mirror = true;
+				top = true;
+                		reload = 24f;
+                		ejectEffect = Fx.casing1;
+				shootSound = Sounds.pew;
+                		bullet = new BasicBulletType(10f, 16){{
+                                	width = height = 7f;
+					top = true;
+                    			lifetime = 40f;
+                    			shootEffect = Fx.shootSmall;
+                    			smokeEffect = Fx.shootSmallSmoke;
                 		}};
                 	}});
 		}};
