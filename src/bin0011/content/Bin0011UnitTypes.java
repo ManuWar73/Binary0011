@@ -27,8 +27,9 @@ public class Bin0011UnitTypes implements ContentList {
 			constructor = UnitEntity::create;
 			range = maxRange = 144f;
 			hitSize = 9f;
-            		weapons.add(new Weapon(){{
-                		y = x = 0f;
+            		weapons.add(new Weapon("u1w1"){{
+                		y = -6;
+				x = 0;
                 		reload = 13f;
                 		ejectEffect = Fx.casing1;
                 		bullet = new BasicBulletType(2.75f, 14){{
