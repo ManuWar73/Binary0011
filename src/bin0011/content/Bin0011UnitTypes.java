@@ -26,13 +26,13 @@ public class Bin0011UnitTypes implements ContentList {
 			constructor = UnitEntity::create;
 			range = maxRange = 144f;
 			hitSize = 9f;
-            		weapons.add(new Weapon("basic-weapon-1"){{
+                       	shootSound = Sounds.pew;
+            		weapons.add(new Weapon("binary0011-basic-weapon-1"){{
                 		y = -6;
 				x = 0;
 				top = true;
                 		reload = 10f;
                 		ejectEffect = Fx.casing1;
-                                shootSound = Sounds.pew;
                 		bullet = new BasicBulletType(2.75f, 17){{
                                 	width = height = 7f;
                     			lifetime = 85f;
