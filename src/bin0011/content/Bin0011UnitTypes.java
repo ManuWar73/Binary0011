@@ -35,6 +35,8 @@ public class Bin0011UnitTypes implements ContentList {
 				shootSound = Sounds.pew;
                 		bullet = new BasicBulletType(2.75f, 17){{
                                 	width = height = 7f;
+					top = true;
+					elevation = 1f;
                     			lifetime = 85f;
                     			shootEffect = Fx.shootSmall;
                     			smokeEffect = Fx.shootSmallSmoke;
