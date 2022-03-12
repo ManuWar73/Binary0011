@@ -92,8 +92,8 @@ public class Bin0011UnitTypes implements ContentList {
 		}};
 		unit010 = new UnitType("unit010") {{
 			localizedName = "unit010";
-	 	 	health = 725;
-			speed = 4f;
+	 	 	health = 857;
+			speed = 3.5f;
 			flying = true;
 			constructor = UnitEntity::create;
 			range = maxRange = 200f;
