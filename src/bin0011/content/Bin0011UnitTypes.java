@@ -98,6 +98,23 @@ public class Bin0011UnitTypes implements ContentList {
 			constructor = UnitEntity::create;
 			range = maxRange = 200f;
 			hitSize = 9f;
+			weapons.add(new Weapon("binary0011-laser-weapon-1"){{
+                		y = 3;
+				x = 6;
+				mirror = true;
+				top = true;
+                		reload = 60f;
+                		bullet = new LaserBulletType(){{
+                    			damage = 55f;
+                    			recoil = 0.5f;
+					hitEffect = Fx.hitLancer;
+                			hitSize = 4;
+                			lifetime = 16f;
+					collidesAir = true;
+                    			length = 200f;
+                    			colors = new Color[]{Pal.lancerLaser.cpy().a(0.4f), Pal.lancerLaser, Color.white};
+                		}};
+                	}});
 		}};
 	}
 }
