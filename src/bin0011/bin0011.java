@@ -31,6 +31,7 @@ public class bin0011 extends Mod{
 	public void loadContent(){
 	 	new Bin0011Liquids().load();
 		new Bin0011Items().load();
+		new Bin0011UnitTypes().load();
 		new Bin0011Blocks().load();
 		new Bin0011Planets().load();
 		new Bin0011TechTree().load();
