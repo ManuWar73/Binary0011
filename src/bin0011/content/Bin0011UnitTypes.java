@@ -100,10 +100,11 @@ public class Bin0011UnitTypes implements ContentList {
 			hitSize = 9f;
 			weapons.add(new Weapon("binary0011-laser-weapon-1"){{
                 		y = 3;
-				x = 6;
+				x = 5;
 				mirror = true;
 				top = true;
-                		reload = 60f;
+                		reload = 35f;
+				shootSound = Sounds.spark;
                 		bullet = new LightningBulletType(){{
                 			damage = 28;
                 			lightningLength = 50;
@@ -113,7 +114,7 @@ public class Bin0011UnitTypes implements ContentList {
                 	}});
 			weapons.add(new Weapon("binary0011-basic-weapon-2"){{
                 		y = -4;
-				x = 9;
+				x = 8;
 				mirror = true;
 				top = true;
                 		reload = 24f;
