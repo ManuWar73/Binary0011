@@ -21,9 +21,8 @@ public class Bin0011UnitTypes implements ContentList {
 		unit000 = new UnitType("unit000") {{
 			localizedName = "unit000";
 	 	 	health = 520;
-			speed = 1.8f;
+			speed = 3f;
 			flying = true;
-			lowAltitude = true;
 			constructor = UnitEntity::create;
 			range = maxRange = 144f;
 			hitSize = 9f;
