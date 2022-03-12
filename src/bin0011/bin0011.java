@@ -21,7 +21,6 @@ public class bin0011 extends Mod{
                         Time.runTask(10f, () -> {
 				BaseDialog dialog = new BaseDialog("binary");
 				dialog.cont.add("Welcome to Binary0011.").row();
-				dialog.cont.image(Core.atlas.find("binary0011-binary")).pad(10f).row();
 				dialog.cont.button("OK", dialog::hide).size(100f, 50f);
 				dialog.show();
                  	});
