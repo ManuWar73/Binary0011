@@ -30,11 +30,12 @@ public class Bin0011UnitTypes implements ContentList {
             		weapons.add(new Weapon("u1w1"){{
                 		y = -6;
 				x = 0;
-                		reload = 13f;
+				top = true;
+                		reload = 10f;
                 		ejectEffect = Fx.casing1;
-                		bullet = new BasicBulletType(2.75f, 14){{
+                		bullet = new BasicBulletType(2.75f, 17){{
                                 	width = height = 7f;
-                    			lifetime = 45f;
+                    			lifetime = 85f;
                     			shootEffect = Fx.shootSmall;
                     			smokeEffect = Fx.shootSmallSmoke;
                     			ammoMultiplier = 2;
