@@ -21,7 +21,7 @@ public class Bin0011UnitTypes implements ContentList {
 		unit000 = new UnitType("unit000") {{
 			localizedName = "unit000";
 	 	 	health = 600;
-			speed = 5.25f;
+			speed = 4f;
 			flying = true;
 			constructor = UnitEntity::create;
 			range = maxRange = 144f;
@@ -47,36 +47,20 @@ public class Bin0011UnitTypes implements ContentList {
 		unit001 = new UnitType("unit001") {{
 			localizedName = "unit001";
 	 	 	health = 725;
-			speed = 5f;
+			speed = 4f;
 			flying = true;
 			constructor = UnitEntity::create;
 			range = maxRange = 192f;
 			hitSize = 9f;
-            		weapons.add(new Weapon("binary0011-basic-weapon-2"){{
-                		y = 3;
-				x = 7;
-				mirror = true;
-				top = true;
-                		reload = 25f;
-                		ejectEffect = Fx.casing1;
-				shootSound = Sounds.pew;
-                		bullet = new BasicBulletType(10f, 4){{
-                                	width = height = 7f;
-					top = true;
-                    			lifetime = 120f;
-                    			shootEffect = Fx.shootSmall;
-                    			smokeEffect = Fx.shootSmallSmoke;
-                		}};
-                	}});
 			weapons.add(new Weapon("binary0011-basic-weapon-2"){{
                 		y = -4;
 				x = 7;
 				mirror = true;
 				top = true;
-                		reload = 25f;
+                		reload = 12f;
                 		ejectEffect = Fx.casing1;
 				shootSound = Sounds.pew;
-                		bullet = new BasicBulletType(10f, 4){{
+                		bullet = new BasicBulletType(10f, 12){{
                                 	width = height = 7f;
 					top = true;
                     			lifetime = 120f;
