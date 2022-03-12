@@ -136,6 +136,7 @@ public class Bin0011Blocks implements ContentList {
                 }};
 	        junction00 = new Junction("junctionbin"){{
            		requirements(Category.distribution, with(Bin0011Items.item01, 1), true);
+			localizedName = "junction00";
                         speed = 52;
                         capacity = 36;
                         health = 135;
@@ -143,6 +144,7 @@ public class Bin0011Blocks implements ContentList {
                 }};
 	        junction01 = new Junction("ljunction"){{
            		requirements(Category.distribution, with(Bin0011Items.item01, 1), true);
+			localizedName = "junction01";
                         speed = 52 * 2;
                         capacity = 36 * 2;
                         health = 135 * 2;
@@ -186,10 +188,12 @@ public class Bin0011Blocks implements ContentList {
 			bufferCapacity = 34;
 		}};
                 binaryduct = new Duct("ductbin"){{
+			localizedName = "Binary Duct";
                         requirements(Category.distribution, with(Bin0011Items.item00, 5));
                         speed = 7f;
                 }};
                 binaryductrouter = new DuctRouter("duct-routerbin"){{
+			localizedName = "Binary Duct Router";
                         requirements(Category.distribution, with(Bin0011Items.item00, 5));
                         speed = 7.5f;
                 }};
