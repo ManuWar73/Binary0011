@@ -20,12 +20,12 @@ public class Bin0011UnitTypes implements ContentList {
 	public void load() {
 		unit000 = new UnitType("unit000") {{
 			localizedName = "unit000";
-	 	 	health = 520;
-			speed = 3f;
+	 	 	health = 600;
+			speed = 5.25f;
 			flying = true;
 			constructor = UnitEntity::create;
 			range = maxRange = 144f;
-			hitSize = 9f;
+			hitSize = 8f;
             		weapons.add(new Weapon("binary0011-basic-weapon-1"){{
                 		y = -6;
 				x = 0;
@@ -39,7 +39,6 @@ public class Bin0011UnitTypes implements ContentList {
                     			lifetime = 85f;
                     			shootEffect = Fx.shootSmall;
                     			smokeEffect = Fx.shootSmallSmoke;
-                    			ammoMultiplier = 2;
                 		}};
                 	}});
 		}};
