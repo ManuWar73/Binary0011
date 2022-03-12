@@ -38,6 +38,7 @@ public class Bin0011UnitTypes implements ContentList {
                                 	width = height = 7f;
 					top = true;
                     			lifetime = 85f;
+					visualElevation = 1f;
                     			shootEffect = Fx.shootSmall;
                     			smokeEffect = Fx.shootSmallSmoke;
                 		}};
