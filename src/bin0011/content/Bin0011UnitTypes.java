@@ -52,20 +52,57 @@ public class Bin0011UnitTypes implements ContentList {
 			constructor = UnitEntity::create;
 			range = maxRange = 192f;
 			hitSize = 9f;
-            		weapons.add(new Weapon("binary0011-basic-weapon-1"){{
-                		y = -6;
+            		weapons.add(new Weapon("binary0011-basic-weapon-2"){{
+                		y = 3;
+				x = 7;
+				mirror = true;
+				top = true;
+                		reload = 25f;
+                		ejectEffect = Fx.casing1;
+				shootSound = Sounds.pew;
+                		bullet = new BasicBulletType(10f, 4){{
+                                	width = height = 7f;
+					top = true;
+                    			lifetime = 120f;
+                    			shootEffect = Fx.shootSmall;
+                    			smokeEffect = Fx.shootSmallSmoke;
+                		}};
+                	}});
+			weapons.add(new Weapon("binary0011-basic-weapon-2"){{
+                		y = -4;
+				x = 7;
+				mirror = true;
+				top = true;
+                		reload = 25f;
+                		ejectEffect = Fx.casing1;
+				shootSound = Sounds.pew;
+                		bullet = new BasicBulletType(10f, 4){{
+                                	width = height = 7f;
+					top = true;
+                    			lifetime = 120f;
+                    			shootEffect = Fx.shootSmall;
+                    			smokeEffect = Fx.shootSmallSmoke;
+                		}};
+                	}});
+			weapons.add(new Weapon("binary0011-basic-weapon-1"){{
+                		y = 2;
 				x = 0;
 				mirror = false;
 				top = true;
-                		reload = 10f;
-                		ejectEffect = Fx.casing1;
-				shootSound = Sounds.pew;
-                		bullet = new BasicBulletType(10f, 17){{
-                                	width = height = 7f;
-					top = true;
-                    			lifetime = 85f;
-                    			shootEffect = Fx.shootSmall;
-                    			smokeEffect = Fx.shootSmallSmoke;
+                		reload = 120f;
+                		ejectEffect = Fx.casing2;
+                		shootSound = Sounds.artillery;
+                		bullet = new ArtilleryBulletType(2f, 35, "shell"){{
+                    			hitEffect = Fx.blastExplosion;
+                    			knockback = 0.8f;
+                    			lifetime = 120f;
+                    			width = height = 14f;
+                    			collides = true;
+                    			collidesTiles = true;
+                    			splashDamageRadius = 35f;
+                    			splashDamage = 80f;
+                    			backColor = Pal.bulletYellowBack;
+                    			frontColor = Pal.bulletYellow;
                 		}};
                 	}});
 		}};
