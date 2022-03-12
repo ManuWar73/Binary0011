@@ -14,7 +14,7 @@ import mindustry.type.*;
 
 public class Bin0011UnitTypes implements ContentList {
 	public static UnitType
-		unit000, unit001;
+		unit000, unit001, unit010;
 
 	@Override
 	public void load() {
