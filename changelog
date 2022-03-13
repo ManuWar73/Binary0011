@@ -2,9 +2,11 @@
 (+) distribution blocks (conveyors, routers, etc.)
 (+) ducts
 (+) binary item extractor
-(+) 5 new units
+(+) 5 new units (and their factories/reconstructors)
+(+) new example status effect "Mati" 
+(+) new liquid crafter "crafter0100"
 (*) techtree fixes
 
 to do list
 more burner gens*
-liquid distribution blocks
+liquid distribution blocks and pumps
