@@ -764,7 +764,7 @@ public class Bin0011Blocks implements ContentList {
 		binfact = new UnitFactory("binfact"){{
             		requirements(Category.units, with(Items.copper, 70, Items.lead, 130, Items.silicon, 50));
             		plans = Seq.with(
-                		new UnitPlan(Bin0011UnitTypes.unit000, 60f * 10f, with(Items.silicon, 20, Items.metaglass, 35)),
+                		new UnitPlan(Bin0011UnitTypes.unit000, 60f * 10f, with(Items.silicon, 20, Items.metaglass, 35))
             		);
             		size = 3;
             		consumes.power(1.2f);
