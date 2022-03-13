@@ -187,7 +187,7 @@ public class Bin0011UnitTypes implements ContentList {
 				top = true;
                 		reload = 4f;
                 		ejectEffect = Fx.casing2Double;
-				shootSound = Sounds.pew;
+				shootSound = Sounds.missile;
                 		bullet = new MissileBulletType(3f, 20){{
                     			width = height = 10f;
                     			shrinkY = 0f;
@@ -308,6 +308,31 @@ public class Bin0011UnitTypes implements ContentList {
                     			width = 19f;
                 		}};
 			}});
+			weapons.add(new Weapon("binary0011-basic-weapon-3"){{
+                		y = -9;
+				x = 16;
+				mirror = true;
+				top = true;
+                		reload = 6f;
+                		ejectEffect = Fx.casing2Double;
+				shootSound = Sounds.missile;
+                		bullet = new MissileBulletType(3f, 21){{
+                    			width = height = 10f;
+                    			shrinkY = 0f;
+                    			drag = -0.003f;
+                    			homingRange = 60f;
+					homingPower = 100f;
+                    			keepVelocity = false;
+                    			splashDamageRadius = 25f;
+                    			splashDamage = 15f;
+                    			lifetime = 50f;
+                    			trailColor = backColor = Pal.unitBack;
+                    			frontColor = Pal.unitFront;
+                    			hitEffect = despawnEffect = Fx.blastExplosion;
+                    			weaveScale = 6f;
+                    			weaveMag = 1f;
+				}};
+                	}});
 		}};
 	}
 }
