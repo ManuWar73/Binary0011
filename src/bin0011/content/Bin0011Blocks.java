@@ -53,7 +53,9 @@ public class Bin0011Blocks implements ContentList {
 		// production
 		crafter0000, crafter0001, crafter0010, crafterLarge0000, crafterLarge0001, crafterLarge0010, crafterLarge0011, itemextractor,
 		// storage
-		binarycontainer, binaryvault
+		binarycontainer, binaryvault,
+		// units
+		binfact, /* binary factory */ r1, r2, r3, r4
 		;
 
 	@Override
@@ -758,5 +760,75 @@ public class Bin0011Blocks implements ContentList {
 	 	 	itemCapacity = 2250;
                         health = size * size * 85;
                 }};
+		// reg units
+		binfact = new UnitFactory("binfact"){{
+            		requirements(Category.units, with(Items.copper, 70, Items.lead, 130, Items.silicon, 50));
+            		plans = Seq.with(
+                		new UnitPlan(Bin0011UnitTypes.unit000, 60f * 10f, with(Items.silicon, 20, Items.metaglass, 35)),
+            		);
+            		size = 3;
+            		consumes.power(1.2f);
+        	}};
+
+        	r1 = new Reconstructor("r1"){{
+            		requirements(Category.units, with(Items.copper, 100, Items.lead, 60, Items.silicon, 45));
+
+            		size = 3;
+            		consumes.power(3f);
+            		consumes.items(with(Items.silicon, 20, Items.graphite, 20)); 
+
+            		constructTime = 60f * 10f;
+
+            		upgrades.addAll(
+                		new UnitType[]{Bin0011UnitTypes.unit000, Bin0011UnitTypes.unit001}
+            		);
+        	}};
+
+        	r2 = new Reconstructor("r2"){{
+            		requirements(Category.units, with(Items.lead, 325, Items.silicon, 225, Items.titanium, 175, Items.thorium, 325));
+
+            		size = 5;
+            		consumes.power(6f);
+            		consumes.items(with(Items.silicon, 65, Items.titanium, 40, Items.metaglass, 20));
+
+            		constructTime = 60f * 30f;
+
+            		upgrades.addAll(
+                		new UnitType[]{Bin0011UnitTypes.unit001, Bin0011UnitTypes.unit010}
+            		);
+        	}};
+
+        	r3 = new Reconstructor("r3"){{
+            		requirements(Category.units, with(Items.lead, 1000, Items.silicon, 500, Items.titanium, 1000, Items.thorium, 375, Items.plastanium, 225, Items.phaseFabric, 300));
+
+            		size = 7;
+            		consumes.power(13f);
+            		consumes.items(with(Items.silicon, 425, Items.titanium, 375, Items.plastanium, 325));
+            		consumes.liquid(Liquids.cryofluid, 0.5f);
+
+            		constructTime = 60f * 60f;
+            		liquidCapacity = 60f;
+
+            		upgrades.addAll(
+                		new UnitType[]{UnitTypes.unit010, UnitTypes.unit011}
+            		);
+        	}};
+
+        	r4 = new Reconstructor("r4"){{
+            		requirements(Category.units, with(Items.lead, 2000, Items.silicon, 1500, Items.thorium, 500, Items.plastanium, 300, Items.phaseFabric, 300, Items.surgeAlloy, 400));
+
+            		size = 9;
+            		consumes.power(25f);
+            		consumes.items(with(Items.silicon, 500, Items.plastanium, 300, Items.surgeAlloy, 250, Items.phaseFabric, 175));
+            		consumes.liquid(Liquids.cryofluid, 1f);
+
+            		constructTime = 60f * 90f;
+            		liquidCapacity = 180f;
+
+            		upgrades.addAll(
+                		new UnitType[]{Bin0011UnitTypes.unit011, Bin0011UnitTypes.unit100}
+            		);
+        	}};
+		// end units
 	}
 }
