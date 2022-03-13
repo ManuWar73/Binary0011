@@ -203,8 +203,8 @@ public class Bin0011UnitTypes implements ContentList {
             			}};
                 	}});
 			weapons.add(new Weapon("binary0011-laser-weapon-1"){{
-                		y = -11;
-				x = 14;
+                		y = -9;
+				x = 9;
 				mirror = true;
 				top = true;
                 		reload = 25f;
@@ -217,7 +217,7 @@ public class Bin0011UnitTypes implements ContentList {
                 		}};
                 	}});
 			weapons.add(new Weapon("binary0011-basic-weapon-1"){{
-                		y = -12;
+                		y = -10;
 				x = 0;
 				mirror = false;
 				top = true;
