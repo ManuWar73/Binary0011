@@ -98,6 +98,7 @@ public class Bin0011UnitTypes implements ContentList {
 			constructor = UnitEntity::create;
 			range = maxRange = 200f;
 			hitSize = 9f;
+			commandLimit = 16;
 			weapons.add(new Weapon("binary0011-laser-weapon-1"){{
                 		y = 3;
 				x = 5;
@@ -137,6 +138,9 @@ public class Bin0011UnitTypes implements ContentList {
 			constructor = UnitEntity::create;
 			range = maxRange = 216f;
 			hitSize = 18f;
+			commandLimit = 24;
+			armor = 9f;
+			abilities.add(new ForceFieldAbility(60f, 0.3f, 400f, 60f * 6));
 			weapons.add(new Weapon(){{
                 		minShootVelocity = 0.75f;
                 		x = 6f;
