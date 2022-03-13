@@ -158,6 +158,31 @@ public class Bin0011UnitTypes implements ContentList {
                     			statusDuration = 240f;
                 		}};
             		}});
+			weapons.add(new Weapon("binary0011-basic-weapon-3"){{
+                		y = 2;
+				x = 9;
+				mirror = true;
+				top = true;
+                		reload = 4f;
+                		ejectEffect = Fx.casing2Double;
+				shootSound = Sounds.pew;
+                		bullet = new MissileBulletType(3f, 20){{
+                    			width = height = 10f;
+                    			shrinkY = 0f;
+                    			drag = -0.003f;
+                    			homingRange = 60f;
+					homingPower = 100f;
+                    			keepVelocity = false;
+                    			splashDamageRadius = 25f;
+                    			splashDamage = 15f;
+                    			lifetime = 50f;
+                    			trailColor = backColor = Pal.unitBack;
+                    			frontColor = Pal.unitFront;
+                    			hitEffect = despawnEffect = Fx.blastExplosion;
+                    			weaveScale = 6f;
+                    			weaveMag = 1f;
+				}};
+                	}});
 		}};
 	}
 }
