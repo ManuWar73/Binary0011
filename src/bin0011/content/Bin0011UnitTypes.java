@@ -292,7 +292,22 @@ public class Bin0011UnitTypes implements ContentList {
                 			ammoMultiplier = 1f;
             			}};
                 	}});
+			weapons.add(new Weapon("binary0011-shrapnel-weapon-1"){{
+				y = 21;
+				x = 0;
+				mirror = false;
+				top = true;
+				shots = 4;
+				reload = 35f / 1.3f;
+				heatColor = Color.valueOf("FFFFFF55");
+				shootSound = Sounds.shotgun;
+				bullet = new ShrapnelBulletType(){{
+                    			length = 256f;
+                    			damage = 66f * 1.5f;
+                    			ammoMultiplier = 4f;
+                    			width = 19f;
+                		}};
+			}});
 		}};
-		
 	}
 }
