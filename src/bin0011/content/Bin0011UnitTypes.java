@@ -289,11 +289,6 @@ public class Bin0011UnitTypes implements ContentList {
                 			incendSpread = 5f;
                 			incendAmount = 1;
                 			ammoMultiplier = 1f;
-					shootDuration = 230f;
-            				powerUse = 17f;
-					loopSound = Sounds.beam;
-            				loopSoundVolume = 2f;
-					shootEffect = Fx.shootBigSmoke2;
             			}};
                 	}});
 		}};
