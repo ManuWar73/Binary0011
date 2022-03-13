@@ -276,11 +276,12 @@ public class Bin0011UnitTypes implements ContentList {
 				x = 0;
 				mirror = false;
 				top = true;
-                		reload = 90f;
+                		reload = 35f;
 				heatColor = Color.valueOf("FFFFFF55");
-            			shootSound = Sounds.laserbig;
-                		bullet = new ContinuousLaserBulletType(80){{
+            			shootSound = Sounds.laser;
+                		bullet = new ContinuousLaserBulletType(100){{
                 			length = 256f;
+					top = true;
                 			hitEffect = Fx.hitMeltdown;
                 			hitColor = Pal.meltdownHit;
                 			status = StatusEffects.melting;
