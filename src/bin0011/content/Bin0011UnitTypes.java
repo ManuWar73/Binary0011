@@ -242,17 +242,43 @@ public class Bin0011UnitTypes implements ContentList {
                 		}};
                 	}});
 		}};
-		unit011 = new UnitType("unit011") {{
-			localizedName = "unit011";
-	 	 	health = 1000;
-			speed = 3.8f;
+		unit100 = new UnitType("unit100") {{
+			localizedName = "unit100";
+	 	 	health = 2000;
+			speed = 2f;
 			flying = true;
 			constructor = UnitEntity::create;
-			range = maxRange = 216f;
-			hitSize = 18f;
-			commandLimit = 24;
-			armor = 9f;
+			range = maxRange = 256f;
+			hitSize = 20f;
+			commandLimit = 48;
+			armor = 18f;
 			abilities.add(new ForceFieldAbility(120f, 0.6f, 800f, 120f * 12));
+			weapons.add(new Weapon("binary0011-laser-weapon-3"){{
+                		y = 1;
+				x = 0;
+				mirror = false;
+				top = true;
+                		reload = 90f;
+				firingMoveFract = 0.5f;
+            			shootDuration = 230f;
+            			powerUse = 17f;
+            			shootSound = Sounds.laserbig;
+            			loopSound = Sounds.beam;
+            			loopSoundVolume = 2f;
+				shootEffect = Fx.shootBigSmoke2;
+                		bullet = new ContinuousLaserBulletType(80){{
+                			length = 256f;
+                			hitEffect = Fx.hitMeltdown;
+                			hitColor = Pal.meltdownHit;
+                			status = StatusEffects.melting;
+                			drawSize = 160f;
+                			incendChance = 0.4f;
+                			incendSpread = 5f;
+                			incendAmount = 1;
+                			ammoMultiplier = 1f;
+            			}};
+                	}});
 		}};
+		
 	}
 }
