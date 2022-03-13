@@ -278,12 +278,7 @@ public class Bin0011UnitTypes implements ContentList {
 				top = true;
                 		reload = 90f;
 				firingMoveFract = 0.5f;
-            			shootDuration = 230f;
-            			powerUse = 17f;
             			shootSound = Sounds.laserbig;
-            			loopSound = Sounds.beam;
-            			loopSoundVolume = 2f;
-				shootEffect = Fx.shootBigSmoke2;
                 		bullet = new ContinuousLaserBulletType(80){{
                 			length = 256f;
                 			hitEffect = Fx.hitMeltdown;
@@ -294,6 +289,11 @@ public class Bin0011UnitTypes implements ContentList {
                 			incendSpread = 5f;
                 			incendAmount = 1;
                 			ammoMultiplier = 1f;
+					shootDuration = 230f;
+            				powerUse = 17f;
+					loopSound = Sounds.beam;
+            				loopSoundVolume = 2f;
+					shootEffect = Fx.shootBigSmoke2;
             			}};
                 	}});
 		}};
