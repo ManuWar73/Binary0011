@@ -810,7 +810,7 @@ public class Bin0011Blocks implements ContentList {
             		liquidCapacity = 60f;
 
             		upgrades.addAll(
-                		new UnitType[]{UnitTypes.unit010, UnitTypes.unit011}
+                		new UnitType[]{Bin0011UnitTypes.unit010, Bin0011UnitTypes.unit011}
             		);
         	}};
 
