@@ -293,8 +293,8 @@ public class Bin0011UnitTypes implements ContentList {
             			}};
                 	}});
 			weapons.add(new Weapon("binary0011-shrapnel-weapon-1"){{
-				y = 21;
-				x = 6;
+				y = 19;
+				x = 7;
 				mirror = true;
 				top = true;
 				shots = 4;
