@@ -129,5 +129,14 @@ public class Bin0011UnitTypes implements ContentList {
                 		}};
                 	}});
 		}};
+		unit011 = new UnitType("unit011") {{
+			localizedName = "unit011";
+	 	 	health = 1000;
+			speed = 3.8f;
+			flying = true;
+			constructor = UnitEntity::create;
+			range = maxRange = 216f;
+			hitSize = 18f;
+		}};
 	}
 }
