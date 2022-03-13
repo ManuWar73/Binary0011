@@ -14,7 +14,7 @@ import mindustry.type.*;
 
 public class Bin0011UnitTypes implements ContentList {
 	public static UnitType
-		unit000, unit001, unit010, unit011;
+		unit000, unit001, unit010, unit011, unit100;
 
 	@Override
 	public void load() {
@@ -241,6 +241,18 @@ public class Bin0011UnitTypes implements ContentList {
                     			frontColor = Pal.bulletYellow;
                 		}};
                 	}});
+		}};
+		unit011 = new UnitType("unit011") {{
+			localizedName = "unit011";
+	 	 	health = 1000;
+			speed = 3.8f;
+			flying = true;
+			constructor = UnitEntity::create;
+			range = maxRange = 216f;
+			hitSize = 18f;
+			commandLimit = 24;
+			armor = 9f;
+			abilities.add(new ForceFieldAbility(120f, 0.6f, 800f, 120f * 12));
 		}};
 	}
 }
