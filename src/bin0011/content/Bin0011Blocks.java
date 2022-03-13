@@ -761,7 +761,7 @@ public class Bin0011Blocks implements ContentList {
                         health = size * size * 85;
                 }};
 		// reg units
-		binfact = new UnitFactory("binfact"){{
+		binfact = new UnitFactory("bin-fact"){{
             		requirements(Category.units, with(Items.copper, 70, Items.lead, 130, Items.silicon, 50));
             		plans = Seq.with(
                 		new UnitPlan(Bin0011UnitTypes.unit000, 60f * 10f, with(Items.silicon, 20, Items.metaglass, 35))
