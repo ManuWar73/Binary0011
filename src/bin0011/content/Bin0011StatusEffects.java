@@ -21,7 +21,7 @@ public class Bin0011StatusEffects implements ContentList{
     public void load(){
 
         mati = new StatusEffect("mati"){{
-			localizedName = "Mati" // mati = dead
+			localizedName = "Mati"; // mati = dead
             color = Color.valueOf("666666"); // bjir
             damage = 99999999999999999999999999999f;
             effect = Fx.lightning;
