@@ -202,6 +202,41 @@ public class Bin0011UnitTypes implements ContentList {
                 			ammoMultiplier = 1f;
             			}};
                 	}});
+			weapons.add(new Weapon("binary0011-laser-weapon-1"){{
+                		y = -11;
+				x = 14;
+				mirror = true;
+				top = true;
+                		reload = 25f;
+				shootSound = Sounds.spark;
+                		bullet = new LightningBulletType(){{
+                			damage = 28;
+                			lightningLength = 50;
+                			collidesAir = true;
+                			ammoMultiplier = 1f;
+                		}};
+                	}});
+			weapons.add(new Weapon("binary0011-basic-weapon-1"){{
+                		y = -12;
+				x = 0;
+				mirror = false;
+				top = true;
+                		reload = 120f;
+                		ejectEffect = Fx.casing2;
+                		shootSound = Sounds.artillery;
+                		bullet = new ArtilleryBulletType(2f, 35, "shell"){{
+                    			hitEffect = Fx.blastExplosion;
+                    			knockback = 0.8f;
+                    			lifetime = 120f;
+                    			width = height = 14f;
+                    			collides = true;
+                    			collidesTiles = true;
+                    			splashDamageRadius = 35f;
+                    			splashDamage = 80f;
+                    			backColor = Pal.bulletYellowBack;
+                    			frontColor = Pal.bulletYellow;
+                		}};
+                	}});
 		}};
 	}
 }
