@@ -183,6 +183,25 @@ public class Bin0011UnitTypes implements ContentList {
                     			weaveMag = 1f;
 				}};
                 	}});
+			weapons.add(new Weapon("binary0011-laser-weapon-2"){{
+                		y = 4;
+				x = 0;
+				mirror = false;
+				top = true;
+                		reload = 60f;
+				shootSound = Sounds.laser;
+                		bullet = new LaserBulletType(156){{
+					shootEffect = Fx.lancerLaserShoot;
+                			colors = new Color[]{Pal.lancerLaser.cpy().a(0.4f), Pal.lancerLaser, Color.white};
+                			hitEffect = Fx.hitLancer;
+                			hitSize = 4;
+                			lifetime = 16f;
+                			drawSize = 400f;
+                			collidesAir = true;
+                			length = 173f;
+                			ammoMultiplier = 1f;
+            			}};
+                	}});
 		}};
 	}
 }
