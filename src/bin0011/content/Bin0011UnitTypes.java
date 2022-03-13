@@ -308,9 +308,9 @@ public class Bin0011UnitTypes implements ContentList {
                     			width = 19f;
                 		}};
 			}});
-			weapons.add(new Weapon("binary0011-basic-weapon-3"){{
+			weapons.add(new Weapon("binary0011-missile-weapon-1"){{
                 		y = -9;
-				x = 16;
+				x = 17;
 				mirror = true;
 				top = true;
                 		reload = 6f;
