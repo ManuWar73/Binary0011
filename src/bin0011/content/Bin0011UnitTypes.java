@@ -277,7 +277,7 @@ public class Bin0011UnitTypes implements ContentList {
 				mirror = false;
 				top = true;
                 		reload = 90f;
-				firingMoveFract = 0.5f;
+				heatColor = Color.valueOf("FFFFFF55");
             			shootSound = Sounds.laserbig;
                 		bullet = new ContinuousLaserBulletType(80){{
                 			length = 256f;
