@@ -763,6 +763,7 @@ public class Bin0011Blocks implements ContentList {
 		// reg units
 		binfact = new UnitFactory("bin-fact"){{
             		requirements(Category.units, with(Items.copper, 70, Items.lead, 130, Items.silicon, 50));
+			localizedName = "Binary Factory";
             		plans = Seq.with(
                 		new UnitPlan(Bin0011UnitTypes.unit000, 60f * 10f, with(Items.silicon, 20, Items.metaglass, 35))
             		);
@@ -772,7 +773,7 @@ public class Bin0011Blocks implements ContentList {
 
         	r1 = new Reconstructor("r1"){{
             		requirements(Category.units, with(Items.copper, 100, Items.lead, 60, Items.silicon, 45));
-
+			localizedName = "r1";
             		size = 3;
             		consumes.power(3f);
             		consumes.items(with(Items.silicon, 20, Items.graphite, 20)); 
@@ -786,7 +787,7 @@ public class Bin0011Blocks implements ContentList {
 
         	r2 = new Reconstructor("r2"){{
             		requirements(Category.units, with(Items.lead, 325, Items.silicon, 225, Items.titanium, 175, Items.thorium, 325));
-
+			localizedName = "r2";
             		size = 5;
             		consumes.power(6f);
             		consumes.items(with(Items.silicon, 65, Items.titanium, 40, Items.metaglass, 20));
@@ -800,7 +801,7 @@ public class Bin0011Blocks implements ContentList {
 
         	r3 = new Reconstructor("r3"){{
             		requirements(Category.units, with(Items.lead, 1000, Items.silicon, 500, Items.titanium, 1000, Items.thorium, 375, Items.plastanium, 225, Items.phaseFabric, 300));
-
+			localizedName = "r3";
             		size = 7;
             		consumes.power(13f);
             		consumes.items(with(Items.silicon, 425, Items.titanium, 375, Items.plastanium, 325));
@@ -816,7 +817,7 @@ public class Bin0011Blocks implements ContentList {
 
         	r4 = new Reconstructor("r4"){{
             		requirements(Category.units, with(Items.lead, 2000, Items.silicon, 1500, Items.thorium, 500, Items.plastanium, 300, Items.phaseFabric, 300, Items.surgeAlloy, 400));
-
+			localizedName = "r4";
             		size = 9;
             		consumes.power(25f);
             		consumes.items(with(Items.silicon, 500, Items.plastanium, 300, Items.surgeAlloy, 250, Items.phaseFabric, 175));
