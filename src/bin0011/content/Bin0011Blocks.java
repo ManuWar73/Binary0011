@@ -47,7 +47,7 @@ public class Bin0011Blocks implements ContentList {
 		// distr
 		binaryconveyor, junction00, junction01, router00, router01, router10, bridge00, binaryduct, binaryductrouter,
 		// liquids
-		binaryconduit,
+		binaryconduit, binaryliquidrouter, binarybridgeconduit,
 		// power
 		node000, node001, gen0000, gen0001, burner000, burner001, panel00, panel01, battery00, battery01,
 		// turrets
@@ -202,10 +202,25 @@ public class Bin0011Blocks implements ContentList {
                         speed = 7.5f;
                 }};
 		// end distr
+		// reg liquids
 		binaryconduit = new Conduit("conduitbin"){{
             		requirements(Category.liquid, with(Bin0011Items.item00, 1));
             		health = 65;
         	}};
+        binaryliquidrouter = new LiquidRouter("liquid-routerbin"){{
+            requirements(Category.liquid, with(Bin0011Items.item00, 4, Bin0011Items.item01, 2));
+            liquidCapacity = 20f;
+            localizedName = "Binary Liquid Router";
+        }};
+        binarybridgeconduit = new LiquidBridge("bridge-conduitbin"){{
+            requirements(Category.liquid, with(Items.graphite, 4, Items.metaglass, 8));
+            fadeIn = moveArrows = false;
+            localizedName = "Binary Bridge Conduit";
+            arrowSpacing = 8f;
+            range = 8;
+            hasPower = false;
+        }};
+// end liquid
 
 		// reg power
 		node000 = new PowerNode("node000") {{
