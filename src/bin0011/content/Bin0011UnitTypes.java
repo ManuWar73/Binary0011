@@ -38,7 +38,7 @@ public class Bin0011UnitTypes implements ContentList {
 	public void load() {
 		unit000 = new UnitType("unit000") {{
 			localizedName = "unit000";
-	 	 	health = 600;
+	 	 	health = 800;
 			speed = 4f;
 			flying = true;
 			constructor = UnitEntity::create;
@@ -64,7 +64,7 @@ public class Bin0011UnitTypes implements ContentList {
 		}};
 		unit001 = new UnitType("unit001") {{
 			localizedName = "unit001";
-	 	 	health = 800;
+	 	 	health = 1000;
 			speed = 4f;
 			flying = true;
 			constructor = UnitEntity::create;
@@ -110,7 +110,7 @@ public class Bin0011UnitTypes implements ContentList {
 		}};
 		unit010 = new UnitType("unit010") {{
 			localizedName = "unit010";
-	 	 	health = 1000;
+	 	 	health = 3000;
 			speed = 3.5f;
 			flying = true;
 			constructor = UnitEntity::create;
@@ -150,7 +150,7 @@ public class Bin0011UnitTypes implements ContentList {
 		}};
 		unit011 = new UnitType("unit011") {{
 			localizedName = "unit011";
-	 	 	health = 3000;
+	 	 	health = 6000;
 			speed = 3.8f;
 			flying = true;
 			constructor = UnitEntity::create;
