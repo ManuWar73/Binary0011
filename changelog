@@ -5,8 +5,9 @@
 (+) 5 new units (and their factories/reconstructors)
 (+) new example status effect "Mati" 
 (+) new liquid crafter "crafter0100"
+(+) liquid distribution blocks (untested)
 (*) techtree fixes
 
 to do list
 more burner gens*
-liquid distribution blocks and pumps
+
