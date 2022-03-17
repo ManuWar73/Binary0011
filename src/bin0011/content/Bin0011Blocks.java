@@ -221,7 +221,7 @@ public class Bin0011Blocks implements ContentList {
             hasPower = false;
         }};
         binaryPump = new Pump("binpump"){{
-            requirements(Category.liquid, with(Bin011Items.item00, 15, Bin0011Items.item01, 10));
+            requirements(Category.liquid, with(Bin0011Items.item00, 15, Bin0011Items.item01, 10));
             pumpAmount = 12f / 60f;
         }};
 // end liquid
