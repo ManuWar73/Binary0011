@@ -47,7 +47,7 @@ public class Bin0011Blocks implements ContentList {
 		// distr
 		binaryconveyor, junction00, junction01, router00, router01, router10, bridge00, binaryduct, binaryductrouter,
 		// liquids
-		binaryconduit, binaryliquidrouter, binarybridgeconduit,
+		binaryconduit, binaryliquidrouter, binarybridgeconduit, binaryPump,
 		// power
 		node000, node001, gen0000, gen0001, burner000, burner001, panel00, panel01, battery00, battery01,
 		// turrets
@@ -219,6 +219,10 @@ public class Bin0011Blocks implements ContentList {
             arrowSpacing = 8f;
             range = 8;
             hasPower = false;
+        }};
+        binaryPump = new Pump("binpump"){{
+            requirements(Category.liquid, with(Bin011Items.item00, 15, Bin0011Items.item01, 10));
+            pumpAmount = 12f / 60f;
         }};
 // end liquid
 
