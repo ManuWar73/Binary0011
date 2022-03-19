@@ -12,7 +12,7 @@ bt000.inaccuracy = 2;
 bt000.rotateSpeed = 10;
 bt000.limitRange();
 bt000.ammo(
-	Items.scrap, Bullets.flakScrap
+	Items.scrap, Bullets.standardDense
 );
 bt000.requirements = ItemStack.with(
 	Items.scrap, 28
