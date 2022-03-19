@@ -1,7 +1,7 @@
 # Binary0011Java
 
 the "Java port" and complete rework of my old mod "Binary0011".
-the way you can compile/implement is in the text below.
+<br>the way you can compile/implement is in the text below.
 
 ## Building for Desktop Testing
 
