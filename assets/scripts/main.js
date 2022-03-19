@@ -1,1 +1,1 @@
-require("blocks/turret/bonusturret0000");
+require("blocks");
