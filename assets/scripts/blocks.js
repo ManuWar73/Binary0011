@@ -1,5 +1,6 @@
 const bt0000 = extend(ItemTurret, "bt0000", {
 	size: 1,
+	category: turret,
 	health: 200,
 	reloadTime: 60,
 	spread: 4,
