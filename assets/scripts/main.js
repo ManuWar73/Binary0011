@@ -1,5 +1,5 @@
 const scripts = [
   //turrets
-  "turrets/bt000", "turrets/bt001"
+  "blocks/turrets/bt000", "blocks/turrets/bt001"
 ];
 scripts.forEach(e => require(e));
