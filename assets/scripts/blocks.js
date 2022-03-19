@@ -1,8 +1,8 @@
 const bt000 = extendContent(ItemTurret, "bt000", {});
 bt000.spread = 4;
-bt000.shots = 2;
+bt000.shots = 1;
 bt000.alternate = true;
-bt000.reloadTime = 13;
+bt000.reloadTime = 12;
 bt000.restitution = 0.03;
 bt000.range = 15 * 8;
 bt000.shootCone = 15;
