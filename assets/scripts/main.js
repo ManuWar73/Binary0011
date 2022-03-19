@@ -1,5 +1,2 @@
-const scripts = [
-  //turrets
-  "blocks/turrets/bt000", "blocks/turrets/bt001"
-];
-scripts.forEach(e => require(e));
+require("blocks/turrets/bt000");
+require("blocks/turrets/bt001");
