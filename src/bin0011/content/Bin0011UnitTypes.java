@@ -265,6 +265,7 @@ public class Bin0011UnitTypes implements ContentList {
 	 	 	health = 9000;
 			speed = 2f;
 			flying = true;
+			lowAltitude = true;
 			constructor = UnitEntity::create;
 			range = maxRange = 256f;
 			hitSize = 20f;
