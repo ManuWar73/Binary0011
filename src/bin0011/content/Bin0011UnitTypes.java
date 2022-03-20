@@ -41,6 +41,7 @@ public class Bin0011UnitTypes implements ContentList {
 	 	 	health = 800;
 			speed = 4f;
 			flying = true;
+			lowAltitude = true;
 			constructor = UnitEntity::create;
 			range = maxRange = 144f;
 			hitSize = 8f;
@@ -66,6 +67,7 @@ public class Bin0011UnitTypes implements ContentList {
 			localizedName = "unit001";
 	 	 	health = 1000;
 			speed = 4f;
+			lowAltitude = true;
 			flying = true;
 			constructor = UnitEntity::create;
 			range = maxRange = 192f;
@@ -112,6 +114,7 @@ public class Bin0011UnitTypes implements ContentList {
 			localizedName = "unit010";
 	 	 	health = 3000;
 			speed = 3.5f;
+			lowAltitude = true;
 			flying = true;
 			constructor = UnitEntity::create;
 			range = maxRange = 200f;
@@ -152,6 +155,7 @@ public class Bin0011UnitTypes implements ContentList {
 			localizedName = "unit011";
 	 	 	health = 6000;
 			speed = 3.8f;
+			lowAltitude = true;
 			flying = true;
 			constructor = UnitEntity::create;
 			range = maxRange = 216f;
