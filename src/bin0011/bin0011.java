@@ -29,7 +29,7 @@ public class bin0011 extends Mod{
 	// load mod content
 	@Override
 	public void loadContent(){
-		new Bin0011StatusEffects().load();
+		new Bin0011StatusEffects().load(); // saat ini gaada gunanya, tapi nanti gw bakal bikin turret yang bisa ngasi status effect ini.
 	 	new Bin0011Liquids().load();
 		new Bin0011Items().load();
 		new Bin0011UnitTypes().load();
