@@ -3,6 +3,12 @@
 the "Java port" and complete rework of my old mod "Binary0011".
 <br>the way you can compile/implement is in the text below.
 
+edit 23/3/22 (d/m/y)
+this repository is now archived.
+<br> the "java porting"/"rework" is now complete.(/done)
+<br> i will not implement any features/release any updates of this mod.
+<br> and yes, the "binary air defender" class unit will never be finished.
+
 ## Building for Desktop Testing
 
 1. Install JDK **17**.
