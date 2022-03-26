@@ -88,9 +88,10 @@ public class B11Blocks implements ContentList{
 			maxAmmo = 200;
 			restitution = 0.04f;
 			inaccuracy = 0.1f;
+			heatColor = Color.valueOf("FF0000AA");
 			ammo(
-				B11Items.item00, B11Bullets.basicbullet1,
-				B11Items.item01, B11Bullets.basicbullet2
+				B11Items.item00, B11Bullets.basicbullet3,
+				B11Items.item01, B11Bullets.basicbullet4
 			);
 		}};
 	}
