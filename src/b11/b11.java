@@ -9,7 +9,7 @@ import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 
-// import b11.content.*;
+import b11.content.*;
 
 public class b11 extends Mod{
 	public b11(){
@@ -29,11 +29,13 @@ public class b11 extends Mod{
 	// load mod content
 	@Override
 	public void loadContent(){
+
 //		new B11Status().load();
 //	 	new B11Liquids().load();
-//		new B11Items().load();
+		new B11Items().load();
+		new B11Bullets().load();
 //		new B11Units().load();
-//		new B11Blocks().load();
+		new B11Blocks().load();
 //		new B11Planets().load();
 //		new B11TechTree().load();
 	}
