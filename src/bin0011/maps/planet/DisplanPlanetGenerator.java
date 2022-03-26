@@ -1,3 +1,4 @@
+/*
 package bin0011.maps.planet;
 
 import arc.graphics.Color;
@@ -417,3 +418,4 @@ public class DisplanPlanetGenerator extends SerpuloPlanetGenerator {
         }
     }
 }
+*/
