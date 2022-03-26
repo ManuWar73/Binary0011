@@ -1,4 +1,4 @@
-package bin0011;
+// package b11;
 
 import arc.*;
 import arc.util.*;
@@ -9,7 +9,7 @@ import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 
-import bin0011.content.*;
+// import b11.content.*;
 
 public class bin0011 extends Mod{
 	public bin0011(){
@@ -29,12 +29,12 @@ public class bin0011 extends Mod{
 	// load mod content
 	@Override
 	public void loadContent(){
-//		new Bin0011StatusEffects().load(); // saat ini gaada gunanya, tapi nanti gw bakal bikin turret yang bisa ngasi status effect ini.
-//	 	new Bin0011Liquids().load();
-//		new Bin0011Items().load();
-//		new Bin0011UnitTypes().load();
-//		new Bin0011Blocks().load();
-//		new Bin0011Planets().load();
-//		new Bin0011TechTree().load();
+//		new B11Status().load();
+//	 	new B11Liquids().load();
+//		new B11Items().load();
+//		new B11Units().load();
+//		new B11Blocks().load();
+//		new B11Planets().load();
+//		new B11TechTree().load();
 	}
 }
