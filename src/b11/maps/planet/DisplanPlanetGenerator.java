@@ -1,5 +1,5 @@
 /*
-package bin0011.maps.planet;
+package b11.maps.planet;
 
 import arc.graphics.Color;
 import arc.math.*;
