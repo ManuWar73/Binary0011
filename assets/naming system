@@ -1,0 +1,17 @@
+turret = t
+drills = p
+transport = d
+liquid = l
+production = c
+power = e
+logic = -
+effect = m
+unit = u
+walls = w
+
+floor/liquid tiles = f
+static wall = s
+
+item = item
+liquid = liquid
+unit = unit
