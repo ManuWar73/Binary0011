@@ -1,4 +1,4 @@
-// package b11;
+package b11;
 
 import arc.*;
 import arc.util.*;
@@ -11,15 +11,15 @@ import mindustry.ui.dialogs.*;
 
 // import b11.content.*;
 
-public class bin0011 extends Mod{
-	public bin0011(){
+public class b11 extends Mod{
+	public b11(){
                 Log.info("Loaded Binary0011 constructor.");
 
                 //listen for game load event
                 Events.on(ClientLoadEvent.class, e -> {
                 //show dialog upon startup
                         Time.runTask(10f, () -> {
-				BaseDialog dialog = new BaseDialog("binary");
+				BaseDialog dialog = new BaseDialog("Hello.");
 				dialog.cont.add("Welcome to Binary0011.").row();
 				dialog.cont.button("OK", dialog::hide).size(100f, 50f);
 				dialog.show();
