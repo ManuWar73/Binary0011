@@ -26,7 +26,16 @@ import mindustry.world.blocks.distribution.*;
 import mindustry.world.meta.*;
 import mindustry.world.draw.*;
 import b11.*;
-
+import b11.content;
 import static mindustry.type.ItemStack.*;
 import static mindustry.type.ItemStack.with;
 
+public class B11Blocks implements ContentList{
+	public static Block
+		test
+		;
+	@Override
+	public void load(){
+		test = new AirBlock("test");
+	}
+}
