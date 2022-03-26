@@ -1,8 +1,8 @@
 displayName: "Binary 0011"
 name: "binary0011"
 author: "1237"
-main: "bin0011.bin0011"
-description: "An Example of a Simple Java Mod for Mindustry V7. \n\nThanks to ExplerHD"
-version: 0.0.4
+main: "b11.b11"
+description: "the java port & rework of my old mod "Binary0011"."
+version: 0.0.5
 minGameVersion: 135
 java: true
