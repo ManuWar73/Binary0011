@@ -26,7 +26,6 @@ import mindustry.world.blocks.distribution.*;
 import mindustry.world.meta.*;
 import mindustry.world.draw.*;
 import b11.*;
-import b11.content.*;
 
 import static mindustry.type.ItemStack.*;
 import static mindustry.type.ItemStack.with;
