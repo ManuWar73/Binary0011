@@ -74,5 +74,24 @@ public class B11Blocks implements ContentList{
 				B11Items.item01, B11Bullets.basicbullet2
 			);
 		}};
+		t0010 = new ItemTurret("t010") {{
+			requirements(Category.turret, with(
+				B11Items.item00, 50,
+				B11Items.item01, 25
+			));
+			size = 3;
+			localizedName = "t0010";
+			health = 200 * size * size;
+			reloadTime = 20f;
+			shots = 4;
+			range = 36f * 8f;
+			maxAmmo = 200;
+			restitution = 0.04f;
+			inaccuracy = 0.1f;
+			ammo(
+				B11Items.item00, B11Bullets.basicbullet1,
+				B11Items.item01, B11Bullets.basicbullet2
+			);
+		}};
 	}
 }
