@@ -32,10 +32,27 @@ import static mindustry.type.ItemStack.with;
 
 public class B11Blocks implements ContentList{
 	public static Block
-		test
+		// turret
+		t0000
 		;
 	@Override
 	public void load(){
-		test = new AirBlock("test");
+		t0000 = new ItemTurret("t000") {{
+			requirements(Category.turret, with(
+				B11Items.item00, 25
+			));
+			size = 1;
+			localizedName = "t000";
+			health = 200 * size * size;
+			reloadTime = 20f;
+			shots = 1;
+			range = 18f * 8f;
+			maxAmmo = 200;
+			restitution = 0.02f;
+			inaccuracy = 0f;
+			ammo(
+				B11Items.item00, B11Bullets.basicbullet1
+			);
+		}};
 	}
 }
