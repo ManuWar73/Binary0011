@@ -57,7 +57,7 @@ public class B11Blocks implements ContentList{
 		}};
 		t0001 = new ItemTurret("t001") {{
 			requirements(Category.turret, with(
-				B11Items.item00, 30
+				B11Items.item00, 30,
 				B11Items.item01, 20
 			));
 			size = 2;
