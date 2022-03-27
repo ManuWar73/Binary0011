@@ -33,10 +33,11 @@ import static mindustry.type.ItemStack.with;
 public class B11Blocks implements ContentList{
 	public static Block
 	// turret
-	t0000, t0001, t0010
+	t0000, t0001, t0010, t0011, t0100, t0101
 	;
 	@Override
 	public void load(){
+		// turret start
 		t0000 = new ItemTurret("t000") {{
 			requirements(Category.turret, with(
 				B11Items.item00, 25
@@ -94,5 +95,6 @@ public class B11Blocks implements ContentList{
 				B11Items.item01, B11Bullets.basicbullet4
 			);
 		}};
+		// turret end
 	}
 }
