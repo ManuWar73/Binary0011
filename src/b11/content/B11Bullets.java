@@ -9,10 +9,12 @@ import b11.content.*;
 
 public class B11Bullets implements ContentList {
 	public static BulletType
-	// basic bullets
+	// basic
 	basicbullet1, basicbullet2, basicbullet3, basicbullet4,
-	// pawer bullets
-	lightningbullet1, laserbullet1, laserbullet2, biglaserbullet
+	// pawer
+	lightningbullet1, laserbullet1, laserbullet2, biglaserbullet,
+	// artillery
+	artillerybullet1, artillerybullet2
 	;
 	@Override
 	public void load(){
@@ -97,5 +99,30 @@ public class B11Bullets implements ContentList {
 			colors = new Color[]{Color.valueOf("111111"), Color.valueOf("666666"), Color.valueOf("999999")};
 		}};
 		// pawer end
+		// artillery start
+		artillerybullet1 = new ArtilleryBulletType(3f, 20, "shell"){{
+			hitEffect = Fx.flakExplosion;
+			knockback = 0.8f;
+			lifetime = 80f * 2f;
+			width = height = 11f;
+			collidesTiles = false;
+			splashDamageRadius = 25f * 8f;
+			splashDamage = 49f;
+			reloadMultiplier = 1.2f;
+			ammoMultiplier = 3f;
+			homingPower = homingRange = 100f; // wkwkwk
+		}};
+		artillerybullet2 = new ArtilleryBulletType(3f, 20, "shell"){{
+			hitEffect = Fx.flakExplosion;
+			knockback = 0.8f;
+			lifetime = 80f * 2f;
+			width = height = 11f;
+			collidesTiles = false;
+			splashDamageRadius = 100f * 8f;
+			splashDamage = 73f;
+			reloadMultiplier = 1.2f;
+			ammoMultiplier = 3f;
+			status = StatusEffects.blasted;
+		}};
 	}
 }
