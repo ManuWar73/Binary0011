@@ -224,6 +224,7 @@ public class B11Blocks implements ContentList{
 			shootSound = Sounds.bang;
 			limitRange(0f);
 		}};
+		int a = 6;
 		t1010 = new ItemTurret("t1010"){{
 			requirements(Category.turret, with(Items.graphite, 35, Items.titanium, 35, Items.plastanium, 45, Items.silicon, 30));
 			ammo(
@@ -231,8 +232,9 @@ public class B11Blocks implements ContentList{
 				B11Items.item11, B11Bullets.missile2
 			);
 			reloadTime = 50f;
+			burstSpacing = a;
 			localizedName = "t1010";
-			shots = burstSpacing = 2;
+			shots = 2;
 			inaccuracy = xRand = 6f;
 			range = 192f;
 			size = 1;
@@ -249,7 +251,8 @@ public class B11Blocks implements ContentList{
 			);
 			reloadTime = 30f;
 			localizedName = "t1011";
-			shots = burstSpacing = 4;
+			shots = 4;
+			burstSpacing = a;
 			inaccuracy = xRand = 7f;
 			range = 240f;
 			size = 2;
@@ -266,7 +269,8 @@ public class B11Blocks implements ContentList{
 			);
 			reloadTime = 26f;
 			localizedName = "t1100";
-			shots = burstSpacing = 6;
+			shots = 6;
+			burstSpacing = a;
 			inaccuracy = xRand = 7f;
 			range = 256f;
 			size = 2;
