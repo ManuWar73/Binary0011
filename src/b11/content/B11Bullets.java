@@ -12,7 +12,7 @@ public class B11Bullets implements ContentList {
 	// basic bullets
 	basicbullet1, basicbullet2, basicbullet3, basicbullet4,
 	// pawer bullets
-	lightningbullet1, laserbullet1, laserbullet2
+	lightningbullet1, laserbullet1, laserbullet2, biglaserbullet
 	;
 	@Override
 	public void load(){
