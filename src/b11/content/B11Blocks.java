@@ -169,8 +169,8 @@ public class B11Blocks implements ContentList{
 		t0111 = new ItemTurret("t0111"){{
 			requirements(Category.turret, with(B11Items.item00, 25, B11Items.item01, 8));
 			ammo(
-				Items.item00, B11Bullets.artillerybullet1,
-				Items.item10, B11Bullets.artillerybullet2
+				B11Items.item00, B11Bullets.artillerybullet1,
+				B11Items.item10, B11Bullets.artillerybullet2
 			);
 			localizedName = "t0111";
 			targetAir = false;
