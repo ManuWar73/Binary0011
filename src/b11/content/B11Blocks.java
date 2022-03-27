@@ -33,7 +33,7 @@ import static mindustry.type.ItemStack.with;
 public class B11Blocks implements ContentList{
 	public static Block
 	// turret
-	t0000, t0001, t0010, t0011, t0100, t0101, t0110, t0111, t1000, t1001
+	t0000, t0001, t0010, t0011, t0100, t0101, t0110, t0111, t1000, t1001, t1010, t1011, t1100
 	;
 	@Override
 	public void load(){
@@ -223,6 +223,57 @@ public class B11Blocks implements ContentList{
 			health = 285 * size * size;
 			shootSound = Sounds.bang;
 			limitRange(0f);
+		}};
+		t1010 = new ItemTurret("t1010"){{
+			requirements(Category.turret, with(Items.graphite, 35, Items.titanium, 35, Items.plastanium, 45, Items.silicon, 30));
+			ammo(
+				B11Items.item10, B11Bullets.missile1,
+				B11Items.item11, B11Bullets.missile2
+			);
+			reloadTime = 50f;
+			localizedName = "t1010";
+			shots = burstSpacing = 2;
+			inaccuracy = xRand = 6f;
+			range = 192f;
+			size = 1;
+			health = 300 * size * size;
+			shootSound = Sounds.missile;
+
+			limitRange(5f);
+		}};
+		t1011 = new ItemTurret("t1011"){{
+			requirements(Category.turret, with(Items.graphite, 35, Items.titanium, 35, Items.plastanium, 45, Items.silicon, 30));
+			ammo(
+				B11Items.item10, B11Bullets.missile1,
+				B11Items.item11, B11Bullets.missile2
+			);
+			reloadTime = 30f;
+			localizedName = "t1011";
+			shots = burstSpacing = 4;
+			inaccuracy = xRand = 7f;
+			range = 240f;
+			size = 2;
+			health = 300 * size * size;
+			shootSound = Sounds.missile;
+
+			limitRange(5f);
+		}};
+		t1100 = new ItemTurret("t1100"){{
+			requirements(Category.turret, with(Items.graphite, 35, Items.titanium, 35, Items.plastanium, 45, Items.silicon, 30));
+			ammo(
+				B11Items.item10, B11Bullets.missile1,
+				B11Items.item11, B11Bullets.missile2
+			);
+			reloadTime = 26f;
+			localizedName = "t1100";
+			shots = burstSpacing = 6;
+			inaccuracy = xRand = 7f;
+			range = 256f;
+			size = 2;
+			health = 300 * size * size;
+			shootSound = Sounds.missile;
+
+			limitRange(5f);
 		}};
 		// turret end
 	}
