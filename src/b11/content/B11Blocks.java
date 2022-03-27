@@ -33,7 +33,7 @@ import static mindustry.type.ItemStack.with;
 public class B11Blocks implements ContentList{
 	public static Block
 	// turret
-	t0000, t0001, t0010, t0011, t0100, t0101, t0110, t0111
+	t0000, t0001, t0010, t0011, t0100, t0101, t0110, t0111, t1000
 	;
 	@Override
 	public void load(){
@@ -180,6 +180,24 @@ public class B11Blocks implements ContentList{
 			inaccuracy = 0f;
 			shootCone = 10f;
 			health = 280;
+			shootSound = Sounds.bang;
+			limitRange(0f);
+		}};
+		t1000 = new ItemTurret("t1000"){{
+			requirements(Category.turret, with(B11Items.item00, 60, B11Items.item01, 35, B11Items.item10, 30));
+			ammo(
+				B11Items.item00, B11Bullets.artillerybullet1,
+				B11Items.item10, B11Bullets.artillerybullet2
+			);
+			localizedName = "t1000";
+			shots = 2;
+			targetAir = false;
+			reloadTime = 25f;
+			recoilAmount = 2f;
+			range = 280f;
+			inaccuracy = 0f;
+			shootCone = 10f;
+			health = 280 * size * size;
 			shootSound = Sounds.bang;
 			limitRange(0f);
 		}};
