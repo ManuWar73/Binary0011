@@ -226,7 +226,7 @@ public class B11Blocks implements ContentList{
 		}};
 		int a = 6;
 		t1010 = new ItemTurret("t1010"){{
-			requirements(Category.turret, with(Items.graphite, 35, Items.titanium, 35, Items.plastanium, 45, Items.silicon, 30));
+			requirements(Category.turret, with(B11Items.item00, 25, B11Items.item01, 20, B11Items.item10, 15));
 			ammo(
 				B11Items.item10, B11Bullets.missile1,
 				B11Items.item11, B11Bullets.missile2
@@ -244,7 +244,7 @@ public class B11Blocks implements ContentList{
 			limitRange(5f);
 		}};
 		t1011 = new ItemTurret("t1011"){{
-			requirements(Category.turret, with(Items.graphite, 35, Items.titanium, 35, Items.plastanium, 45, Items.silicon, 30));
+			requirements(Category.turret, with(B11Items.item00, 70, B11Items.item01, 40, B11Items.item10, 30, B11Items.item11, 40));
 			ammo(
 				B11Items.item10, B11Bullets.missile1,
 				B11Items.item11, B11Bullets.missile2
@@ -262,7 +262,7 @@ public class B11Blocks implements ContentList{
 			limitRange(5f);
 		}};
 		t1100 = new ItemTurret("t1100"){{
-			requirements(Category.turret, with(Items.graphite, 35, Items.titanium, 35, Items.plastanium, 45, Items.silicon, 30));
+			requirements(Category.turret, with(B11Items.item00, 85, B11Items.item01, 55, B11Items.item10, 45, B11Items.item11, 55));
 			ammo(
 				B11Items.item10, B11Bullets.missile1,
 				B11Items.item11, B11Bullets.missile2
