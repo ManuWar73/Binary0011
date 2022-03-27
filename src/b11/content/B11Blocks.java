@@ -169,9 +169,8 @@ public class B11Blocks implements ContentList{
 		t0111 = new ItemTurret("t0111"){{
 			requirements(Category.turret, with(B11Items.item00, 25, B11Items.item01, 8));
 			ammo(
-				Items.graphite, Bullets.artilleryDense,
-				Items.silicon, Bullets.artilleryHoming,
-				Items.pyratite, Bullets.artilleryIncendiary
+				Items.item00, B11Bullets.artillerybullet1,
+				Items.item10, B11Bullets.artillerybullet2
 			);
 			localizedName = "t0111";
 			targetAir = false;
@@ -180,7 +179,7 @@ public class B11Blocks implements ContentList{
 			range = 240f;
 			inaccuracy = 0f;
 			shootCone = 10f;
-			health = 260;
+			health = 280;
 			shootSound = Sounds.bang;
 			limitRange(0f);
 		}};
