@@ -33,7 +33,7 @@ import static mindustry.type.ItemStack.with;
 public class B11Blocks implements ContentList{
 	public static Block
 	// turret
-	t0000, t0001, t0010, t0011, t0100, t0101
+	t0000, t0001, t0010, t0011, t0100, t0101, t0110
 	;
 	@Override
 	public void load(){
@@ -149,6 +149,22 @@ public class B11Blocks implements ContentList{
 			shootType = B11Bullets.laserbullet2;
 		}};
 		t0110 = new PowerTurret("t0110"){{
+			requirements(Category.turret, with(B11Items.item00, 175, B11Items.item01, 154, B11Items.item10, 100));
+			range = 288f;
+			localizedName = "t0110";
+			chargeTime = 120f;
+			chargeMaxDelay = 60f;
+			recoilAmount = 2f;
+			reloadTime = 60f * 2f;
+			cooldown = 0.03f;
+			powerUse = 10f;
+			shootShake = 2f;
+			heatColor = Color.red;
+			size = 3;
+			health = 260 * size * size;
+			targetAir = true;
+			shootSound = Sounds.laser;
+			shootType = B11Bullets.biglaserbullet;
 		}};
 		// turret end
 	}
