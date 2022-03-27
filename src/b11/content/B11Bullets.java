@@ -77,13 +77,13 @@ public class B11Bullets implements ContentList {
 		}};
 		biglaserbullet = new LaserBulletType(){{
 			length = 460f;
-			damage = 560f;
-			width = 75f;
+			damage = 560f / 2f;
+			width = 75 / 1.5f;
 
-			lifetime = 65f;
+			lifetime = 65 * 1.5f;
 
 			lightningSpacing = 35f;
-			lightningLength = 5;
+			lightningLength = 5 * 3;
 			lightningDelay = 1.1f;
 			lightningLengthRand = 15;
 			lightningDamage = 50;
@@ -91,12 +91,10 @@ public class B11Bullets implements ContentList {
 			largeHit = true;
 			lightColor = lightningColor = Color.valueOf("ffffff");
 
-			shootEffect = Fx.greenLaserCharge;
-
 			sideAngle = 15f;
 			sideWidth = 0f;
 			sideLength = 0f;
-			colors = new Color[]{Color.valueOf("666666"), Color.valueOf("AAAAAA"), Color.white};
+			colors = new Color[]{Color.valueOf("111111"), Color.valueOf("666666"), Color.valueOf("999999")};
 		}};
 		// pawer end
 	}
