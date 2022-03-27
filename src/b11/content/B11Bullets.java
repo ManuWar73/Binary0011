@@ -14,7 +14,9 @@ public class B11Bullets implements ContentList {
 	// pawer
 	lightningbullet1, laserbullet1, laserbullet2, biglaserbullet,
 	// artillery
-	artillerybullet1, artillerybullet2
+	artillerybullet1, artillerybullet2,
+	// missile
+	missile1, missile2
 	;
 	@Override
 	public void load(){
@@ -123,6 +125,30 @@ public class B11Bullets implements ContentList {
 			reloadMultiplier = 1.2f;
 			ammoMultiplier = 3f;
 			status = StatusEffects.blasted;
+		}};
+		// artillery end
+		// missile start
+		missile1 = new MissileBulletType(3.7f, 24){{
+			width = height = 8f;
+			shrinkY = 0f;
+			splashDamageRadius = 25f;
+			splashDamage = 34f * 1.4f;
+			hitEffect = Fx.blastExplosion;
+			despawnEffect = Fx.blastExplosion;
+			ammoMultiplier = 4f;
+			lightningDamage = lightningLength = 25;
+			lightning = 2;
+		}};
+		missile2 = new MissileBulletType(3.7f, 27){{
+			width = height = 10f;
+			shrinkY = 0f;
+			splashDamageRadius = 25f;
+			splashDamage = 34f * 1.4f;
+			hitEffect = Fx.blastExplosion;
+			despawnEffect = Fx.blastExplosion;
+			ammoMultiplier = 4f;
+			lightningDamage = lightningLength = 45;
+			lightning = 2;
 		}};
 	}
 }
