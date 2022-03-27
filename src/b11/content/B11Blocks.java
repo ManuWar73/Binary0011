@@ -33,7 +33,7 @@ import static mindustry.type.ItemStack.with;
 public class B11Blocks implements ContentList{
 	public static Block
 	// turret
-	t0000, t0001, t0010, t0011, t0100, t0101, t0110, t0111, t1000
+	t0000, t0001, t0010, t0011, t0100, t0101, t0110, t0111, t1000, t1001
 	;
 	@Override
 	public void load(){
@@ -173,6 +173,7 @@ public class B11Blocks implements ContentList{
 				B11Items.item10, B11Bullets.artillerybullet2
 			);
 			localizedName = "t0111";
+			heatColor = Color.red;
 			targetAir = false;
 			reloadTime = 50f;
 			recoilAmount = 2f;
@@ -190,7 +191,9 @@ public class B11Blocks implements ContentList{
 				B11Items.item10, B11Bullets.artillerybullet2
 			);
 			localizedName = "t1000";
+			heatColor = Color.red;
 			shots = 2;
+			size = 2;
 			targetAir = false;
 			reloadTime = 25f;
 			recoilAmount = 2f;
@@ -198,6 +201,26 @@ public class B11Blocks implements ContentList{
 			inaccuracy = 0f;
 			shootCone = 10f;
 			health = 280 * size * size;
+			shootSound = Sounds.bang;
+			limitRange(0f);
+		}};
+		t1001 = new ItemTurret("t1001"){{
+			requirements(Category.turret, with(B11Items.item00, 120, B11Items.item01, 90, B11Items.item10, 75));
+			ammo(
+				B11Items.item00, B11Bullets.artillerybullet1,
+				B11Items.item10, B11Bullets.artillerybullet2
+			);
+			localizedName = "t1001";
+			heatColor = Color.red;
+			shots = 4;
+			size = 3;
+			targetAir = false;
+			reloadTime = 20f;
+			recoilAmount = 2f;
+			range = 300f;
+			inaccuracy = 0f;
+			shootCone = 10f;
+			health = 285 * size * size;
 			shootSound = Sounds.bang;
 			limitRange(0f);
 		}};
