@@ -33,7 +33,7 @@ import static mindustry.type.ItemStack.with;
 public class B11Blocks implements ContentList{
 	public static Block
 	// turret
-	t0000, t0001, t0010, t0011, t0100, t0101, t0110
+	t0000, t0001, t0010, t0011, t0100, t0101, t0110, t0111
 	;
 	@Override
 	public void load(){
@@ -43,7 +43,7 @@ public class B11Blocks implements ContentList{
 				B11Items.item00, 25
 			));
 			size = 1;
-			localizedName = "t000";
+			localizedName = "t0000";
 			health = 200 * size * size;
 			reloadTime = 20f;
 			shots = 1;
@@ -62,7 +62,7 @@ public class B11Blocks implements ContentList{
 				B11Items.item01, 20
 			));
 			size = 2;
-			localizedName = "t001";
+			localizedName = "t0001";
 			health = 200 * size * size;
 			reloadTime = 20f;
 			shots = 2;
