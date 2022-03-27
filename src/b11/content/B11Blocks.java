@@ -38,7 +38,7 @@ public class B11Blocks implements ContentList{
 	@Override
 	public void load(){
 		// turret start
-		t0000 = new ItemTurret("t000") {{
+		t0000 = new ItemTurret("t0000") {{
 			requirements(Category.turret, with(
 				B11Items.item00, 25
 			));
@@ -56,7 +56,7 @@ public class B11Blocks implements ContentList{
 				B11Items.item01, B11Bullets.basicbullet2
 			);
 		}};
-		t0001 = new ItemTurret("t001") {{
+		t0001 = new ItemTurret("t0001") {{
 			requirements(Category.turret, with(
 				B11Items.item00, 30,
 				B11Items.item01, 20
@@ -75,7 +75,7 @@ public class B11Blocks implements ContentList{
 				B11Items.item01, B11Bullets.basicbullet2
 			);
 		}};
-		t0010 = new ItemTurret("t010") {{
+		t0010 = new ItemTurret("t0010") {{
 			requirements(Category.turret, with(
 				B11Items.item00, 50,
 				B11Items.item01, 25
@@ -142,7 +142,7 @@ public class B11Blocks implements ContentList{
 			powerUse = 5.7f;
 			shootShake = 2f;
 			heatColor = Color.red;
-			size = 1;
+			size = 2;
 			health = 260 * size * size;
 			targetAir = true;
 			shootSound = Sounds.laser;
