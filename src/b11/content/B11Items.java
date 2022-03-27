@@ -13,15 +13,15 @@ public class B11Items implements ContentList{
 			cost = 0.1f;
 			hardness = 0;
 		}};
-		item01 = new Item("item00"){{
+		item01 = new Item("item01"){{
 			cost = 0.1f;
 			hardness = 0;
 		}};
-		item10 = new Item("item00"){{
+		item10 = new Item("item10"){{
 			cost = 0.2f;
 			hardness = 0;
 		}};
-		item11 = new Item("item00"){{
+		item11 = new Item("item11"){{
 			cost = 0.2f;
 			hardness = 0;
 			charge = 0.05f;
