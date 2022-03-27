@@ -112,6 +112,42 @@ public class B11Blocks implements ContentList{
 			health = 260;
 			shootSound = Sounds.spark;
 		}};
+		t0100 = new PowerTurret("t0100"){{
+			requirements(Category.turret, with(B11Items.item00, 30, B11Items.item01, 35));
+			range = 192f;
+			localizedName = "t0100";
+			chargeTime = 40f;
+			chargeMaxDelay = 30f;
+			recoilAmount = 2f;
+			reloadTime = 60f;
+			cooldown = 0.03f;
+			powerUse = 5.7f;
+			shootShake = 2f;
+			heatColor = Color.red;
+			size = 1;
+			health = 260;
+			targetAir = true;
+			shootSound = Sounds.laser;
+			shootType = B11Bullets.laserbullet1;
+		}};
+		t0101 = new PowerTurret("t0101"){{
+			requirements(Category.turret, with(B11Items.item00, 50, B11Items.item01, 60, B11Items.item10, 30));
+			range = 288f;
+			localizedName = "t0101";
+			chargeTime = 20f;
+			chargeMaxDelay = 10f;
+			recoilAmount = 2f;
+			reloadTime = 60f;
+			cooldown = 0.03f;
+			powerUse = 5.7f;
+			shootShake = 2f;
+			heatColor = Color.red;
+			size = 1;
+			health = 260 * size * size;
+			targetAir = true;
+			shootSound = Sounds.laser;
+			shootType = B11Bullets.laserbullet2;
+		}};
 		// turret end
 	}
 }
