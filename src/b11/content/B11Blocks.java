@@ -148,6 +148,8 @@ public class B11Blocks implements ContentList{
 			shootSound = Sounds.laser;
 			shootType = B11Bullets.laserbullet2;
 		}};
+		t0110 = new PowerTurret("t0110"){{
+		}};
 		// turret end
 	}
 }
