@@ -1,13 +1,13 @@
-(+) binary containers & vaults
-(+) distribution blocks (conveyors, routers, etc.)
-(+) ducts
-(+) binary item extractor
-(+) 5 new units (and their factories/reconstructors)
-(+) new example status effect "Mati" 
-(+) new liquid crafter "crafter0100"
-(+) liquid distribution blocks (untested)
-(*) techtree fixes
+(*) r e w o r k e d a l l c o n t e n t .
 
 to do list
-more burner gens*
+turret* (3/16)
+units (0/10)
+liquids (0/2)
+power blocks (0/16)
+item distribution/liquid distribution blocks (0/8, 0/8)
+production blocks (0/2)
+floors/ores (0/2)
+techtree
+
 
