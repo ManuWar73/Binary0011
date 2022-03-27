@@ -103,7 +103,7 @@ public class B11Bullets implements ContentList {
 		artillerybullet1 = new ArtilleryBulletType(3f, 20, "shell"){{
 			hitEffect = Fx.flakExplosion;
 			knockback = 0.8f;
-			lifetime = 80f * 2f;
+			lifetime = 80f * 3f;
 			width = height = 11f;
 			collidesTiles = false;
 			splashDamageRadius = 25f * 8f;
@@ -115,7 +115,7 @@ public class B11Bullets implements ContentList {
 		artillerybullet2 = new ArtilleryBulletType(3f, 20, "shell"){{
 			hitEffect = Fx.flakExplosion;
 			knockback = 0.8f;
-			lifetime = 80f * 2f;
+			lifetime = 80f * 3f;
 			width = height = 11f;
 			collidesTiles = false;
 			splashDamageRadius = 100f * 8f;
