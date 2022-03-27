@@ -1,8 +1,8 @@
-displayName: "Binary 0011"
-name: "binary0011"
+displayName: "Binary0011"
+name: "b11"
 author: "1237"
 main: "b11.b11"
-description: "the java port & rework of my old mod "Binary0011"."
+description: "0011."
 version: 0.0.5
 minGameVersion: 135
 java: true
