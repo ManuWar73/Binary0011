@@ -95,6 +95,23 @@ public class B11Blocks implements ContentList{
 				B11Items.item01, B11Bullets.basicbullet4
 			);
 		}};
+		t0011 = new PowerTurret ("t0011"){{
+			requirements(Category.turret, with(B11Items.item00, 50, B11Items.item01, 25));
+			shootType = B11Bullets.lightningbullet1;
+			localizedName = "t0011";
+			reloadTime = 30f;
+			shootCone = 40f;
+			rotateSpeed = 8f;
+			powerUse = 2.8f;
+			targetAir = true;
+			range = 90f;
+			shootEffect = Fx.lightningShoot;
+			heatColor = Color.red;
+			recoilAmount = 1f;
+			size = 1;
+			health = 260;
+			shootSound = Sounds.spark;
+		}};
 		// turret end
 	}
 }
