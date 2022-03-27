@@ -89,7 +89,7 @@ public class B11Bullets implements ContentList {
 			lightningDamage = 50;
 			lightningAngleRand = 40f;
 			largeHit = true;
-			lightColor = lightningColor = Pal.heal;
+			lightColor = lightningColor = Color.valueOf("ffffff");
 
 			shootEffect = Fx.greenLaserCharge;
 
