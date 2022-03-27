@@ -166,6 +166,24 @@ public class B11Blocks implements ContentList{
 			shootSound = Sounds.laser;
 			shootType = B11Bullets.biglaserbullet;
 		}};
+		t0111 = new ItemTurret("t0111"){{
+			requirements(Category.turret, with(B11Items.item00, 25, B11Items.item01, 8));
+			ammo(
+				Items.graphite, Bullets.artilleryDense,
+				Items.silicon, Bullets.artilleryHoming,
+				Items.pyratite, Bullets.artilleryIncendiary
+			);
+			localizedName = "t0111";
+			targetAir = false;
+			reloadTime = 50f;
+			recoilAmount = 2f;
+			range = 240f;
+			inaccuracy = 0f;
+			shootCone = 10f;
+			health = 260;
+			shootSound = Sounds.bang;
+			limitRange(0f);
+		}};
 		// turret end
 	}
 }
