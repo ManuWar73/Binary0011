@@ -335,6 +335,7 @@ public class B11Blocks implements ContentList{
 			rotateSpeed = 10f;
 			inaccuracy = 0f;
 			shootCone = 30f;
+			heatColor = Color.valueOf("ffffff");
 			shootSound = Sounds.shootSnap;
 			health = 150 * size * size;
 			limitRange();
