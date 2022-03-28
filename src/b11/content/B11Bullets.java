@@ -16,7 +16,9 @@ public class B11Bullets implements ContentList {
 	// artillery
 	artillerybullet1, artillerybullet2,
 	// missile
-	missile1, missile2
+	missile1, missile2,
+	// flak
+	flak1, flak2, flak3
 	;
 	@Override
 	public void load(){
@@ -150,5 +152,35 @@ public class B11Bullets implements ContentList {
 			lightningDamage = lightningLength = 45;
 			lightning = 2;
 		}};
+		// missile end
+		// flak start
+		flak1 = new FlakBulletType(4.5f, 13){{
+			ammoMultiplier = 2f;
+			splashDamage = splashDamageRadius = 28f * 1.5f;
+			lightning = 2;
+			lightningLength = 7;
+			shootEffect = Fx.shootBig;
+			collidesGround = true;
+			explodeRange = 15f;
+		}};
+		flak2 = new FlakBulletType(4.5f, 13){{
+			ammoMultiplier = 4f;
+			splashDamage = splashDamageRadius = 44f * 1.5f;
+			lightning = 3;
+			lightningLength = 8;
+			shootEffect = Fx.shootBig;
+			collidesGround = true;
+			explodeRange = 35f;
+		}};
+		flak3 = new FlakBulletType(4.5f, 13){{
+			ammoMultiplier = 2f;
+			splashDamage = splashDamageRadius = 28f * 1.5f;
+			lightning = 8;
+			lightningLength = 17;
+			shootEffect = Fx.shootBig;
+			collidesGround = true;
+			explodeRange = 50f;
+		}};
+		// flak end
 	}
 }
