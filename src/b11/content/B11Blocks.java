@@ -47,6 +47,7 @@ public class B11Blocks implements ContentList{
 	;
 	@Override
 	public void load(){
+		int y = 140;
 		// production start
 		c0000 = new GenericCrafter("c0000"){{
 			requirements(Category.crafting, with(Items.copper, 20));
@@ -55,6 +56,7 @@ public class B11Blocks implements ContentList{
 			craftTime = 25f;
 			localizedName = "c0000";
 			size = 1;
+			health = y;
 			hasPower = hasLiquids = false;
 			ambientSound = Sounds.smelter;
 			ambientSoundVolume = 0.05f;
@@ -68,6 +70,7 @@ public class B11Blocks implements ContentList{
 			craftTime = 30f;
 			localizedName = "c0001";
 			size = 2;
+			health = y * size * size;
 			hasPower = true;
 			hasLiquids = false;
 			ambientSound = Sounds.smelter;
@@ -81,14 +84,31 @@ public class B11Blocks implements ContentList{
 			updateEffect = Fx.pulverizeMedium;
 			outputItem = new ItemStack(B11Items.item10, 3);
 			craftTime = 54f;
-			localizedName = "c0001";
+			localizedName = "c0010";
+			health = y * size * size;
 			size = 3;
 			hasPower = true;
 			hasLiquids = false;
-			ambientSound = Sounds.steam;
+			ambientSound = Sounds.smelter;
 			ambientSoundVolume = 0.05f;
 			consumes.power(1.25f);
 			consumes.items(with(Items.lead, 3, Items.coal, 2));
+		}};
+		c0011 = new GenericCrafter("c0011"){{
+			requirements(Category.crafting, with(Items.copper, 115, Items.lead, 85, Items.graphite, 70, Items.silicon, 20));
+			craftEffect = Fx.spawn;
+			health = y * size * size;
+			updateEffect = Fx.pulverizeMedium;
+			outputItem = new ItemStack(B11Items.item11, 4);
+			craftTime = 54f;
+			localizedName = "c0011";
+			size = 4;
+			hasPower = true;
+			hasLiquids = false;
+			ambientSound = Sounds.smelter;
+			ambientSoundVolume = 0.05f;
+			consumes.power(3f);
+			consumes.items(with(Items.copper, 4, Items.silicon, 3));
 		}};
 		// production end
 		// turret start
