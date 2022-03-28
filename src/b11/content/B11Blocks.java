@@ -16,13 +16,21 @@ import mindustry.entities.bullet.*;
 import mindustry.entities.*;
 import mindustry.world.*;
 import mindustry.world.blocks.*;
-import mindustry.world.blocks.power.*;
-import mindustry.world.blocks.units.*;
+import mindustry.world.blocks.campaign.*;
 import mindustry.world.blocks.defense.*;
-import mindustry.world.blocks.environment.*;
 import mindustry.world.blocks.defense.turrets.*;
-import mindustry.world.blocks.production.*;
 import mindustry.world.blocks.distribution.*;
+import mindustry.world.blocks.environment.*;
+import mindustry.world.blocks.legacy.*;
+import mindustry.world.blocks.liquid.*;
+import mindustry.world.blocks.logic.*;
+import mindustry.world.blocks.payloads.*;
+import mindustry.world.blocks.power.*;
+import mindustry.world.blocks.production.*;
+import mindustry.world.blocks.sandbox.*;
+import mindustry.world.blocks.storage.*;
+import mindustry.world.blocks.units.*;
+import mindustry.world.consumers.*;
 import mindustry.world.meta.*;
 import mindustry.world.draw.*;
 import b11.*;
@@ -32,11 +40,27 @@ import static mindustry.type.ItemStack.with;
 
 public class B11Blocks implements ContentList{
 	public static Block
+	// production
+	c0000, c0001, c0010, c0011,
 	// turret
 	t0000, t0001, t0010, t0011, t0100, t0101, t0110, t0111, t1000, t1001, t1010, t1011, t1100, t1101, t1110, t1111, tNUMBER_OVERFLOW
 	;
 	@Override
 	public void load(){
+		// production start
+		c0000 = new GenericCrafter("c0000"){{
+			requirements(Category.crafting, with(Items.copper, 20));
+			craftEffect = Fx.spawn;
+			outputItem = new ItemStack(B11Items.item00, 2);
+			craftTime = 25f;
+			localizedName = "c0000";
+			size = 1;
+			hasPower = hasLiquids = false;
+			ambientSound = Sounds.smelter;
+			ambientSoundVolume = 0.05f;
+			consumes.items(with(Items.copper, 2));
+		}};
+		// production end
 		// turret start
 		t0000 = new ItemTurret("t0000") {{
 			requirements(Category.turret, with(
