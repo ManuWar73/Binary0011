@@ -33,7 +33,7 @@ import static mindustry.type.ItemStack.with;
 public class B11Blocks implements ContentList{
 	public static Block
 	// turret
-	t0000, t0001, t0010, t0011, t0100, t0101, t0110, t0111, t1000, t1001, t1010, t1011, t1100
+	t0000, t0001, t0010, t0011, t0100, t0101, t0110, t0111, t1000, t1001, t1010, t1011, t1100, t1101, t1110, t1111, tNUMBER_OVERFLOW
 	;
 	@Override
 	public void load(){
@@ -278,6 +278,66 @@ public class B11Blocks implements ContentList{
 			shootSound = Sounds.missile;
 
 			limitRange(5f);
+		}};
+		t1101 = new ItemTurret("t1101"){{
+			requirements(Category.turret, with(B11Items.item00, 50, B11Items.item01, 25));
+			ammo(
+				B11Items.item01, Bullets.flak1,
+				B11Items.item10, Bullets.flak2,
+				B11Items.item11, Bullets.flak3
+			);
+			xRand = 4f;
+			localizedName = "t1101";
+			reloadTime = 20f;
+			range = 100f;
+			size = 1;
+			recoilAmount = 1f;
+			rotateSpeed = 10f;
+			inaccuracy = 0f;
+			shootCone = 30f;
+			shootSound = Sounds.shootSnap;
+			health = 150 * size * size;
+			limitRange();
+		}};
+		t1110 = new ItemTurret("t1110"){{
+			requirements(Category.turret, with(B11Items.item00, 100, B11Items.item01, 75, B11Items.item11, 55));
+			ammo(
+				B11Items.item01, Bullets.flak1,
+				B11Items.item10, Bullets.flak2,
+				B11Items.item11, Bullets.flak3
+			);
+			xRand = 4f;
+			localizedName = "t1110";
+			reloadTime = 12f;
+			range = 180f;
+			size = 2;
+			recoilAmount = 2f;
+			rotateSpeed = 10f;
+			inaccuracy = 0f;
+			shootCone = 30f;
+			shootSound = Sounds.shootSnap;
+			health = 150 * size * size;
+			limitRange();
+		}};
+		t1111 = new ItemTurret("t1111"){{
+			requirements(Category.turret, with(B11Items.item00, 175, B11Items.item01, 160, B11Items.item11, 180));
+			ammo(
+				B11Items.item01, Bullets.flak1,
+				B11Items.item10, Bullets.flak2,
+				B11Items.item11, Bullets.flak3
+			);
+			xRand = 6f;
+			localizedName = "t1111";
+			reloadTime = 5f;
+			range = 240f;
+			size = 3;
+			recoilAmount = 3f;
+			rotateSpeed = 10f;
+			inaccuracy = 0f;
+			shootCone = 30f;
+			shootSound = Sounds.shootSnap;
+			health = 150 * size * size;
+			limitRange();
 		}};
 		// turret end
 	}
