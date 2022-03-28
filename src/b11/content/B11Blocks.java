@@ -60,6 +60,36 @@ public class B11Blocks implements ContentList{
 			ambientSoundVolume = 0.05f;
 			consumes.items(with(Items.copper, 2));
 		}};
+		c0001 = new GenericCrafter("c0001"){{
+			requirements(Category.crafting, with(Items.copper, 45, Items.lead, 30));
+			craftEffect = Fx.spawn;
+			updateEffect = Fx.pulverizeMedium;
+			outputItem = new ItemStack(B11Items.item01, 2);
+			craftTime = 30f;
+			localizedName = "c0001";
+			size = 2;
+			hasPower = true;
+			hasLiquids = false;
+			ambientSound = Sounds.smelter;
+			ambientSoundVolume = 0.05f;
+			consumes.power("0.5f");
+			consumes.items(with(Items.copper, 2, Items.lead, 1));
+		}};
+		c0010 = new GenericCrafter("c0010"){{
+			requirements(Category.crafting, with(Items.copper, 80, Items.lead, 45, Items.graphite, 28));
+			craftEffect = Fx.spawn;
+			updateEffect = Fx.pulverizeMedium;
+			outputItem = new ItemStack(B11Items.item10, 3);
+			craftTime = 54f;
+			localizedName = "c0001";
+			size = 3;
+			hasPower = true;
+			hasLiquids = false;
+			ambientSound = Sounds.steam;
+			ambientSoundVolume = 0.05f;
+			consumes.power("1.25f");
+			consumes.items(with(Items.lead, 3, Items.coal, 2));
+		}};
 		// production end
 		// turret start
 		t0000 = new ItemTurret("t0000") {{
