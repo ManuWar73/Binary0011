@@ -282,9 +282,9 @@ public class B11Blocks implements ContentList{
 		t1101 = new ItemTurret("t1101"){{
 			requirements(Category.turret, with(B11Items.item00, 50, B11Items.item01, 25));
 			ammo(
-				B11Items.item01, Bullets.flak1,
-				B11Items.item10, Bullets.flak2,
-				B11Items.item11, Bullets.flak3
+				B11Items.item01, B11Bullets.flak1,
+				B11Items.item10, B11Bullets.flak2,
+				B11Items.item11, B11Bullets.flak3
 			);
 			xRand = 4f;
 			localizedName = "t1101";
@@ -302,9 +302,9 @@ public class B11Blocks implements ContentList{
 		t1110 = new ItemTurret("t1110"){{
 			requirements(Category.turret, with(B11Items.item00, 100, B11Items.item01, 75, B11Items.item11, 55));
 			ammo(
-				B11Items.item01, Bullets.flak1,
-				B11Items.item10, Bullets.flak2,
-				B11Items.item11, Bullets.flak3
+				B11Items.item01, B11Bullets.flak1,
+				B11Items.item10, B11Bullets.flak2,
+				B11Items.item11, B11Bullets.flak3
 			);
 			xRand = 4f;
 			localizedName = "t1110";
@@ -322,9 +322,9 @@ public class B11Blocks implements ContentList{
 		t1111 = new ItemTurret("t1111"){{
 			requirements(Category.turret, with(B11Items.item00, 175, B11Items.item01, 160, B11Items.item11, 180));
 			ammo(
-				B11Items.item01, Bullets.flak1,
-				B11Items.item10, Bullets.flak2,
-				B11Items.item11, Bullets.flak3
+				B11Items.item01, B11Bullets.flak1,
+				B11Items.item10, B11Bullets.flak2,
+				B11Items.item11, B11Bullets.flak3
 			);
 			xRand = 6f;
 			localizedName = "t1111";
