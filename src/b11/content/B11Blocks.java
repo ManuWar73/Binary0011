@@ -41,7 +41,7 @@ import static mindustry.type.ItemStack.with;
 public class B11Blocks implements ContentList{
 	public static Block
 	// production
-	c0000, c0001, c0010, c0011,
+	c0000, c0001, c0010, c0011, c0100, c0101,
 	// turret
 	t0000, t0001, t0010, t0011, t0100, t0101, t0110, t0111, t1000, t1001, t1010, t1011, t1100, t1101, t1110, t1111, tNUMBER_OVERFLOW
 	;
