@@ -2,7 +2,7 @@ displayName: "Binary0011"
 name: "b11"
 author: "1237"
 main: "b11.b11"
-description: "0011."
+description: "a binary themed mod for mindustry 7.135. \n\nmade by 1237."
 version: 0.0.5
 minGameVersion: 135
 java: true
