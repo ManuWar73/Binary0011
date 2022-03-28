@@ -72,7 +72,7 @@ public class B11Blocks implements ContentList{
 			hasLiquids = false;
 			ambientSound = Sounds.smelter;
 			ambientSoundVolume = 0.05f;
-			consumes.power("0.5f");
+			consumes.power(0.5f);
 			consumes.items(with(Items.copper, 2, Items.lead, 1));
 		}};
 		c0010 = new GenericCrafter("c0010"){{
@@ -87,7 +87,7 @@ public class B11Blocks implements ContentList{
 			hasLiquids = false;
 			ambientSound = Sounds.steam;
 			ambientSoundVolume = 0.05f;
-			consumes.power("1.25f");
+			consumes.power(1.25f);
 			consumes.items(with(Items.lead, 3, Items.coal, 2));
 		}};
 		// production end
