@@ -47,7 +47,7 @@ public class B11Blocks implements ContentList{
 	;
 	@Override
 	public void load(){
-		int y = 140;
+		final int y = 140;
 		// production start
 		c0000 = new GenericCrafter("c0000"){{
 			requirements(Category.crafting, with(Items.copper, 20));
@@ -99,7 +99,7 @@ public class B11Blocks implements ContentList{
 			craftEffect = Fx.spawn;
 			health = y * size * size;
 			updateEffect = Fx.pulverizeMedium;
-			outputItem = new ItemStack(B11Items.item11, 4);
+			outputItem = new ItemStack(B11Items.item11, 5);
 			craftTime = 54f;
 			localizedName = "c0011";
 			size = 4;
@@ -109,6 +109,38 @@ public class B11Blocks implements ContentList{
 			ambientSoundVolume = 0.05f;
 			consumes.power(3f);
 			consumes.items(with(Items.copper, 4, Items.silicon, 3));
+		}};
+		c0100 = new LiquidConverter("c0100"){{
+			requirements(Category.crafting, with(B11Items.item00, 50, B11Items.item01, 35));
+			outputLiquid = new LiquidStack(B11Liquids.liquid0, 0.5f);
+			craftTime = 30f;
+			localizedName = "c0100";
+			size = 2;
+			hasPower = true;
+			hasItems = true;
+			hasLiquids = true;
+			rotate = false;
+			solid = true;
+			outputsLiquid = true;
+			consumes.power(1f);
+			consumes.item(B11Items.item00);
+			consumes.liquid(Liquids.water, 0.1f);
+		}};
+		c0101 = new LiquidConverter("c0101"){{
+			requirements(Category.crafting, with(B11Items.item00, 65, B11Items.item01, 40, B11Items.item10, 25));
+			outputLiquid = new LiquidStack(B11Liquids.liquid1, 0.75f);
+			craftTime = 45f;
+			localizedName = "c0101";
+			size = 2;
+			hasPower = true;
+			hasItems = true;
+			hasLiquids = true;
+			rotate = false;
+			solid = true;
+			outputsLiquid = true;
+			consumes.power(1.1f);
+			consumes.item(B11Items.item01);
+			consumes.liquid(Liquids.water, 0.2f);
 		}};
 		// production end
 		// turret start
