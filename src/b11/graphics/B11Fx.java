@@ -1,4 +1,4 @@
-package b11.content;
+package b11.graphics;
 
 import arc.*;
 import arc.graphics.*;
