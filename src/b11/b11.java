@@ -31,7 +31,7 @@ public class b11 extends Mod{
 	public void loadContent(){
 
 //		new B11Status().load();
-//	 	new B11Liquids().load();
+	 	new B11Liquids().load();
 		new B11Items().load();
 		new B11Bullets().load();
 //		new B11Units().load();
