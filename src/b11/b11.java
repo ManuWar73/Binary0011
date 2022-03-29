@@ -29,7 +29,7 @@ public class b11 extends Mod{
 	// load mod content
 	@Override
 	public void loadContent(){
-
+		new B11Fx().load();
 //		new B11Status().load();
 	 	new B11Liquids().load();
 		new B11Items().load();
