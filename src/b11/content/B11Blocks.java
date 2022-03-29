@@ -35,9 +35,9 @@ import mindustry.world.meta.*;
 import mindustry.world.draw.*;
 import b11.*;
 import b11.content.*;
+import b11.graphics.*;
 import static mindustry.type.ItemStack.*;
 import static mindustry.type.ItemStack.with;
-
 public class B11Blocks implements ContentList{
 	public static Block
 	// production
@@ -51,9 +51,9 @@ public class B11Blocks implements ContentList{
 		// production start
 		c0000 = new GenericCrafter("c0000"){{
 			requirements(Category.crafting, with(Items.copper, 20));
-			craftEffect = Fx.spawn;
+			craftEffect = B11Fx.craft;
 			outputItem = new ItemStack(B11Items.item00, 2);
-			craftTime = 25f;
+			craftTime = 35f;
 			localizedName = "c0000";
 			size = 1;
 			health = y;
@@ -64,8 +64,8 @@ public class B11Blocks implements ContentList{
 		}};
 		c0001 = new GenericCrafter("c0001"){{
 			requirements(Category.crafting, with(Items.copper, 45, Items.lead, 30));
-			craftEffect = Fx.spawn;
-			updateEffect = Fx.pulverizeMedium;
+			craftEffect = B11Fx.craft;
+			updateEffect = Fx.none;
 			outputItem = new ItemStack(B11Items.item01, 2);
 			craftTime = 30f;
 			localizedName = "c0001";
@@ -80,8 +80,7 @@ public class B11Blocks implements ContentList{
 		}};
 		c0010 = new GenericCrafter("c0010"){{
 			requirements(Category.crafting, with(Items.copper, 80, Items.lead, 45, Items.graphite, 28));
-			craftEffect = Fx.spawn;
-			updateEffect = Fx.pulverizeMedium;
+			craftEffect = B11Fx.craft;
 			outputItem = new ItemStack(B11Items.item10, 3);
 			craftTime = 54f;
 			localizedName = "c0010";
@@ -96,7 +95,7 @@ public class B11Blocks implements ContentList{
 		}};
 		c0011 = new GenericCrafter("c0011"){{
 			requirements(Category.crafting, with(Items.copper, 115, Items.lead, 85, Items.graphite, 70, Items.silicon, 20));
-			craftEffect = Fx.spawn;
+			craftEffect = B11Fx.craft;
 			health = y * size * size;
 			updateEffect = Fx.pulverizeMedium;
 			outputItem = new ItemStack(B11Items.item11, 5);
@@ -112,7 +111,7 @@ public class B11Blocks implements ContentList{
 		}};
 		c0100 = new LiquidConverter("c0100"){{
 			requirements(Category.crafting, with(B11Items.item00, 50, B11Items.item01, 35));
-			outputLiquid = new LiquidStack(B11Liquids.liquid0, 0.5f);
+			outputLiquid = new LiquidStack(B11Liquids.liquid0, 1f);
 			craftTime = 30f;
 			localizedName = "c0100";
 			size = 2;
@@ -128,7 +127,7 @@ public class B11Blocks implements ContentList{
 		}};
 		c0101 = new LiquidConverter("c0101"){{
 			requirements(Category.crafting, with(B11Items.item00, 65, B11Items.item01, 40, B11Items.item10, 25));
-			outputLiquid = new LiquidStack(B11Liquids.liquid1, 0.75f);
+			outputLiquid = new LiquidStack(B11Liquids.liquid1, 1.5f);
 			craftTime = 45f;
 			localizedName = "c0101";
 			size = 2;
