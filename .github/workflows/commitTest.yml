@@ -15,10 +15,14 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 16
+    - name: clear cache(?)
+      run: rm -rf ~/.gradle
     - name: Build mod jar
       run: ./gradlew deploy
+    - name: clear cache(?) 2
+      run: rm -rf ~/.gradle
     - name: Upload built jar file
       uses: actions/upload-artifact@v2
       with:
-        name: Binary0011 Unstable
+        name: binary0011
         path: build/libs/${{ github.event.repository.name }}.jar
