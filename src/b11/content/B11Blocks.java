@@ -68,7 +68,7 @@ public class B11Blocks implements ContentList{
 			restitution = 0.02f;
 			inaccuracy = 0f;
 			shootType = Bullets.standardCopper;
-		}}
+		}};
 		// experimental end
 		final int y = 140;
 		// production start
