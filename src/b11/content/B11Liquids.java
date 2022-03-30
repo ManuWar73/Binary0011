@@ -9,7 +9,7 @@ public class B11Liquids implements ContentList{
     @Override
     public void load(){
         liquid0 = new Liquid("liquid0", Color.valueOf("54555e")){{
-            heatCapacity = 0.4f;
+            heatCapacity = 0.65f;
             localizedName = "liquid0";
             alwaysUnlocked = true;
             //effect = StatusEffects.wet;
