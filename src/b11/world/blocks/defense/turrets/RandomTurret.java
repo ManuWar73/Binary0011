@@ -19,16 +19,18 @@ import mindustry.world.blocks.defense.turrets.*;
 import static mindustry.Vars.*;
 
 public class RandomTurret extends Turret{
-    public BulletType shootType;
     public ObjectMap<Item, BulletType> ammoTypes = new ObjectMap<>();
 
     public RandomTurret(String name){
         super(name);
         hasItems = true;
     }
+    public void ammo(Object objects){
+        ammoTypes = ObjectMap.of(objects);
+    }
 
     public void limitRange(){
-        limitRange(1f);
+        limitRange(0f);
     }
 
     // Makes copies of all bullets and limits their range.
