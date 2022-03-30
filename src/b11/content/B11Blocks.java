@@ -54,7 +54,7 @@ public class B11Blocks implements ContentList{
 	@Override
 	public void load(){
 		// experimental start
-		randomturret1 = new RandomTurret("randomturret1"){{
+		/*randomturret1 = new RandomTurret("randomturret1"){{
 			requirements(Category.turret, with(
 				B11Items.item00, 1
 			));
@@ -68,7 +68,7 @@ public class B11Blocks implements ContentList{
 			restitution = 0.02f;
 			inaccuracy = 0f;
 			ammo(Bullets.standardCopper);
-		}};
+		}};*/
 		// experimental end
 		final int y = 140;
 		// production start
