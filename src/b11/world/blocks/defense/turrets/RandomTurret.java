@@ -14,7 +14,7 @@ import mindustry.type.*;
 import mindustry.ui.*;
 import mindustry.world.consumers.*;
 import mindustry.world.meta.*;
-import mindustry.world.blocks.defense.turrets;
+import mindustry.world.blocks.defense.turrets.*;
 
 import static mindustry.Vars.*;
 
