@@ -30,7 +30,7 @@ public class RandomTurret extends Turret{
         limitRange(1f);
     }
 
-    /** Makes copies of all bullets and limits their range. */
+    // Makes copies of all bullets and limits their range.
     public void limitRange(float margin){
         for(var entry : ammoTypes.copy().entries()){
             var copy = entry.value.copy();
