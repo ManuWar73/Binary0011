@@ -53,8 +53,8 @@ public class B11Blocks implements ContentList{
 	;
 	@Override
 	public void load(){
-		final float x = 4.25f;
-		final int y = 140;
+		public final int x = 5f;
+		public final int y = 140;
 		// walls start
 		w000 = new Wall("w000"){{
 			requirements(Category.defense, with(B11Items.item00, 3, B11Items.item01, 3));
