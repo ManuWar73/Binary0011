@@ -22,6 +22,8 @@ public class B11Items implements ContentList{
 		item10 = new Item("item10", Color.valueOf("b2bbc2")){{
 			cost = 0.2f;
 			localizedName = "item10";
+			flammability = 0.35f;
+			explosiveness = 0.05f;
 			hardness = 0;
 		}};
 		item11 = new Item("item11", Color.valueOf("54555e")){{
