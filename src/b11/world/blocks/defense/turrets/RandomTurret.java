@@ -42,11 +42,6 @@ public class RandomTurret extends Turret{
     @Override
     public void init(){
         @Override
-        public boolean valid(Building entity){
-            return entity instanceof ItemTurretBuild it && !it.ammo.isEmpty();
-        }
-
-        @Override
         public void display(Stats stats){
             //don't display
         }
