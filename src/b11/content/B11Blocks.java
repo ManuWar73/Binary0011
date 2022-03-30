@@ -33,13 +33,19 @@ import mindustry.world.blocks.units.*;
 import mindustry.world.consumers.*;
 import mindustry.world.meta.*;
 import mindustry.world.draw.*;
+
 import b11.*;
 import b11.content.*;
 import b11.graphics.*;
+import b11.world.blocks.defense.turrets.*;
+
 import static mindustry.type.ItemStack.*;
 import static mindustry.type.ItemStack.with;
+
 public class B11Blocks implements ContentList{
 	public static Block
+	// experimental
+	randomturret1,
 	// production
 	c0000, c0001, c0010, c0011, c0100, c0101,
 	// turret
@@ -47,6 +53,23 @@ public class B11Blocks implements ContentList{
 	;
 	@Override
 	public void load(){
+		// experimental start
+		randomturret1 = new RandomTurret("randomturret1"){{
+			requirements(Category.turret, with(
+				B11Items.item00, 1
+			));
+			size = 2;
+			localizedName = "random turret 1";
+			health = 200 * size * size;
+			reloadTime = 20f;
+			shots = 2;
+			range = 27f * 8f;
+			maxAmmo = 200;
+			restitution = 0.02f;
+			inaccuracy = 0f;
+			shootType = Bullets.standardCopper;
+		}}
+		// experimental end
 		final int y = 140;
 		// production start
 		c0000 = new GenericCrafter("c0000"){{
