@@ -26,8 +26,6 @@ public class RandomTurret extends Turret{
         hasItems = true;
     }
 
-    /** Initializes accepted ammo map. Format: [item1, bullet1, item2, bullet2...] */
-    /** Makes copies of all bullets and limits their range. */
     public void limitRange(){
         limitRange(1f);
     }
@@ -39,11 +37,10 @@ public class RandomTurret extends Turret{
             copy.lifetime = (range + margin) / copy.speed;
             ammoTypes.put(entry.key, copy);
         }
-    }
+    };
 
-    @Override
+    @Override up
     public void init(){
-
             @Override
             public boolean valid(Building entity){
                 return entity instanceof ItemTurretBuild it && !it.ammo.isEmpty();
