@@ -1,4 +1,4 @@
-/* package b11.world.blocks.defense.turrets;
+package b11.world.blocks.defense.turrets;
 
 import arc.*;
 import arc.scene.ui.layout.*;
