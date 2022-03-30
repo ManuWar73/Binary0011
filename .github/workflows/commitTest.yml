@@ -21,6 +21,8 @@ jobs:
       run: ./gradlew deploy
     - name: Upload built jar file
       uses: actions/upload-artifact@v2
+    - name: clear cache(?) 2
+      run: rm -rf ~/.gradle
       with:
-        name: Binary0011 Unstable
+        name: binary0011
         path: build/libs/${{ github.event.repository.name }}.jar
