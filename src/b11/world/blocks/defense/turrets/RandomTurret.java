@@ -38,14 +38,6 @@ public class RandomTurret extends Turret{
             ammoTypes.put(entry.key, copy);
         }
     }
-
-    @Override
-    public void init(){
-        @Override
-        public void display(Stats stats){};
-        super.init();
-    }
-
     public class RandomTurretBuild extends TurretBuild{
 
         @Override
