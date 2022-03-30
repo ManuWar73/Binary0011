@@ -1,6 +1,6 @@
-# Binary0011Java
+# Binary0011
 
-the "Java port" and complete rework of my old mod "Binary0011".
+a binary themed mod for mindustry v7. the "Java port" and complete rework of my old (hjson) mod "Binary0011".
 <br>the way you can compile/implement is in the text below.
 
 ## Building for Desktop Testing
