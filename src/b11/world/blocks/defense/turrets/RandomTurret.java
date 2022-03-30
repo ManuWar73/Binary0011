@@ -37,20 +37,20 @@ public class RandomTurret extends Turret{
             copy.lifetime = (range + margin) / copy.speed;
             ammoTypes.put(entry.key, copy);
         }
-    };
+    }
 
     @Override
     public void init(){
             @Override
             public boolean valid(Building entity){
                 return entity instanceof ItemTurretBuild it && !it.ammo.isEmpty();
-            };
+            }
 
             @Override
             public void display(Stats stats){
                 //don't display
             }
-        };
+        }
 
         super.init();
     }
