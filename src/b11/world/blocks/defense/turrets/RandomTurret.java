@@ -21,7 +21,7 @@ import static mindustry.Vars.*;
 public class RandomTurret extends Turret{
     public ObjectMap<Item, BulletType> ammoTypes = new ObjectMap<>();
 
-    public ItemTurret(String name){
+    public RandomTurret(String name){
         super(name);
         hasItems = true;
     }
@@ -46,7 +46,6 @@ public class RandomTurret extends Turret{
 
             @Override
             public boolean valid(Building entity){
-                //valid when there's any ammo in the turret
                 return entity instanceof ItemTurretBuild it && !it.ammo.isEmpty();
             }
 
@@ -54,7 +53,7 @@ public class RandomTurret extends Turret{
             public void display(Stats stats){
                 //don't display
             }
-        });
+        };
 
         super.init();
     }
