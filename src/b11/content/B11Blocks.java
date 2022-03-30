@@ -44,8 +44,8 @@ import static mindustry.type.ItemStack.with;
 
 public class B11Blocks implements ContentList{
 	public static Block
-	// experimental
-	randomturret1,
+	// walls
+	w000, w001, w010, w011, w100, w101,
 	// production
 	c0000, c0001, c0010, c0011, c0100, c0101,
 	// turret
@@ -53,24 +53,50 @@ public class B11Blocks implements ContentList{
 	;
 	@Override
 	public void load(){
-		// experimental start
-		/*randomturret1 = new RandomTurret("randomturret1"){{
-			requirements(Category.turret, with(
-				B11Items.item00, 1
-			));
-			size = 2;
-			localizedName = "random turret 1";
-			health = 200 * size * size;
-			reloadTime = 20f;
-			shots = 2;
-			range = 27f * 8f;
-			maxAmmo = 200;
-			restitution = 0.02f;
-			inaccuracy = 0f;
-			ammo(Bullets.standardCopper);
-		}};*/
-		// experimental end
+		final float x = 4.25f;
 		final int y = 140;
+		// walls start
+		w000 = new Wall("w000"){{
+			requirements(Category.defense, with(B11Items.item00, 3, B11Items.item01, 3));
+			localizedName = "w000";
+			health = 80 * x;
+			absorbLasers = true;
+		}};
+		w001 = new Wall("w001"){{
+			requirements(Category.defense, with(B11Items.item01, 3, B11Items.item10, 3));
+			localizedName = "w001";
+			health = 95 * x;
+			lightningChance = 0.05f;
+		}};
+		w010 = new Wall("w010"){{
+			requirements(Category.defense, with(B11Items.item00, 6, B11Items.item01, 6));
+			localizedName = "w010";
+			size = 2;
+			health = 80 * x * x;
+			absorbLasers = true;
+		}};
+		w011 = new Wall("w011"){{
+			requirements(Category.defense, with(B11Items.item01, 6, B11Items.item10, 6));
+			localizedName = "w011";
+			size = 2;
+			health = 95 * x * x;
+			lightningChance = 0.5f;
+		}};
+		w100 = new Wall("w100"){{
+			requirements(Category.defense, with(B11Items.item00, 6, B11Items.item01, 6));
+			localizedName = "w100";
+			size = 3;
+			health = 80 * x * x * x;
+			absorbLasers = true;
+		}};
+		w101 = new Wall("w101"){{
+			requirements(Category.defense, with(B11Items.item01, 6, B11Items.item10, 6));
+			localizedName = "w101";
+			size = 3;
+			health = 95 * x * x * x;
+			lightningChance = 0.5f;
+		}};
+		// walls end
 		// production start
 		c0000 = new GenericCrafter("c0000"){{
 			requirements(Category.crafting, with(Items.copper, 20));
