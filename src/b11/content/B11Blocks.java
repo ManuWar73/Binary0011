@@ -67,7 +67,7 @@ public class B11Blocks implements ContentList{
 			maxAmmo = 200;
 			restitution = 0.02f;
 			inaccuracy = 0f;
-			shootType = Bullets.standardCopper;
+			ammo(Bullets.standardCopper);
 		}};
 		// experimental end
 		final int y = 140;
