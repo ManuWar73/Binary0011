@@ -42,7 +42,7 @@ public class RandomTurret extends Turret{
     @Override
     public void init(){
         @Override
-        public void display(Stats stats);
+        public void display(Stats stats){};
         super.init();
     }
 
