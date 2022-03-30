@@ -53,7 +53,7 @@ public class B11Blocks implements ContentList{
 	;
 	@Override
 	public void load(){
-		final int x = 5f;
+		final int x = 5;
 		final int y = 140;
 		// walls start
 		w000 = new Wall("w000"){{
