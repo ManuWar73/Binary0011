@@ -19,6 +19,7 @@ import mindustry.world.blocks.defense.turrets.*;
 import static mindustry.Vars.*;
 
 public class RandomTurret extends Turret{
+    public BulletType shootType;
     public ObjectMap<Item, BulletType> ammoTypes = new ObjectMap<>();
 
     public RandomTurret(String name){
@@ -45,7 +46,7 @@ public class RandomTurret extends Turret{
             super.onProximityAdded();
 
             //add first ammo item to cheaty blocks so they can shoot properly
-            if(cheating() && ammo.size > 0){
+            if(cheating()){
                 handleItem(this, ammoTypes.entries().next().key);
             }
         }
