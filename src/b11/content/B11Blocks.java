@@ -45,7 +45,7 @@ import static mindustry.type.ItemStack.with;
 public class B11Blocks implements ContentList{
 	public static Block
 	// distribution
-	d0000, d0001
+	d0000, d0001,
 	// walls (w)
 	w000, w001, w010, w011, w100, w101,
 	// production (c)
