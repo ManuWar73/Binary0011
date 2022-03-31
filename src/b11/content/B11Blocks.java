@@ -44,6 +44,8 @@ import static mindustry.type.ItemStack.with;
 
 public class B11Blocks implements ContentList{
 	public static Block
+	// distribution
+	d0000,
 	// walls (w)
 	w000, w001, w010, w011, w100, w101,
 	// production (c)
@@ -57,6 +59,15 @@ public class B11Blocks implements ContentList{
 	public void load(){
 		final int x = 5;
 		final int y = 140;
+		// distribution start
+		d0000 = new StackConveyor("d0000"){{
+			requirements(Category.distribution, with(B11Items.item00, 1));
+			health = 10;
+			localizedName = "d0000";
+			speed = 5.5f / 60f;
+			itemCapacity = 2;
+		}};
+		// distribution end
 		// walls start
 		w000 = new Wall("w000"){{
 			requirements(Category.defense, with(B11Items.item00, 3, B11Items.item01, 3));
@@ -219,6 +230,19 @@ public class B11Blocks implements ContentList{
 			itemDuration = 190f;
 			ambientSound = Sounds.smelter;
 			ambientSoundVolume = 0.03f;
+		}};
+		p0011 = new PowerNode("p0011"){{
+			requirements(Category.power, with(B11Items.item00, 4));
+			localizedName = "p0011";
+			maxNodes = 14;
+			laserRange = 12;
+		}};
+		p0100 = new PowerNode("p0100"){{
+			requirements(Category.power, with(B11Items.item00, 4));
+			localizedName = "p0100";
+			maxNodes = 21;
+			size = 2;
+			laserRange = 18;
 		}};
 		// power end
 		// turret start
