@@ -44,11 +44,13 @@ import static mindustry.type.ItemStack.with;
 
 public class B11Blocks implements ContentList{
 	public static Block
-	// walls
+	// walls (w)
 	w000, w001, w010, w011, w100, w101,
-	// production
+	// production (c)
 	c0000, c0001, c0010, c0011, c0100, c0101,
-	// turret
+	// power (p)
+	p0000, p0001, p0010, p0011,
+	// turret (t)
 	t0000, t0001, t0010, t0011, t0100, t0101, t0110, t0111, t1000, t1001, t1010, t1011, t1100, t1101, t1110, t1111, tNUMBER_OVERFLOW
 	;
 	@Override
@@ -191,6 +193,15 @@ public class B11Blocks implements ContentList{
 			consumes.liquid(Liquids.water, 0.2f);
 		}};
 		// production end
+		// power start
+		p0000 = new BurnerGenerator("p0000"){{
+			requirements(Category.power, with(B11Items.item00, 20, B11Items.item01, 20));
+			powerProduction = 1f;
+			itemDuration = 180f;
+			ambientSound = Sounds.smelter;
+			ambientSoundVolume = 0.03f;
+		}};
+		// power end
 		// turret start
 		t0000 = new ItemTurret("t0000") {{
 			requirements(Category.turret, with(
