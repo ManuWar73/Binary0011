@@ -264,7 +264,7 @@ public class B11Blocks implements ContentList{
 			baseExplosiveness = 8f;
 		}};
 		p0111 = new SolarGenerator("p0111"){{
-			requirements(Category.power, with(B11Items.item00, 40, B11Items.item01 55, B11Items.item10, 8));
+			requirements(Category.power, with(B11Items.item00, 40, B11Items.item01, 55, B11Items.item10, 8));
 			size = 2;
 			localizedName = "p0111";
 			powerProduction = 0.78f;
