@@ -44,6 +44,8 @@ import static mindustry.type.ItemStack.with;
 
 public class B11Blocks implements ContentList{
 	public static Block
+	// floors (f)
+	f00, f01, f10, f11,
 	// distribution (d)
 	d000, d001, d010, d011,
 	// walls (w)
@@ -57,8 +59,32 @@ public class B11Blocks implements ContentList{
 	;
 	@Override
 	public void load(){
+		// deklarasi variable dulu.
 		final int x = 5;
 		final int y = 140;
+		// ok bagus, sekarang waktunya ngoding b l o c k .
+		// floors start
+		f00 = new Floor("f00"){{
+			localizedName = "f00";
+			itemDrop = B11Items.item00;
+			playerUnmineable = false; // m i n e   t h e   f l o o r .
+		}};
+		f01 = new Floor("f01"){{
+			localizedName = "f01";
+			itemDrop = B11Items.item01;
+			playerUnmineable = false; // m i n e   t h e   f l o o r . # 2
+		}};
+		f10 = new Floor("f10"){{
+			localizedName = "f10";
+			itemDrop = B11Items.item10;
+			playerUnmineable = true;
+		}};
+		f11 = new Floor("f11"){{
+			localizedName = "f11";
+			itemDrop = B11Items.item11;
+			playerUnmineable = true;
+		}};
+		// floors end
 		// distribution start
 		d000 = new StackConveyor("d000"){{
 			requirements(Category.distribution, with(B11Items.item00, 1));
