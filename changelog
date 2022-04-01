@@ -1,16 +1,19 @@
-(+) added some content(s)
-(-) removed some content(s)
+(+) 5 turrets
+(+) 2 conveyors
+(+) 4 tiles
+(+) routers & distributors
+(-) removed big router
 (*) reworked all turrets
 (*) reworked liquid0 & liquid1
 (*) reworked (& resprited) all production blocks
 (*) resprited & reworked power blocks
 (*) resprited containers & vaults
-
+(*) reworked walls
 
 to do list
 units (0/5)
 unit factories ( 0/5) (resprite)
-item distribution (2/8)
+item distribution (4/8)
 liquid distribution blocks ( 0/8)
 menders/overdrivers (t1, t2, t3...) (0/6)
 techtree
