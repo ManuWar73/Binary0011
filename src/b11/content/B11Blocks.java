@@ -44,14 +44,14 @@ import static mindustry.type.ItemStack.with;
 
 public class B11Blocks implements ContentList{
 	public static Block
-	// distribution
+	// distribution (d)
 	d0000, d0001,
 	// walls (w)
 	w000, w001, w010, w011, w100, w101,
 	// production (c)
 	c0000, c0001, c0010, c0011, c0100, c0101,
 	// power (p)
-	p0000, p0001, p0010, p0011, p0100,
+	p0000, p0001, p0010, p0011, p0100, p0101, p0110, p0111, p1000
 	// turret (t)
 	t0000, t0001, t0010, t0011, t0100, t0101, t0110, t0111, t1000, t1001, t1010, t1011, t1100, t1101, t1110, t1111, tNUMBER_OVERFLOW
 	;
@@ -250,6 +250,30 @@ public class B11Blocks implements ContentList{
 			maxNodes = 21;
 			size = 2;
 			laserRange = 18;
+		}};
+		p0101 = new Battery("p0101"){{
+			requirements(Category.power, with(B11Items.item00, 13, B11Items.item01, 12));
+			consumes.powerBuffered(8000f);
+			localizedName = "p0101";
+			baseExplosiveness = 2.5f;
+		}};
+		p0110 = new Battery("p0110"){{
+			requirements(Category.power, with(B11Items.item00, 39, B11Items.item01, 36));
+			consumes.powerBuffered(150000f);
+			localizedName = "p0110";
+			baseExplosiveness = 8f;
+		}};
+		p0111 = new SolarGenerator("p0111"){{
+			requirements(Category.power, with(B11Items.item00, 40, B11Items.item01 55, B11Items.item10, 8));
+			size = 2;
+			localizedName = "p0111";
+			powerProduction = 0.78f;
+		}};
+		p1000 = new SolarGenerator("p1000"){{
+			requirements(Category.power, with(B11Items.item00, 80, B11Items.item01, 110, B11Items.item10, 15));
+			size = 3;
+			localizedName = "p1000";
+			powerProduction = 1.59f;
 		}};
 		// power end
 		// turret start
