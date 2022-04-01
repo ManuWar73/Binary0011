@@ -45,7 +45,7 @@ import static mindustry.type.ItemStack.with;
 public class B11Blocks implements ContentList{
 	public static Block
 	// distribution (d)
-	d0000, d0001,
+	d000, d001,
 	// walls (w)
 	w000, w001, w010, w011, w100, w101,
 	// production (c)
@@ -60,18 +60,18 @@ public class B11Blocks implements ContentList{
 		final int x = 5;
 		final int y = 140;
 		// distribution start
-		d0000 = new StackConveyor("d0000"){{
+		d000 = new StackConveyor("d000"){{
 			requirements(Category.distribution, with(B11Items.item00, 1));
 			health = 10;
-			localizedName = "d0000";
+			localizedName = "d000";
 			speed = 5.5f / 60f;
 			itemCapacity = 2;
 		}};
-		d0001 = new StackConveyor("d0001"){{
+		d001 = new StackConveyor("d001"){{
 			requirements(Category.distribution, with(B11Items.item00, 2, B11Items.item01, 1));
 			health = 20;
-			localizedName = "d0001";
-			speed = 7.7f / 60f;
+			localizedName = "d001";
+			speed = 11f / 60f;
 			itemCapacity = 4;
 		}};
 		// distribution end
