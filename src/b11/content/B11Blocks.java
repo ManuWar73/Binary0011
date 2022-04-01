@@ -45,7 +45,7 @@ import static mindustry.type.ItemStack.with;
 public class B11Blocks implements ContentList{
 	public static Block
 	// distribution (d)
-	d000, d001,
+	d000, d001, d010, d011,
 	// walls (w)
 	w000, w001, w010, w011, w100, w101,
 	// production (c)
@@ -73,6 +73,19 @@ public class B11Blocks implements ContentList{
 			localizedName = "d001";
 			speed = 11f / 60f;
 			itemCapacity = 4;
+		}};
+		d010 = new Router("d010"){{
+			requirements(Category.distribution, with(B11Items.item00, 2));
+			speed = 0.01f;
+			localizedName = "d010";
+			health = 100;
+		}};
+		d011 = new Router("d011"){{
+			requirements(Category.distribution, with(B11Items.item00, 2));
+			speed = 0.01f;
+			localizedName = "d011";
+			size = 2;
+			health = 200;
 		}};
 		// distribution end
 		// walls start
