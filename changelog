@@ -1,16 +1,18 @@
-(+) added some new blocks
-(-) removed some blocks
+(+) added some content(s)
+(-) removed some content(s)
 (*) reworked all turrets
 (*) reworked liquid0 & liquid1
 (*) reworked (& resprited) all production blocks
 (*) resprited & reworked power blocks
+(*) resprited containers & vaults
 
 
 to do list
-units/unit factories (0/10, 0/5) (resprite)
-item distribution/liquid distribution blocks (2/8, 0/8)
-containers/vaults (resprite)
-menders/projectors (t1, t2, t3...) (0/6)
+units (0/5)
+unit factories ( 0/5) (resprite)
+item distribution (2/8)
+liquid distribution blocks ( 0/8)
+menders/overdrivers (t1, t2, t3...) (0/6)
 techtree
 
 
