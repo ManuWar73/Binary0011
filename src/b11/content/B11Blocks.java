@@ -141,14 +141,14 @@ public class B11Blocks implements ContentList{
 			health = 95 * x * x;
 			lightningChance = 0.5f;
 		}};
-		w100 = new Wall("w100"){{
+		w100 = new Wall("w101"){{
 			requirements(Category.defense, with(B11Items.item00, 6, B11Items.item01, 6));
 			localizedName = "w100";
 			size = 3;
 			health = 80 * x * x * x;
 			absorbLasers = true;
 		}};
-		w101 = new Wall("w101"){{
+		w101 = new Wall("w110"){{
 			requirements(Category.defense, with(B11Items.item01, 6, B11Items.item10, 6));
 			localizedName = "w101";
 			size = 3;
