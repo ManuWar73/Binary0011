@@ -3,6 +3,12 @@
 (+) 4 tiles
 (+) routers & distributors
 (-) removed big router
+(-) removed big junction
+(-) removed bridge conveyor
+(-) removed displan
+(-) removed status effect
+(-) removed techtree
+(-) removed units (& their factories
 (*) reworked all turrets
 (*) reworked liquid0 & liquid1
 (*) reworked (& resprited) all production blocks
