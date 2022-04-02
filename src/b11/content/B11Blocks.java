@@ -300,6 +300,7 @@ public class B11Blocks implements ContentList{
 			requirements(Category.power, with(B11Items.item00, 39, B11Items.item01, 36));
 			consumes.powerBuffered(150000f);
 			localizedName = "p0110";
+			size = 3;
 			baseExplosiveness = 8f;
 		}};
 		p0111 = new SolarGenerator("p0111"){{
