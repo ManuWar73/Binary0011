@@ -255,7 +255,7 @@ public class B11Blocks implements ContentList{
 			requirements(Category.power, with(B11Items.item00, 20, B11Items.item01, 20));
 			powerProduction = 1f;
 			localizedName = "p0000";
-			heatColor = Color.valueOf("ffffff77")
+			heatColor = Color.valueOf("ffffff77");
 			itemDuration = 180f;
 			ambientSound = Sounds.smelter;
 			ambientSoundVolume = 0.03f;
@@ -263,7 +263,7 @@ public class B11Blocks implements ContentList{
 		p0001 = new BurnerGenerator("p0001"){{
 			requirements(Category.power, with(B11Items.item00, 45, B11Items.item01, 30));
 			powerProduction = 1.75f;
-			heatColor = Color.valueOf("ffffff77")
+			heatColor = Color.valueOf("ffffff77");
 			localizedName = "p0001";
 			size = 2;
 			itemDuration = 190f;
@@ -274,7 +274,7 @@ public class B11Blocks implements ContentList{
 			requirements(Category.power, with(B11Items.item00, 60, B11Items.item01, 47, B11Items.item10, 20));
 			powerProduction = 2.5f;
 			localizedName = "p0010";
-			heatColor = Color.valueOf("ffffff77")
+			heatColor = Color.valueOf("ffffff77");
 			size = 3;
 			itemDuration = 190f;
 			ambientSound = Sounds.smelter;
