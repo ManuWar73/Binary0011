@@ -9,7 +9,7 @@ import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 
-import b11.content.*;
+// import b11.content.*;
 
 public class b11 extends Mod{
 	public b11(){
