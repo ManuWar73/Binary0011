@@ -36,5 +36,5 @@ public class B11Blocks implements ContentList{
 	public void load(){
 		
 	}
-}
+} */
 
