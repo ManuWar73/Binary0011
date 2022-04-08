@@ -1,4 +1,4 @@
-/*package b11.content;
+package b11.content;
 import arc.graphics.*;
 import arc.math.*;
 import arc.struct.*;
@@ -34,7 +34,22 @@ public class B11Blocks implements ContentList{
 	e0000, e0001;
 	@Override
 	public void load(){
-		
+		e0000 = new BurnerGenerator("e0000"){{
+			requirements(Category.power, with(Items.copper, 35, Items.lead, 25));
+			localizedName = "e0000";
+			powerProduction = 1.3f;
+			itemDuration = 180f;
+			ambientSound = Sounds.smelter;
+			ambientSoundVolume = 0.03f;
+		}};
+		e0001 = new BurnerGenerator("e0001"){{
+			requirements(Category.power, with(Items.copper, 70, Items.lead, 50, Items.silicon, 15));
+			localizedName = "e0001";
+			powerProduction = 2.72f;
+			size = 2;
+			itemDuration = 240f;
+			ambientSound = Sounds.smelter;
+			ambientSoundVolume = 0.03f;
+		}};
 	}
-} */
-
+}
