@@ -34,9 +34,11 @@ import java.util.*;
 import mindustry.content.*;
 public class B11Blocks implements ContentList{
 	public static Block
-	e0000, e0001;
+	e0000, e0001,
+	m0000, m0001;
 	@Override
 	public void load(){
+		// power
 		e0000 = new BurnerGenerator("e0000"){{
 			requirements(Category.power, with(Items.copper, 35, Items.lead, 25));
 			localizedName = "e0000";
@@ -53,6 +55,35 @@ public class B11Blocks implements ContentList{
 			itemDuration = 240f;
 			ambientSound = Sounds.smelter;
 			ambientSoundVolume = 0.03f;
+		}};
+		// effect
+		m0000 = new MendProjector("m0000"){{
+			requirements(Category.effect, with(Items.lead, 45, Items.copper, 35, Items.silicon, 20));
+			consumes.power(0.32f);
+			localizedName = "m0000";
+			details = "basically it's a block that damages another blocks";
+			size = 1;
+			reload = 125f;
+			range = 8 * 20f;
+			healPercent = -5f;
+			phaseBoost = 4f;
+			phaseRangeBoost = 35f;
+			health = 125;
+			consumes.item(Items.silicon).boost();
+		}};
+		m0001 = new MendProjector("m0001"){{
+			requirements(Category.effect, with(Items.lead, 90, Items.copper, 70, Items.silicon, 40, Items.titanium, 35));
+			consumes.power(0.32f);
+			localizedName = "m0001";
+			details = "m0000 MKII";
+			size = 2;
+			reload = 65f;
+			range = 8 * 45f;
+			healPercent = -20f;
+			phaseBoost = 5f;
+			phaseRangeBoost = 55f;
+			health = 250 * size * size;
+			consumes.item(Items.silicon).boost();
 		}};
 	}
 }
