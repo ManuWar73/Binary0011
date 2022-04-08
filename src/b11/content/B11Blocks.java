@@ -29,6 +29,9 @@ import mindustry.world.consumers.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
 import static mindustry.type.ItemStack.*;
+import b11.content.*;
+import java.util.*;
+import mindustry.content.*;
 public class B11Blocks implements ContentList{
 	public static Block
 	e0000, e0001;
