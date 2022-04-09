@@ -17,7 +17,7 @@ public class test extends PowerGenerator{
     public float powerProduction;
     public DrawBlock drawer = new DrawBlock(); //hm
     public Stat generationType = Stat.basePowerGeneration;
-    public PowerGenerator(String name){
+    public test(String name){
         super(name);
         sync = true;
         baseExplosiveness = 5f;
@@ -46,7 +46,7 @@ public class test extends PowerGenerator{
         return false;
     }
 
-    public class GeneratorBuild extends Building{
+    public class testBuild extends GeneratorBuild{
         public float generateTime;
         /** The efficiency of the producer. An efficiency of 1.0 means 100% */
         public float productionEfficiency = 0.0f;
