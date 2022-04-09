@@ -31,6 +31,7 @@ import mindustry.world.draw.DrawRotator;
 import mindustry.world.meta.*;
 import static mindustry.type.ItemStack.*;
 import b11.content.*;
+import b11.world.blocks.power.*;
 import java.util.*;
 import mindustry.content.*;
 public class B11Blocks implements ContentList{
@@ -56,7 +57,7 @@ public class B11Blocks implements ContentList{
 			ambientSound = Sounds.smelter;
 			ambientSoundVolume = 0.03f;
 		}};
-		e0010 = new PowerGenerator("e0010"){{
+		e0010 = new test("e0010"){{
 			requirements(Category.power, with(Items.copper, 45, Items.lead, 40, Items.silicon, 30));
 			localizedName = "e0010";
 			powerProduction = 1.5f;
