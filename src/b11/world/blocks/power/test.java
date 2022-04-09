@@ -11,7 +11,7 @@ import mindustry.gen.*;
 import mindustry.graphics.*;
 import mindustry.ui.*;
 import mindustry.world.meta.*;
-
+import mindustry.world.draw.*;
 public class test extends PowerGenerator{
     /** The amount of power produced per tick in case of an efficiency of 1.0, which represents 100%. */
     public float powerProduction;
