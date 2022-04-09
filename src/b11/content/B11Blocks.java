@@ -31,7 +31,6 @@ import mindustry.world.draw.DrawRotator;
 import mindustry.world.meta.*;
 import static mindustry.type.ItemStack.*;
 import b11.content.*;
-import b11.world.blocks.power.*;
 import java.util.*;
 import mindustry.content.*;
 public class B11Blocks implements ContentList{
