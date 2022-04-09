@@ -34,7 +34,7 @@ import java.util.*;
 import mindustry.content.*;
 public class B11Blocks implements ContentList{
 	public static Block
-	e0000, e0001;
+	e0000, e0001, e0010;
 	@Override
 	public void load(){
 		// power
