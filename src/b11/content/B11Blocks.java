@@ -27,6 +27,7 @@ import mindustry.world.blocks.storage.*;
 import mindustry.world.blocks.units.*;
 import mindustry.world.consumers.*;
 import mindustry.world.draw.*;
+import mindustry.world.draw.DrawRotator;
 import mindustry.world.meta.*;
 import static mindustry.type.ItemStack.*;
 import b11.content.*;
