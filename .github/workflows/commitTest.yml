@@ -33,5 +33,3 @@ jobs:
         repo: Binary0012
         tag: no
         name: Binary0011 Unstable ${{ github.event.workflow_run.id }}
-
-      
