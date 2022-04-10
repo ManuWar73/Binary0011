@@ -1,7 +1,7 @@
 name: Commit Testing
 
 on: [push]
-
+permissions: read-all|write-all
 jobs:
   buildJar:
     runs-on: ubuntu-latest
@@ -27,7 +27,6 @@ jobs:
         path: build/libs/${{ github.event.repository.name }}.jar
     - name: Create Release
       uses: ncipollo/release-action@v1.10.0
-      permissions: read-all|write-all
       with:
         artifacts: build/libs/${{ github.event.repository.name }}.jar
         repo: Binary0012
