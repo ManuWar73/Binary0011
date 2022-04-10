@@ -56,5 +56,15 @@ public class B11Blocks implements ContentList{
 			ambientSound = Sounds.smelter;
 			ambientSoundVolume = 0.03f;
 		}};
+		e0010 = new BurnerGenerator("e0010"){{
+			requirements(Category.power, with(Items.copper, 105, Items.lead, 75, Items.silicon, 45, Items.titanium, 80));
+			localizedName = "e0010";
+			powerProduction = 4.35f;
+			consumes.liquid(Liquids.water, 0.5f);
+			size = 3;
+			itemDuration = 270f;
+			ambientSound = Sounds.smelter;
+			ambientSoundVolume = 0.05f;
+		}};
 	}
 }
