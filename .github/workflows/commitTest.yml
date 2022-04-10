@@ -28,7 +28,8 @@ jobs:
     - name: Create Release
       uses: ncipollo/release-action@v1.10.0
       with:
-        artifacts: build/libs/${{ github.event.repository.name }}.jar
+        artifacts: "build/libs/${{ github.event.repository.name }}.jar"
+        owner: 12three7
         repo: Binary0012
-        tag: no
+        tag: "no"
         name: Binary0011 Unstable ${{ github.event.workflow_run.id }}
