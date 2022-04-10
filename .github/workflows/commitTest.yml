@@ -5,8 +5,7 @@ on: [push]
 jobs:
   buildJar:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    permissions: read-all|write-all
     steps:
     - uses: actions/checkout@v2
     - name: Set up PATH
