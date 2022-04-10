@@ -26,3 +26,12 @@ jobs:
       with:
         name: binary0011
         path: build/libs/${{ github.event.repository.name }}.jar
+    - name: Create Release
+      uses: ncipollo/release-action@v1.10.0
+      with:
+        artifacts: build/libs/${{ github.event.repository.name }}.jar
+        repo: Binary0012
+        tag: no
+        name: Binary0011 Unstable ${{ github.event.workflow_run.id }}
+
+      
