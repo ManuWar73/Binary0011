@@ -4,7 +4,6 @@ on: [push]
 jobs:
   buildJar:
     runs-on: ubuntu-latest
-    permissions: read-all
     steps:
     - uses: actions/checkout@v2
     - name: Set up PATH
@@ -25,12 +24,3 @@ jobs:
       with:
         name: binary0011
         path: build/libs/${{ github.event.repository.name }}.jar
-    - name: Create Release
-      uses: ncipollo/release-action@v1.10.0
-      permissions: write-all
-      with:
-        artifacts: "build/libs/${{ github.event.repository.name }}.jar"
-        owner: 12three7
-        repo: Binary0012
-        tag: "no"
-        name: Binary0011 Unstable ${{ github.event.workflow_run.id }}
