@@ -48,19 +48,19 @@ public class B11Blocks implements ContentList{
 			ambientSoundVolume = 0.03f;
 		}};
 		e0001 = new BurnerGenerator("e0001"){{
-			requirements(Category.power, with(Items.copper, 70, Items.lead, 50, Items.silicon, 15));
+			requirements(Category.power, with(Items.copper, 70, Items.lead, 50, Items.silicon, 35));
 			localizedName = "e0001";
-			powerProduction = 2.72f;
+			powerProduction = 8.16f;
 			size = 2;
 			itemDuration = 240f;
 			ambientSound = Sounds.smelter;
 			ambientSoundVolume = 0.03f;
 		}};
 		e0010 = new BurnerGenerator("e0010"){{
-			requirements(Category.power, with(Items.copper, 105, Items.lead, 75, Items.silicon, 45, Items.titanium, 80));
+			requirements(Category.power, with(Items.copper, 135, Items.lead, 95, Items.silicon, 75, Items.titanium, 80));
 			localizedName = "e0010";
-			powerProduction = 4.35f;
-			consumes.liquid(Liquids.water, 0.5f);
+			powerProduction = 21.75f;
+			consumes.liquid(Liquids.water, 0.75f);
 			size = 3;
 			itemDuration = 270f;
 			ambientSound = Sounds.smelter;
