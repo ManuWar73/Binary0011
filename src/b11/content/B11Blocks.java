@@ -35,7 +35,7 @@ import java.util.*;
 import mindustry.content.*;
 public class B11Blocks implements ContentList{
 	public static Block
-	e0000, e0001, e0010, e0011;
+	/* power */ e0000, e0001, e0010, e0011, e0100, e0101, e0110;
 	@Override
 	public void load(){
 		// power
@@ -75,6 +75,39 @@ public class B11Blocks implements ContentList{
 			itemDuration = 360f;
 			ambientSound = Sounds.smelter;
 			ambientSoundVolume = 0.06f;
+		}};
+		e0100 = new ThermalGenerator("e0100"){{
+			requirements(Category.power, with(Items.copper, 15, Items.graphite, 10, Items.lead, 5));
+			powerProduction = 1f;
+			localizedName = "e0100";
+			generateEffect = Fx.redgeneratespark;
+			effectChance = 0.011f;
+			size = 1;
+			floating = true;
+			ambientSound = Sounds.hum;
+			ambientSoundVolume = 0.03f;
+		}};
+		e0101 = new ThermalGenerator("e0101"){{
+			requirements(Category.power, with(Items.copper, 45, Items.graphite, 35, Items.lead, 20));
+			powerProduction = 2.2f;
+			localizedName = "e0101";
+			generateEffect = Fx.redgeneratespark;
+			effectChance = 0.011f;
+			size = 1;
+			floating = true;
+			ambientSound = Sounds.hum;
+			ambientSoundVolume = 0.04f;
+		}};
+		e0110 = new ThermalGenerator("e0110"){{
+			requirements(Category.power, with(Items.copper, 135, Items.graphite, 105, Items.lead, 80, Items.silicon, 50));
+			powerProduction = 3.8f;
+			localizedName = "e0110";
+			generateEffect = Fx.redgeneratespark;
+			effectChance = 0.011f;
+			size = 1;
+			floating = true;
+			ambientSound = Sounds.hum;
+			ambientSoundVolume = 0.04f;
 		}};
 	}
 }
