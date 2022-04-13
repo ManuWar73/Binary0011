@@ -1,27 +1,5 @@
-(+) 5 turrets
-(+) 2 conveyors
-(+) 4 tiles
-(+) routers & distributors
-(-) removed big router
-(-) removed big junction
-(-) removed bridge conveyor
-(-) removed displan
-(-) removed status effect
-(-) removed techtree
-(-) removed units (& their factories
-(*) reworked all turrets
-(*) reworked liquid0 & liquid1
-(*) reworked (& resprited) all production blocks
-(*) resprited & reworked power blocks
-(*) resprited containers & vaults
-(*) reworked walls
-
-to do list
-units (0/5)
-unit factories ( 0/5) (resprite)
-item distribution (4/8)
-liquid distribution blocks ( 0/8)
-menders/overdrivers (t1, t2, t3...) (0/6)
-techtree
-
-
+(-) removed all turrets
+(-) removed all distribution blocks
+(-) removed all items
+(-) ..........
+(-) all contents (blocks, items, etc.) from 0.0.5 are removed and replaced with new contents
