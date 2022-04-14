@@ -122,5 +122,19 @@ public class B11Blocks implements ContentList{
 			ambientSound = Sounds.hum;
 			ambientSoundVolume = 0.04f;
 		}};
+		e1000 = new DecayGenerator("e1000"){{
+			requirements(Category.power, with(Items.lead, 35, Items.silicon, 20, Items.plastanium, 15));
+			size = 1;
+			localizedName = "e1000";
+			powerProduction = 2.5f;
+			itemDuration = 60 * 7f;
+		}};
+		e1001 = new DecayGenerator("e1001"){{
+			requirements(Category.power, with(Items.lead, 140, Items.silicon, 70, Items.plastanium, 65, Items.thorium, 25));
+			size = 2;
+			localizedName = "e1001";
+			powerProduction = 5f;
+			itemDuration = 60 * 14f;
+		}};
 	}
 }
