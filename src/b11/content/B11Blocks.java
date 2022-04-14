@@ -37,7 +37,7 @@ public class B11Blocks implements ContentList{
 	public static Block
         // power
 	e0000, e0001, e0010, e0011, e0100, 
-	e0101, e0110, e0111;
+	e0101, e0110, e0111, e1000, e1001;
 	@Override
 	public void load(){
 		// power
