@@ -37,7 +37,9 @@ public class B11Blocks implements ContentList{
 	public static Block
         // power
 	e0000, e0001, e0010, e0011, e0100, 
-	e0101, e0110, e0111, e1000, e1001;
+	e0101, e0110, e0111, e1000, e1001,
+	// distribution
+	d0000;
 	@Override
 	public void load(){
 		// power
@@ -135,6 +137,14 @@ public class B11Blocks implements ContentList{
 			localizedName = "e1001";
 			powerProduction = 5f;
 			itemDuration = 60 * 14f;
+		}};
+		// distribution
+		d0000 = new StackConveyor("d0000"){{
+			requirements(Category.distribution, with(Items.titanium, 1));
+			localizedName = "d0000";
+			health = 50;
+			speed = 3f / 60f;
+			itemCapacity = 10;
 		}};
 	}
 }
