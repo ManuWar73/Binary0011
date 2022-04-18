@@ -147,6 +147,6 @@ public class B11Blocks implements ContentList{
 			itemCapacity = 10;
 		}};
 		d0001 = new Router("d0001"){{requirements(Category.distribution, with(Items.titanium, 1));localizedName = "d0001";health = 200;speed = 0.2f;}};
-		d0010 = new Router("d0010"){{requirements(Category.distribution, with(Items.titanium, 1));localizedName = "d0010";health = 150;speed = 0.2f;capacity = 20;}};
+		d0010 = new Router("d0010"){{requirements(Category.distribution, with(Items.titanium, 1));localizedName = "d0010";health = 150;speed = 0.2f;itemCapacity = 20;}};
 	}
 }
