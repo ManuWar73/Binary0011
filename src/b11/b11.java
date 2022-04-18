@@ -36,6 +36,6 @@ public class b11 extends Mod{
 //		new B11Units().load();
 		new B11Blocks().load();
 //		new B11Planets().load();
-		new B11TechTree().load();
+		new B11Tree().load();
 	}
 }
