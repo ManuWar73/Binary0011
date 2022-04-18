@@ -78,17 +78,7 @@ public class B11Tree implements ContentList {
 
 	@Override
 	public void load() {
-		extendNode(Blocks.steamGenerator, () -> {
-node(B11Blocks.e0000, () -> {
-node(B11Blocks.e0001, () -> {
-node(B11Blocks.e0010, () -> {node(B11Blocks.e0011);
-});
-});
-});});
-		extendNode(Blocks.thermalGenerator, () -> {
-node(B11Blocks.e0100, () -> {node(B11Blocks.e0101, () -> {node(B11Blocks.e0110, () -> {node(B11Blocks.e0111);});});});});
-
-
-
+		extendNode(Blocks.steamGenerator, () -> {node(B11Blocks.e0000, () -> {node(B11Blocks.e0001, () -> {node(B11Blocks.e0010, () -> {node(B11Blocks.e0011);});});});});
+		extendNode(Blocks.thermalGenerator, () -> {node(B11Blocks.e0100, () -> {node(B11Blocks.e0101, () -> {node(B11Blocks.e0110, () -> {node(B11Blocks.e0111);});});});});
 	}
 }
