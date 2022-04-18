@@ -39,7 +39,7 @@ public class B11Blocks implements ContentList{
 	e0000, e0001, e0010, e0011, e0100, 
 	e0101, e0110, e0111, e1000, e1001,
 	// distribution
-	d0000;
+	d0000, d0001, d0010;
 	@Override
 	public void load(){
 		// power
@@ -146,5 +146,7 @@ public class B11Blocks implements ContentList{
 			speed = 3f / 60f;
 			itemCapacity = 10;
 		}};
+		d0001 = new Router("d0001"){{requirements(Category.distribution, with(Items.titanium, 1));localizedName = "d0001";health = 200;speed = 0.2f;}};
+		d0010 = new Router("d0010"){{requirements(Category.distribution, with(Items.titanium, 1));localizedName = "d0010";health = 150;speed = 0.2f;capacity = 20;}};
 	}
 }
