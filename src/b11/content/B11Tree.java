@@ -11,7 +11,7 @@ import mindustry.type.ItemStack;
 public class B11Tree implements ContentList {
 	static TechTree.TechNode context = null;
 	private static void extendNode (UnlockableContent parent, Runnable children) {context = TechTree.all.find(t -> t.content == parent);children.run();}
-	private static void node (UnlockableContent content, ItemStack[] requirements, Seq <Objective> objectives, Runnable children) {TechNode node = new TechNode(context, content, requirements);if (objectives != null) node.objectives = objectives;TechNode prev = context;content = node;children.run();context = prev;}
+	private static void node (UnlockableContent content, ItemStack[] requirements, Seq <Objective> objectives, Runnable children) {TechNode node = new TechNode(context, content, requirements);if (objectives != null) node.objectives = objectives;TechNode prev = context;context = node;children.run();context = prev;}
 	private static void node (UnlockableContent content, ItemStack[] requirements, Seq <Objective> objectives) {node(content, requirements, objectives, () -> {});}
 	private static void node (UnlockableContent content, Seq <Objective> objectives) {node(content, content.researchRequirements(), objectives, () -> {});}
 	private static void node (UnlockableContent content, ItemStack[] requirements) {node(content, requirements, Seq.with(), () -> {});}
