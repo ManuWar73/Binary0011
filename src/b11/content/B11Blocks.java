@@ -10,7 +10,7 @@ public class B11Blocks implements ContentList{
 	// distribution
 	d0000, d0001, d0010,
 	// turret
-	t0000, t0000;
+	t0000, t0001;
 	@Override
 	public void load(){
 		// power
