@@ -32,7 +32,7 @@ public class b11 extends Mod{
 //		new B11Status().load();
 //	 	new B11Liquids().load();
 //		new B11Items().load();
-//		new B11Bullets().load();
+		new B11Bullets().load();
 //		new B11Units().load();
 		new B11Blocks().load();
 //		new B11Planets().load();
