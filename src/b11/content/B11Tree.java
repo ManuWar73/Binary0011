@@ -15,5 +15,7 @@ public class B11Tree implements ContentList {static TechTree.TechNode context = 
 		extendNode(Blocks.rtgGenerator, () -> {node(B11Blocks.e1000, () -> {node(B11Blocks.e1001);});});
 		// distribution
                 extendNode(Blocks.plastaniumConveyor, () -> {node(B11Blocks.d0000, () -> {node(B11Blocks.d0001,() -> {node(B11Blocks.d0010);});});});
+		// turret
+		extendNode(Blocks.duo, () -> {node(B11Blocks.t0000, () -> {node(B11Blocks.t0001, () -> {node(B11Blocks.t0010, () -> {node(B11Blocks.t0011, () -> {node(B11Blocks.t0100);});});});});});
 	}
 }
