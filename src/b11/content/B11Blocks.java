@@ -10,7 +10,7 @@ public class B11Blocks implements ContentList{
 	// distribution
 	d0000, d0001, d0010,
 	// turret
-	t0000, t0001;
+	t0000, t0001, t0010, t0011;
 	@Override
 	public void load(){
 		// power
@@ -138,7 +138,7 @@ public class B11Blocks implements ContentList{
 			rotateSpeed = 10f;
 		}};
 		t0001 = new ItemTurret("t0001"){{
-			requirements(Category.turret, with(Items.copper, 28), true);
+			requirements(Category.turret, with(Items.copper, 40, Items.lead, 15), true);
 			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3);
 			spread = 4.5f;
 			shots = 2;
@@ -149,6 +149,36 @@ public class B11Blocks implements ContentList{
 			shootCone = 15f;
 			ammoUseEffect = Fx.casing2;
 			health = 300;
+			inaccuracy = 0f;
+			rotateSpeed = 12f;
+		}};
+		t0010 = new ItemTurret("t0010"){{
+			requirements(Category.turret, with(Items.copper, 45, Items.lead, 20), true);
+			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3, Items.surgeAlloy, lightningbullet1);
+			spread = 4.5f;
+			shots = 2;
+			localizedName = "t0010";
+			alternate = true;
+			reloadTime = 18f;
+			range = 192;
+			shootCone = 15f;
+			ammoUseEffect = Fx.casing2;
+			health = 350;
+			inaccuracy = 0f;
+			rotateSpeed = 12f;
+		}};
+		t0011 = new ItemTurret("t0011"){{
+			requirements(Category.turret, with(Items.copper, 45, Items.lead, 15 Items.graphite, 18), true);
+			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3, Items.surgeAlloy, laserbullet1);
+			spread = 4.5f;
+			shots = 2;
+			localizedName = "t0010";
+			alternate = true;
+			reloadTime = 18f;
+			range = 192;
+			shootCone = 15f;
+			ammoUseEffect = Fx.casing2;
+			health = 350;
 			inaccuracy = 0f;
 			rotateSpeed = 12f;
 		}};
