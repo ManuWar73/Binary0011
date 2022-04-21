@@ -182,6 +182,18 @@ public class B11Blocks implements ContentList{
 			inaccuracy = 0f;
 			rotateSpeed = 12f;
 		}};
+		/*hail = new ItemTurret("hail"){{
+			requirements(Category.turret, with(Items.copper, 40, Items.graphite, 17));
+			ammo(Items.graphite, Bullets.artilleryDense, Items.silicon, Bullets.artilleryHoming,Items.pyratite, Bullets.artilleryIncendiary);
+			targetAir = false;
+			reloadTime = 60f;
+            recoilAmount = 2f;
+            range = 235f;
+           
+            shootCone = 10f;
+            health = 260;
+            shootSound = Sounds.bang;
+        }};*/
 		// end turret
 	}
 }
