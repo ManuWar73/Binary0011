@@ -13,6 +13,7 @@ public class B11Tree implements ContentList {static TechTree.TechNode context = 
 		extendNode(Blocks.steamGenerator, () -> {node(B11Blocks.e0000, () -> {node(B11Blocks.e0001, () -> {node(B11Blocks.e0010, () -> {node(B11Blocks.e0011);});});});});
 		extendNode(Blocks.thermalGenerator, () -> {node(B11Blocks.e0100, () -> {node(B11Blocks.e0101, () -> {node(B11Blocks.e0110, () -> {node(B11Blocks.e0111);});});});});
 		extendNode(Blocks.rtgGenerator, () -> {node(B11Blocks.e1000, () -> {node(B11Blocks.e1001);});});
-                extendNode(Blocks.plastaniumConveyor, () -> {node(B11Blocks.d0000);});
+		// distribution
+                extendNode(Blocks.plastaniumConveyor, () -> {node(B11Blocks.d0000, () -> {node(B11Blocks.d0001,() -> {node(B11Blocks.d0010);});});});
 	}
 }
