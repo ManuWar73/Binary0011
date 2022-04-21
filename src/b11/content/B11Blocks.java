@@ -10,7 +10,7 @@ public class B11Blocks implements ContentList{
 	// distribution
 	d0000, d0001, d0010,
 	// turret
-	t0000, t0001, t0010, t0011;
+	t0000, t0001, t0010, t0011, t0100;
 	@Override
 	public void load(){
 		// power
@@ -168,7 +168,7 @@ public class B11Blocks implements ContentList{
 			rotateSpeed = 12f;
 		}};
 		t0011 = new ItemTurret("t0011"){{
-			requirements(Category.turret, with(Items.copper, 45, Items.lead, 25, Items.graphite, 18), true);
+			requirements(Category.turret, with(Items.copper, 45, Items.graphite, 18), true);
 			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3, Items.surgeAlloy, B11Bullets.laserbullet1);
 			spread = 4.5f;
 			shots = 2;
@@ -182,18 +182,18 @@ public class B11Blocks implements ContentList{
 			inaccuracy = 0f;
 			rotateSpeed = 12f;
 		}};
-		/*hail = new ItemTurret("hail"){{
-			requirements(Category.turret, with(Items.copper, 40, Items.graphite, 17));
-			ammo(Items.graphite, Bullets.artilleryDense, Items.silicon, Bullets.artilleryHoming,Items.pyratite, Bullets.artilleryIncendiary);
+		t0100 = new ItemTurret("t0100"){{
+			requirements(Category.turret, with(Items.copper, 48, Items.graphite, 20));
+			ammo(Items.silicon, B11Bullets.artillerybullet1, Items.blastCompound, B11Bullets.artillerybullet2);
 			targetAir = false;
+			localizedName = "t0100";
 			reloadTime = 60f;
-            recoilAmount = 2f;
-            range = 235f;
-           
-            shootCone = 10f;
-            health = 260;
-            shootSound = Sounds.bang;
-        }};*/
+			recoilAmount = 2f;
+			range = 248f;
+			shootCone = 10f;
+			health = 260;
+			shootSound = Sounds.bang;
+		}};
 		// end turret
 	}
 }
