@@ -154,7 +154,7 @@ public class B11Blocks implements ContentList{
 		}};
 		t0010 = new ItemTurret("t0010"){{
 			requirements(Category.turret, with(Items.copper, 45, Items.lead, 20), true);
-			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3, Items.surgeAlloy, lightningbullet1);
+			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3, Items.surgeAlloy, B11Bullets.lightningbullet1);
 			spread = 4.5f;
 			shots = 2;
 			localizedName = "t0010";
@@ -169,7 +169,7 @@ public class B11Blocks implements ContentList{
 		}};
 		t0011 = new ItemTurret("t0011"){{
 			requirements(Category.turret, with(Items.copper, 45, Items.lead, 25, Items.graphite, 18), true);
-			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3, Items.surgeAlloy, laserbullet1);
+			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3, Items.surgeAlloy, B11Bullets.laserbullet1);
 			spread = 4.5f;
 			shots = 2;
 			localizedName = "t0010";
