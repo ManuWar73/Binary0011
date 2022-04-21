@@ -168,7 +168,7 @@ public class B11Blocks implements ContentList{
 			rotateSpeed = 12f;
 		}};
 		t0011 = new ItemTurret("t0011"){{
-			requirements(Category.turret, with(Items.copper, 45, Items.lead, 15 Items.graphite, 18), true);
+			requirements(Category.turret, with(Items.copper, 45, Items.lead, 25, Items.graphite, 18), true);
 			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3, Items.surgeAlloy, laserbullet1);
 			spread = 4.5f;
 			shots = 2;
