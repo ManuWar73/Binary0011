@@ -109,6 +109,7 @@ public class B11Blocks implements ContentList{
 			powerProduction = 5f;
 			itemDuration = 60 * 14f;
 		}};
+		// end power
 		// distribution
 		d0000 = new StackConveyor("d0000"){{
 			requirements(Category.distribution, with(Items.titanium, 1));
@@ -118,6 +119,39 @@ public class B11Blocks implements ContentList{
 			itemCapacity = 10;
 		}};
 		d0001 = new Router("d0001"){{requirements(Category.distribution, with(Items.titanium, 1));localizedName = "d0001";health = 200;speed = 0.2f;}};
-		d0010 = new Router("d0010"){{requirements(Category.distribution, with(Items.titanium, 1));localizedName = "d0010";health = 150;speed = 0.2f;itemCapacity = 20;}};
+		d0010 = new Junction("d0010"){{requirements(Category.distribution, with(Items.titanium, 1));localizedName = "d0010";health = 150;speed = 0.2f;itemCapacity = 20;}};
+		// end distribution
+		// turret
+		t0000 = new ItemTurret("t0000"){{
+			requirements(Category.turret, with(Items.copper, 28), true);
+			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2);
+			spread = 4.5f;
+			shots = 1;
+			localizedName = "t0000";
+			reloadTime = 24f;
+			restitution = 0.03f;
+			range = 128;
+			shootCone = 15f;
+			ammoUseEffect = Fx.casing1;
+			health = 250;
+			inaccuracy = 0f;
+			rotateSpeed = 10f;
+		}};
+		t0001 = new ItemTurret("t0001"){{
+			requirements(Category.turret, with(Items.copper, 28), true);
+			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3);
+			spread = 4.5f;
+			shots = 2;
+			localizedName = "t0001";
+			alternate = true;
+			reloadTime = 24f;
+			range = 160;
+			shootCone = 15f;
+			ammoUseEffect = Fx.casing2;
+			health = 300;
+			inaccuracy = 0f;
+			rotateSpeed = 12f;
+		}};
+		// end turret
 	}
 }
