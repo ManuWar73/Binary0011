@@ -14,7 +14,7 @@ public class B11Bullets implements ContentList {
 	// pawer
 	lightningbullet1, laserbullet1, laserbullet2, biglaserbullet,
 	// artillery
-	artillerybullet1, artillerybullet2,
+	artillerybullet1, artillerybullet2, artillerybullet3,
 	// missile
 	missile1, missile2,
 	// flak
@@ -127,6 +127,20 @@ public class B11Bullets implements ContentList {
 			reloadMultiplier = 1.2f;
 			ammoMultiplier = 3f;
 			status = StatusEffects.blasted;
+		}};
+		artillerybullet3 = new ArtilleryBulletType(3f, 20, "shell"){{
+			hitEffect = Fx.flakExplosion;
+			knockback = 0.8f;
+			lifetime = 80f * 4.5f;
+			width = height = 11f;
+			collidesTiles = false;
+			splashDamageRadius = 100f * 8f;
+			splashDamage = 85f;
+			reloadMultiplier = 1.25f;
+			ammoMultiplier = 3f;
+			status = StatusEffects.unmoving;
+			homingPower = 100;
+			homingRange = 240;
 		}};
 		// artillery end
 		// missile start
