@@ -10,19 +10,9 @@ public class B11Blocks implements ContentList{
 	// distribution
 	d0000, d0001, d0010,
 	// turret
-	t0000, t0001, t0010, t0011, t0100, t0101,
-	// experimental
-	w0000;
+	t0000, t0001, t0010, t0011, t0100, t0101;
 	@Override
 	public void load(){
-		// experimental
-		w0000 = new BulletWall("w0000"){{
-			requirements(Category.defense, with(Items.copper, 1));
-		 	localizedName = "w0000"; // sebenernya ini gak terlalu berguna, tapi b o d o a m a t l a h.
-			shots = 5;
-			health = 1;
-			bullet = Bullets.standardHoming;
-		}};
 		// power
 		e0000 = new BurnerGenerator("e0000"){{
 			requirements(Category.power, with(Items.copper, 35, Items.lead, 25));
