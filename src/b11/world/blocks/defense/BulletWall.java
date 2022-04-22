@@ -20,7 +20,6 @@ public class BulletWall extends Wall {
 		@Override
 		public void onDestroyed() {
 			bullet.create(this, this.team, x, y, Mathf.random(0, 4) * 90f);
-			Thread.sleep(500);
 			bullet.create(this, this.team, x, y, Mathf.random(0, 4) * 90f);
 			super.onDestroyed();
 		}
