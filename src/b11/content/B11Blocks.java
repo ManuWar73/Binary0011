@@ -1,7 +1,7 @@
 package b11.content;
 /* arc */ import arc.graphics.*;import arc.math.*;import arc.struct.*;
 /* mindus */ import mindustry.*;import mindustry.ctype.*;import mindustry.entities.*;import mindustry.entities.bullet.*;import mindustry.gen.*;import mindustry.graphics.*;import mindustry.type.*;import mindustry.world.*;import mindustry.world.blocks.*;import mindustry.world.blocks.campaign.*;import mindustry.world.blocks.defense.*;import mindustry.world.blocks.defense.turrets.*;import mindustry.world.blocks.distribution.*;import mindustry.world.blocks.environment.*;import mindustry.world.blocks.legacy.*;import mindustry.world.blocks.liquid.*;import mindustry.world.blocks.logic.*;import mindustry.world.blocks.payloads.*;import mindustry.world.blocks.power.*;import mindustry.world.blocks.production.*;import mindustry.world.blocks.sandbox.*;import mindustry.world.blocks.storage.*;import mindustry.world.blocks.units.*;import mindustry.world.consumers.*;import mindustry.world.draw.*;import mindustry.world.draw.DrawRotator;import mindustry.world.meta.*;import static mindustry.type.ItemStack.*;import mindustry.content.*;
-/* binary */ import b11.content.*;
+/* binary */ import b11.content.*;import b11.world.blocks.defense.*;
 public class B11Blocks implements ContentList{
 	public static Block
         // power
@@ -10,9 +10,18 @@ public class B11Blocks implements ContentList{
 	// distribution
 	d0000, d0001, d0010,
 	// turret
-	t0000, t0001, t0010, t0011, t0100, t0101;
+	t0000, t0001, t0010, t0011, t0100, t0101,
+	// experimental
+	w0000;
 	@Override
 	public void load(){
+		// experimental
+		w0000 = new BulletWall("w0000"){{
+		 	localizedName = "w0000"; // sebenernya ini gak terlalu berguna, tapi b o d o a m a t l a h.
+			shots = 5;
+			health = 1;
+			bullet = Bullets.standardHoming;
+		}};
 		// power
 		e0000 = new BurnerGenerator("e0000"){{
 			requirements(Category.power, with(Items.copper, 35, Items.lead, 25));
