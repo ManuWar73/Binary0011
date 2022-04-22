@@ -17,6 +17,7 @@ public class B11Blocks implements ContentList{
 	public void load(){
 		// experimental
 		w0000 = new BulletWall("w0000"){{
+			requirements(Category.defense, with(Items.copper, 1));
 		 	localizedName = "w0000"; // sebenernya ini gak terlalu berguna, tapi b o d o a m a t l a h.
 			shots = 5;
 			health = 1;
