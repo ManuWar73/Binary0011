@@ -5,9 +5,14 @@ package b11.world.blocks.defense;
 /** a wall that ""shoots"" bullets when destroyed. in short, it's a hybrid wall-turret. */
 public class BulletWall extends Wall {
 	public BulletType bullet = Bullets.standardCopper;
-	public float range = 240f;
+	public int health = 0;
+	public int shots = 3;
 	public BulletWall(String name) {
 		super(name);
+		solid = destructible = true;
+	 	group = BlockGroup.walls;
+	 	buildCostMultiplier = 3f; // ini wall mahal, naikin cost multiplier jadi > 3 bisa bikin wall ini kemahalan wkwkw
+	 	canOverdrive = drawDisabled = false;
 	}
 
 	@Override
@@ -19,8 +24,10 @@ public class BulletWall extends Wall {
 	public class BulletWallBuild extends WallBuild {
 		@Override
 		public void onDestroyed() {
-			bullet.create(this, this.team, x, y, Mathf.random(0, 4) * 90f);
-			bullet.create(this, this.team, x, y, Mathf.random(0, 4) * 90f);
+		 	for(int no = 0;i <= shots;i++){
+				 bullet.create(this, this.team, x, y, Mathf.random(0, 4) * 90f);
+				 bullet.create(this, this.team, x, y, Mathf.random(0, 4) * 90f);
+			};
 			super.onDestroyed();
 		}
 	}
