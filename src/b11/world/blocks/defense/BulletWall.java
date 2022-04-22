@@ -7,6 +7,7 @@ public class BulletWall extends Wall {
 	public BulletType bullet = Bullets.standardCopper;
 	public int health = 0;
 	public int shots = 3;
+	public bulletrange(int lt, int s){bullet.lifetime = this.lt; bullet.speed = this.s;}
 	public BulletWall(String name) {
 		super(name);
 		solid = destructible = true;
