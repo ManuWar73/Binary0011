@@ -209,7 +209,7 @@ public class B11Blocks implements ContentList{
 	 	 	size = 1;
 	 	 	health = 300;
 	 	 	shootSound = Sounds.laser;
-		};
+		}};
 		// end turret
 	}
 }
