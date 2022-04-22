@@ -204,7 +204,6 @@ public class B11Blocks implements ContentList{
 	 	 	targetAir = true;
 	 	 	range = 128f;
 	 	 	shootEffect = Fx.lightningShoot;
-	 	 	heatColor = Color.red;
 	 	 	recoilAmount = 1f;
 	 	 	size = 1;
 	 	 	health = 300;
