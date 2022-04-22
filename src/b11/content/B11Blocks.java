@@ -10,7 +10,7 @@ public class B11Blocks implements ContentList{
 	// distribution
 	d0000, d0001, d0010,
 	// turret
-	t0000, t0001, t0010, t0011, t0100;
+	t0000, t0001, t0010, t0011, t0100, t0101;
 	@Override
 	public void load(){
 		// power
@@ -118,7 +118,7 @@ public class B11Blocks implements ContentList{
 			speed = 3f / 60f;
 			itemCapacity = 10;
 		}};
-		d0001 = new Router("d0001"){{requirements(Category.distribution, with(Items.titanium, 1));localizedName = "d0001";health = 200;speed = 0.2f;}};
+		d0001 = new Router("d0001"){{requirements(Category.distribution, with(Items.titanium, 1));localizedName = "d0001";health = 200;speed = 0.2f;}}; // compact™
 		d0010 = new Junction("d0010"){{requirements(Category.distribution, with(Items.titanium, 1));localizedName = "d0010";health = 150;speed = 0.2f;itemCapacity = 20;}};
 		// end distribution
 		// turret
@@ -154,7 +154,7 @@ public class B11Blocks implements ContentList{
 		}};
 		t0010 = new ItemTurret("t0010"){{
 			requirements(Category.turret, with(Items.copper, 45, Items.lead, 20), true);
-			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3, Items.surgeAlloy, B11Bullets.lightningbullet1);
+			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3);
 			spread = 4.5f;
 			shots = 2;
 			localizedName = "t0010";
@@ -169,7 +169,7 @@ public class B11Blocks implements ContentList{
 		}};
 		t0011 = new ItemTurret("t0011"){{
 			requirements(Category.turret, with(Items.copper, 45, Items.graphite, 18), true);
-			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3, Items.surgeAlloy, B11Bullets.laserbullet1);
+			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3);
 			spread = 4.5f;
 			shots = 2;
 			localizedName = "t0010";
@@ -194,6 +194,22 @@ public class B11Blocks implements ContentList{
 			health = 260;
 			shootSound = Sounds.bang;
 		}};
+		t0101 = new PowerTurret("t0101"){{
+			requirements(Category.turret, with(Items.copper, 65, Items.lead, 35));
+			shootType = B11Bullets.laserbullet1;
+			reloadTime = 60f;
+			shootCone = 40f;
+			rotateSpeed = 8f;
+			powerUse = 3.5f;
+	 	 	targetAir = true;
+	 	 	range = 128f;
+	 	 	shootEffect = Fx.lightningShoot;
+	 	 	heatColor = Color.red;
+	 	 	recoilAmount = 1f;
+	 	 	size = 1;
+	 	 	health = 300;
+	 	 	shootSound = Sounds.laser;
+		};
 		// end turret
 	}
 }
