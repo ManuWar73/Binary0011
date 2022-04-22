@@ -18,7 +18,6 @@ public class BulletWall extends Wall {
 	@Override
 	public void setStats() {
 		super.setStats();
-		stats.add(Stat.bullet, bullet);
 		stats.add(Stat.range, bullet.lifetime * bullet.speed/8, StatUnit.blocks);
 	}
 	public class BulletWallBuild extends WallBuild {
