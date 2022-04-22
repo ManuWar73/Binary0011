@@ -1,8 +1,9 @@
 /** nanti gw isi */
 /** a wall that can absorb enemy bullets and heals itself. hybrid mender-wall. */
-/* package b11.world.blocks.defense;
-/* arc */ import arc.Core;import arc.graphics.*;import arc.graphics.g2d.*; import arc.math.*;
-/* mindus */ import mindustry.content.*; import mindustry.world.blocks.defense.*;import mindustry.entities.bullet.*;import mindustry.game.EventType.*;import mindustry.gen.*;import mindustry.graphics.*;import mindustry.type.*;import mindustry.ui.*;import mindustry.world.consumers.*;import mindustry.world.meta.*;
+/*
+package b11.world.blocks.defense;
+import arc.Core;import arc.graphics.*;import arc.graphics.g2d.*; import arc.math.*;
+import mindustry.content.*; import mindustry.world.blocks.defense.*;import mindustry.entities.bullet.*;import mindustry.game.EventType.*;import mindustry.gen.*;import mindustry.graphics.*;import mindustry.type.*;import mindustry.ui.*;import mindustry.world.consumers.*;import mindustry.world.meta.*;
 public class BulletWall extends Wall {
 	public BulletType bullet = Bullets.standardCopper;
 	public int health = 0;
