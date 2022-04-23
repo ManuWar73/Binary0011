@@ -33,8 +33,8 @@ public class AbsorbWall extends Wall {
 			}else{
 	 	 	 	health -= bullet.damage;
 				damagecounter += 2;
+				return true;
 			}
-			return true;
 		}
 	}
 }
