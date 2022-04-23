@@ -16,12 +16,11 @@ public class AbsorbWall extends Wall {
 		super.setStats();	
 	}
 	public class AbsorbWallBuild extends WallBuild {
-		int health2 = (float) health; // aneh
 		int damagecounter = 0;
 		public boolean damaged(){
 			damagecounter += 2;
 			if(damagecounter == 100){
-	 	 		 health += health2;
+	 	 		 health += 99999999;
 			};
 		}
 	}
