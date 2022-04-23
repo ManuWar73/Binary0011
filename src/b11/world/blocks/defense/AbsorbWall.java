@@ -18,7 +18,7 @@ public class AbsorbWall extends Wall {
 	@Override
 	public void setBars(){
 		super.setBars();
-		bars.add("counter", (AbsorbWallBuild entity) -> new Bar("bar.damagecounter", Pal.lightOrange, () -> entity.damagecounter));
+		bars.add("bar", (AbsorbWallBuild entity) -> new Bar("damagecounter", Pal.lightOrange, () -> entity.AbsorbWallBuild));
 	}
 	public class AbsorbWallBuild extends WallBuild {
 		int damagecounter = 0;
