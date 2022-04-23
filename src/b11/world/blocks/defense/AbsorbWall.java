@@ -3,7 +3,8 @@ package b11.world.blocks.defense;
 import arc.Core;import arc.graphics.*;import arc.graphics.g2d.*; import arc.math.*;
 import mindustry.content.*; import mindustry.world.blocks.defense.*;import mindustry.entities.bullet.*;import mindustry.game.EventType.*;import mindustry.gen.*;import mindustry.graphics.*;import mindustry.type.*;import mindustry.ui.*;import mindustry.world.consumers.*;import mindustry.world.meta.*;
 public class AbsorbWall extends Wall {
-	public int health = 1237;
+	super(health);
+	//public int health = 1237;
 	public int heal = 1000;
 	public AbsorbWall(String name) {
 		super(name);
