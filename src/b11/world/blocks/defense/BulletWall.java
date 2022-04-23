@@ -6,7 +6,6 @@ a wall that ""shoots"" bullets when destroyed. a hybrid wall-turret.
 */
 public class BulletWall extends Wall {
 	public BulletType bullet = Bullets.standardCopper;
-	public int health = 0;
 	public int shots = 3;
 	public BulletWall(String name) {
 		super(name);
