@@ -18,7 +18,6 @@ public class B11Blocks implements ContentList{
 		experimental = new AbsorbWall("experimental"){{
 			requirements(Category.defense, with(Items.copper, 1));
 	 	 	health = 50;
-			BuildVisibility = BuildVisibility.sandboxOnly;
 		}};
 		// power
 		e0000 = new BurnerGenerator("e0000"){{
