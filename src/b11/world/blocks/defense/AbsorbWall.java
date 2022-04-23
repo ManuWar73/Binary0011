@@ -1,4 +1,4 @@
-/** a wall that can absorb enemy bullets and heals itself. hybrid mender-wall. */
+/** no description. */
 package b11.world.blocks.defense;
 import arc.Core;import arc.graphics.*;import arc.graphics.g2d.*; import arc.math.*;
 import mindustry.content.*; import mindustry.world.blocks.defense.*;import mindustry.entities.bullet.*;import mindustry.game.EventType.*;import mindustry.gen.*;import mindustry.graphics.*;import mindustry.type.*;import mindustry.ui.*;import mindustry.world.consumers.*;import mindustry.world.meta.*;
@@ -23,16 +23,15 @@ public class AbsorbWall extends Wall {
 	public class AbsorbWallBuild extends WallBuild {
 		int damagecounter = 0;
 		@Override
-		public boolean damaged(){
-			damagecounter += 2;
+		public boolean collision (Bullet bullet){
 			if(damagecounter == 100){
 	 	 		health += heal;
 				damagecounter = 0;
 			}else{
-	 	 	 	health -= health/10;
+				damagecounter += 2;
+				health -= bullet.damage;
 			}
-		 	return true;
-			//return false;
+			return true;
 		}
 	}
 }
