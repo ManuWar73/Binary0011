@@ -5,7 +5,7 @@ package b11.content;
 public class B11Blocks implements ContentList{
 	public static Block
 	// experimental
-	w0000,
+	w0000, w0001,
         // power
 	e0000, e0001, e0010, e0011, e0100, e0101,
 	e0110, e0111, e1000, e1001,
@@ -18,8 +18,15 @@ public class B11Blocks implements ContentList{
 		w0000 = new BulletWall("w0000"){{
 			requirements(Category.defense, with(Items.copper, 999));
 	 	 	health = 5000;
-			shots = 6;
-			bullet = B11Bullets.biglaserbullet;
+			localizedName = "INI BULLET WALL";
+			shots = 2;
+			bullet = B11Bullets.basicbullet3;
+		}};
+		w0001 = new AbsorbWall("w0001"){{
+			requirements(Category.defense, with(Items.lead, 999));
+	 	 	health = 5000;
+			localizedName = "INI ABSORB WALL";
+			heal = 100;
 		}};
 		// power
 		e0000 = new BurnerGenerator("e0000"){{
