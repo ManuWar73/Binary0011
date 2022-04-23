@@ -6,8 +6,8 @@ public class AbsorbWall extends Wall {
 	public int health = 1237;
 	public int heal = 1000;
 	public AbsorbWall(String name) {
-		super(health);
 		super(name);
+		super(health);
 		solid = destructible = true;
 	 	group = BlockGroup.walls;
 	 	buildCostMultiplier = 3f;
