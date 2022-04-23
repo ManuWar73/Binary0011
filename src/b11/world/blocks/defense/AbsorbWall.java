@@ -26,7 +26,7 @@ public class AbsorbWall extends Wall {
                         (AbsorbWallBuild entity) -> new Bar(
                                 () -> "Damage Counter",
                                 () -> Pal.lightOrange,
-                                () -> Stat.repairTime // entity.damagecounter
+                                () -> entity.damagecounter
                         )
                 );
 	}
