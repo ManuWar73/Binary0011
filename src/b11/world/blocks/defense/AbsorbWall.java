@@ -12,13 +12,12 @@ public class AbsorbWall extends Wall {
 	 	canOverdrive = drawDisabled = false;
 	}
 
-	int damagecounter = 0;
-	int i = 2;
+	int e = 2;
 
 	@Override
 	public void setStats() {
 		super.setStats();
-		stats.add(Stat.repairTime, (100f / heal * i / 60f), StatUnit.seconds);
+		stats.add(Stat.repairTime, (100f / heal * e / 60f), StatUnit.seconds);
 	}
 	@Override
 	public void setBars(){
@@ -32,6 +31,8 @@ public class AbsorbWall extends Wall {
                 );
 	}
 	public class AbsorbWallBuild extends WallBuild {
+		int damagecounter = 0;
+		int i = e;
 		@Override
 		public boolean collision (Bullet bullet){
 			if(damagecounter == 100){
