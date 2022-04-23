@@ -30,14 +30,11 @@ public class AbsorbWall extends Wall {
 			if(damagecounter == 100){
 	 	 		health += heal;
 				damagecounter = 0;
-				return false;
 			}else{
 	 	 	 	health -= bullet.damage;
 				damagecounter += 2;
-				return true;
 			}
-		 	return super.collision(bullet);
-		 	//return this.collision(bullet);
+		 	return true;
 		}
 	}
 }
