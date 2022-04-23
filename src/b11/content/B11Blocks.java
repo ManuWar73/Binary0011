@@ -17,7 +17,8 @@ public class B11Blocks implements ContentList{
 	public void load(){
 		experimental = new AbsorbWall("experimental"){{
 			requirements(Category.defense, with(Items.copper, 1));
-	 	 	health = 1000;
+	 	 	health = 5000;
+			heal = 1000;
 		}};
 		// power
 		e0000 = new BurnerGenerator("e0000"){{
