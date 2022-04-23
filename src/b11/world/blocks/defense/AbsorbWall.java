@@ -20,7 +20,9 @@ public class AbsorbWall extends Wall {
 		int damagecounter = 0;
 		public boolean damaged(){
 			damagecounter += 2;
-			if(damagecounter == 100){health += health2};
+			if(damagecounter == 100){
+	 	 		 health += health2;
+			};
 		}
 	}
 }
