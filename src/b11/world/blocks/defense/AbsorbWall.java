@@ -17,11 +17,12 @@ public class AbsorbWall extends Wall {
 	}
 	public class AbsorbWallBuild extends WallBuild {
 		int damagecounter = 0;
-		public void damaged(){
+		public boolean damaged(){
 			damagecounter += 2;
 			if(damagecounter == 100){
 	 	 		 health += 99999999;
 			};
+			return true;
 		}
 	}
 }
