@@ -36,7 +36,8 @@ public class AbsorbWall extends Wall {
 				damagecounter += 2;
 				return true;
 			}
-		 	return this.collision;
+		 	return super.collision(bullet);
+		 	//return this.collision(bullet);
 		}
 	}
 }
