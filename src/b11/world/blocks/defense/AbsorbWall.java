@@ -17,7 +17,7 @@ public class AbsorbWall extends Wall {
 	}
 	public class AbsorbWallBuild extends WallBuild {
 		int damagecounter = 0;
-		public boolean damaged(){
+		public void damaged(){
 			damagecounter += 2;
 			if(damagecounter == 100){
 	 	 		 health += 99999999;
