@@ -23,16 +23,17 @@ public class AbsorbWall extends Wall {
 	public class AbsorbWallBuild extends WallBuild {
 		int damagecounter = 0;
 		@Override
-		public boolean collision(Bullet bullet){
-			super.collision(bullet);
+		public boolean damaged(){
+			super.damaged();
+			damagecounter += 2;
 			if(damagecounter == 100){
 	 	 		health += heal;
 				damagecounter = 0;
 			}else{
-	 	 	 	health -= bullet.damage;
-				damagecounter += 2;
+	 	 	 	health -= health/10;
 			}
 		 	return true;
+			//return false;
 		}
 	}
 }
