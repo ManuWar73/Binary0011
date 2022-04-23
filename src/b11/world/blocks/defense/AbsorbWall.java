@@ -24,7 +24,6 @@ public class AbsorbWall extends Wall {
 		int damagecounter = 0;
 		@Override
 		public boolean damaged(){
-			super.damaged();
 			damagecounter += 2;
 			if(damagecounter == 100){
 	 	 		health += heal;
