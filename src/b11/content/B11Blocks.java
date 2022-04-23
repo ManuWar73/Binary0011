@@ -17,7 +17,7 @@ public class B11Blocks implements ContentList{
 	public void load(){
 		w0000 = new BulletWall("w0000"){{
 			requirements(Category.defense, with(Items.copper, 999));
-	 	 	health = 5000;
+	 	 	health = 100;
 			localizedName = "INI BULLET WALL";
 			shots = 2;
 			bullet = B11Bullets.basicbullet3;
@@ -26,7 +26,7 @@ public class B11Blocks implements ContentList{
 			requirements(Category.defense, with(Items.lead, 999));
 	 	 	health = 5000;
 			localizedName = "INI ABSORB WALL";
-			heal = 100;
+			heal = 50;
 		}};
 		// power
 		e0000 = new BurnerGenerator("e0000"){{
