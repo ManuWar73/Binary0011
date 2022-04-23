@@ -4,6 +4,8 @@ package b11.content;
 /* binary */ import b11.content.*;import b11.world.blocks.defense.*;
 public class B11Blocks implements ContentList{
 	public static Block
+	// experimental
+	experimental,
         // power
 	e0000, e0001, e0010, e0011, e0100, e0101,
 	e0110, e0111, e1000, e1001,
@@ -13,6 +15,11 @@ public class B11Blocks implements ContentList{
 	t0000, t0001, t0010, t0011, t0100, t0101;
 	@Override
 	public void load(){
+		experimental = new AbsorbWall("experimental"){{
+			requirements(Category.defense, with(Items.copper, 1));
+	 	 	health = 50;
+			BuildVisibility = BuildVisibility.sandboxOnly;
+		}};
 		// power
 		e0000 = new BurnerGenerator("e0000"){{
 			requirements(Category.power, with(Items.copper, 35, Items.lead, 25));
