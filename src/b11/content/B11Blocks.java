@@ -26,7 +26,7 @@ public class B11Blocks implements ContentList{
 			requirements(Category.defense, with(Items.lead, 999));
 	 	 	health = 5000;
 			localizedName = "INI ABSORB WALL";
-			heal = 50;
+			heal = 500;
 		}};
 		// power
 		e0000 = new BurnerGenerator("e0000"){{
