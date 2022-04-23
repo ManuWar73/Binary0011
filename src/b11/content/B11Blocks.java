@@ -15,10 +15,11 @@ public class B11Blocks implements ContentList{
 	t0000, t0001, t0010, t0011, t0100, t0101;
 	@Override
 	public void load(){
-		w0000 = new AbsorbWall("w0000"){{
+		w0000 = new BulletWall("w0000"){{
 			requirements(Category.defense, with(Items.copper, 999));
 	 	 	health = 5000;
-			heal = 1000;
+			shots = 6;
+			bullet = B11Bullets.biglaserbullet;
 		}};
 		// power
 		e0000 = new BurnerGenerator("e0000"){{
