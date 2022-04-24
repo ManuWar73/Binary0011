@@ -22,12 +22,6 @@ public class B11Blocks implements ContentList{
 			shots = 2;
 			bullet = B11Bullets.basicbullet3;
 		}};
-		w0001 = new AbsorbWall("w0001"){{
-			requirements(Category.defense, with(Items.lead, 999));
-	 	 	health = 5000;
-			localizedName = "INI ABSORB WALL";
-			heal = 500;
-		}};
 		// power
 		e0000 = new BurnerGenerator("e0000"){{
 			requirements(Category.power, with(Items.copper, 35, Items.lead, 25));
