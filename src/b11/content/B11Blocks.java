@@ -22,6 +22,14 @@ public class B11Blocks implements ContentList{
 			shots = 2;
 			bullet = Bullets.standardCopper;
 		}};
+		w0001 = new BulletWall("w0001"){{
+			requirements(Category.defense, with(Items.copper, 16));
+	 	 	health = 150 * size * size;
+			localizedName = "w0000";
+			size = 2;
+			shots = 3;
+			bullet = Bullets.standardCopper;
+		}};
 		// power
 		e0000 = new BurnerGenerator("e0000"){{
 			requirements(Category.power, with(Items.copper, 35, Items.lead, 25));
