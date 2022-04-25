@@ -16,11 +16,11 @@ public class B11Blocks implements ContentList{
 	@Override
 	public void load(){
 		w0000 = new BulletWall("w0000"){{
-			requirements(Category.defense, with(Items.copper, 999));
-	 	 	health = 100;
-			localizedName = "INI BULLET WALL";
+			requirements(Category.defense, with(Items.copper, 8));
+	 	 	health = 150;
+			localizedName = "w0000";
 			shots = 2;
-			bullet = B11Bullets.basicbullet3;
+			bullet = Bullets.standardCopper;
 		}};
 		// power
 		e0000 = new BurnerGenerator("e0000"){{
@@ -205,8 +205,8 @@ public class B11Blocks implements ContentList{
 		}};
 		t0101 = new PowerTurret("t0101"){{
 			requirements(Category.turret, with(Items.copper, 65, Items.lead, 35));
-			shootType = B11Bullets.laserbullet1;
-			reloadTime = 60f;
+			shootType = B11Bullets.lightningbullet1;
+			reloadTime = 25f;
 			shootCone = 40f;
 			rotateSpeed = 8f;
 			powerUse = 3.5f;
@@ -216,7 +216,7 @@ public class B11Blocks implements ContentList{
 	 	 	recoilAmount = 1f;
 	 	 	size = 1;
 	 	 	health = 300;
-	 	 	shootSound = Sounds.laser;
+	 	 	shootSound = Sounds.lightning;
 		}};
 		// end turret
 	}
