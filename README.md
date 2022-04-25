@@ -32,4 +32,4 @@ Building locally takes more time to set up, but shouldn't be a problem if you've
 
 ---
 
-Binary0011 0.0.6 is going to be weird. <br>- 1237
+_Binary0011 **0.0.6** is going to be weird._ <br>- 1237
