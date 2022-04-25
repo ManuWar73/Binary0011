@@ -216,7 +216,7 @@ public class B11Blocks implements ContentList{
 	 	 	recoilAmount = 1f;
 	 	 	size = 1;
 	 	 	health = 300;
-	 	 	shootSound = Sounds.lightning;
+	 	 	shootSound = Sounds.spark;
 		}};
 		// end turret
 	}
