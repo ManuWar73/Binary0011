@@ -283,6 +283,7 @@ public class B11Blocks implements ContentList{
 			requirements(Category.turret, with(Items.copper, 2000, Items.lead, 1500, Items.silicon, 1750, Items.surgeAlloy, 575, Items.titanium, 800, Items.thorium, 250, Items.plastanium, 850));
 			range = 460;
 			localizedName = "t1000";
+			details = "an endgame turret that will end your game, and the development of this mod.";
 			recoilAmount = 2f;
 	 	 	reloadTime = 180f;
 			cooldown = 1f;
