@@ -27,7 +27,6 @@ public class BulletWall extends Wall {
 				 bullet.create(this, this.team, x, y, Mathf.random(0, 4) * 90f);
 				 bullet.create(this, this.team, x, y, Mathf.random(0, 4) * 90f);
 			};
-			super.collision();
 			return true;
 		}
 	}
