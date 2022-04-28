@@ -12,7 +12,8 @@ public class B11Blocks implements ContentList{
 	// distribution
 	d0000, d0001, d0010,
 	// turret
-	t0000, t0001, t0010, t0011, t0100, t0101;
+	t0000, t0001, t0010, t0011, t0100, t0101,
+	t0110, t0111, t1000, t1001;
 	@Override
 	public void load(){
 		w0000 = new BulletWall("w0000"){{
@@ -23,12 +24,12 @@ public class B11Blocks implements ContentList{
 			bullet = Bullets.standardCopper;
 		}};
 		w0001 = new BulletWall("w0001"){{
-			requirements(Category.defense, with(Items.copper, 16));
+			requirements(Category.defense, with(Items.copper, 16, Items.graphite, 5));
 	 	 	health = 150 * size * size;
 			localizedName = "w0000";
 			size = 2;
 			shots = 3;
-			bullet = Bullets.standardCopper;
+			bullet = Bullets.standardDense;
 		}};
 		// power
 		e0000 = new BurnerGenerator("e0000"){{
@@ -226,6 +227,72 @@ public class B11Blocks implements ContentList{
 	 	 	health = 300;
 	 	 	shootSound = Sounds.spark;
 		}};
+		t0110 = new PowerTurret("t0110"){{
+			requirements(Category.turret, with(Items.copper, 60, Items.lead, 70, Items.silicon, 50));
+			range = 165f;
+			localizedName = "t0110";
+			chargeTime = 40f;chargeMaxDelay = 30f;chargeEffects = 7;chargeEffect = Fx.lancerLaserCharge;chargeBeginEffect = Fx.lancerLaserChargeBegin;recoilAmount = 2f; // charge stuffs
+	 	 	reloadTime = 160f;
+			cooldown = 0.03f;
+			powerUse = 6f;
+			shootShake = 2f;
+			shootEffect = Fx.lancerLaserShoot;
+			smokeEffect = Fx.none;
+	 	 	size = 2;
+	 	 	health = 350 * size * size;
+	 	 	targetAir = true;
+	 	 	shootSound = Sounds.laser;
+	 	 	shootType = B11Bullets.laserbullet1;
+		}};
 		// end turret
+		t0111 = new ItemTurret("t0111"){{
+	 	 	requirements(Category.turret, with(Items.copper, 65, Items.lead, 65));
+	 	 	ammo(Items.scrap, Bullets.flak1,Items.lead, Bullets.flak2,Items.metaglass, Bullets.flak3);
+	 	 	reloadTime = 18f;
+	 	 	range = 240f;
+	 	 	size = 2;
+			localizedName = "t0111";
+			burstSpacing = 4f;
+			shots = 2;
+			targetGround = false;
+			recoilAmount = 2f;
+			rotateSpeed = 15f;
+			inaccuracy = 5f;
+			shootCone = 35f;
+			health = 325 * size * size;
+			shootSound = Sounds.shootSnap;
+		}};
+		t1000 = new ItemTurret("t1000"){{
+	 	 	requirements(Category.turret, with(Items.copper, 75, Items.lead, 55, Items.silicon, 20));
+	 	 	ammo(Items.scrap, Bullets.flak1,Items.lead, Bullets.flak2,Items.metaglass, Bullets.flak3);
+	 	 	reloadTime = 9f;
+	 	 	range = 280f;
+	 	 	size = 2;
+			localizedName = "t1000";
+			burstSpacing = 4f;
+			shots = 3;
+			targetGround = false;
+			recoilAmount = 2f;
+			rotateSpeed = 15f;
+			inaccuracy = 0f;
+			shootCone = 35f;
+			health = 350 * size * size;
+			shootSound = Sounds.shootSnap;
+		}};
+		t1001 = new PowerTurret("t1001"){{
+			requirements(Category.turret, with(Items.copper, 2000, Items.lead, 1500, Items.silicon, 1750, Items.surgeAlloy, 575, Items.titanium, 800, Items.thorium, 250, Items.plastanium, 850));
+			range = B11Bullets.biglaserbullet.length;
+			localizedName = "t1000";
+			recoilAmount = 2f;
+	 	 	reloadTime = 180f;
+			cooldown = 1f;
+			powerUse = 12f;
+			shootShake = 2f;
+	 	 	size = 4;
+	 	 	health = 2500 * size * size;
+	 	 	targetAir = true;
+	 	 	shootSound = Sounds.laser;
+	 	 	shootType = B11Bullets.biglaserbullet;
+		}};
 	}
 }
