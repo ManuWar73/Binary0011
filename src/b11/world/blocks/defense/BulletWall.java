@@ -22,12 +22,13 @@ public class BulletWall extends Wall {
 	}
 	public class BulletWallBuild extends WallBuild {
 		@Override
-		public void collision() {
+		public boolean collision() {
 		 	for(int no = 0;no <= shots * 5;no++){
 				 bullet.create(this, this.team, x, y, Mathf.random(0, 4) * 90f);
 				 bullet.create(this, this.team, x, y, Mathf.random(0, 4) * 90f);
 			};
 			super.collision();
+			return true;
 		}
 	}
 }
