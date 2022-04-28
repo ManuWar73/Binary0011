@@ -21,7 +21,6 @@ public class BulletWall extends Wall {
 		stats.add(Stat.range, bullet.lifetime * bullet.speed/8, StatUnit.blocks);
 	}
 	public class BulletWallBuild extends WallBuild {
-		@Override
 		public boolean collision() {
 		 	for(int no = 0;no <= shots * 5;no++){
 				 bullet.create(this, this.team, x, y, Mathf.random(0, 4) * 90f);
