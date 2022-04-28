@@ -2,8 +2,10 @@ package b11.world.blocks.defense;
 /* arc */ import arc.Core;import arc.graphics.*;import arc.graphics.g2d.*; import arc.math.*;
 /* mindus */ import mindustry.content.*; import mindustry.world.blocks.defense.*;import mindustry.entities.bullet.*;import mindustry.game.EventType.*;import mindustry.gen.*;import mindustry.graphics.*;import mindustry.type.*;import mindustry.ui.*;import mindustry.world.consumers.*;import mindustry.world.meta.*;
 /*
-basically a hybrid wall turret.
-*/
+ *
+ * basically a hybrid wall turret.
+ * 
+ */
 public class BulletWall extends Wall {
 	public BulletType bullet = Bullets.standardCopper;
 	public int shots = 3;
@@ -18,7 +20,7 @@ public class BulletWall extends Wall {
 	@Override
 	public void setStats() {
 		super.setStats();
-		stats.add(Stat.range, bullet.lifetime * bullet.speed/8, StatUnit.blocks);
+		stats.add(Stat.range, (bullet.lifetime * bullet.speed)/8, StatUnit.blocks);
 	}
 	public class BulletWallBuild extends WallBuild {
 		public boolean collision() {
@@ -27,6 +29,11 @@ public class BulletWall extends Wall {
 				 bullet.create(this, this.team, x, y, Mathf.random(0, 4) * 90f);
 			};
 			return true;
+		}
+		public void tapped(){
+			for(int h = 0;h <= shots * 2;h++){
+				 bullet.create(this, this.team, x, y, Mathf.random(0, 4) * 90f);
+			}
 		}
 	}
 }
