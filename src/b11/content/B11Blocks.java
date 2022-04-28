@@ -247,7 +247,7 @@ public class B11Blocks implements ContentList{
 		// end turret
 		t0111 = new ItemTurret("t0111"){{
 	 	 	requirements(Category.turret, with(Items.copper, 65, Items.lead, 65));
-	 	 	ammo(Items.scrap, Bullets.flak1,Items.lead, Bullets.flak2,Items.metaglass, Bullets.flak3);
+	 	 	ammo(Items.scrap, B11Bullets.flak1,Items.lead, B11Bullets.flak2,Items.metaglass, B11Bullets.flak3);
 	 	 	reloadTime = 18f;
 	 	 	range = 240f;
 	 	 	size = 2;
@@ -264,7 +264,7 @@ public class B11Blocks implements ContentList{
 		}};
 		t1000 = new ItemTurret("t1000"){{
 	 	 	requirements(Category.turret, with(Items.copper, 75, Items.lead, 55, Items.silicon, 20));
-	 	 	ammo(Items.scrap, Bullets.flak1,Items.lead, Bullets.flak2,Items.metaglass, Bullets.flak3);
+	 	 	ammo(Items.scrap, B11Bullets.flak1,Items.lead, B11Bullets.flak2,Items.metaglass, B11Bullets.flak3);
 	 	 	reloadTime = 9f;
 	 	 	range = 280f;
 	 	 	size = 2;
@@ -281,7 +281,7 @@ public class B11Blocks implements ContentList{
 		}};
 		t1001 = new PowerTurret("t1001"){{
 			requirements(Category.turret, with(Items.copper, 2000, Items.lead, 1500, Items.silicon, 1750, Items.surgeAlloy, 575, Items.titanium, 800, Items.thorium, 250, Items.plastanium, 850));
-			range = B11Bullets.biglaserbullet.length;
+			range = 460;
 			localizedName = "t1000";
 			recoilAmount = 2f;
 	 	 	reloadTime = 180f;
