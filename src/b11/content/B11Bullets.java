@@ -100,7 +100,7 @@ public class B11Bullets implements ContentList {
 			sideAngle = 15f;
 			sideWidth = 0f;
 			sideLength = 0f;
-			colors = new Color[]{Color.valueOf("111111"), Color.valueOf("666666"), Color.valueOf("999999")};
+			colors = new Color[]{Color.valueOf("777777"), Color.valueOf("cccccc"), Color.valueOf("ffffff")};
 		}};
 		// pawer end
 		// artillery start
