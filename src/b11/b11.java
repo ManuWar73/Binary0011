@@ -25,7 +25,7 @@ public class b11 extends Mod{
             	});
         }
 	// load mod content
-	public static void loadContent(){
+	public void loadContent(){
 //		B11Status.load();
 //	 	B11Liquids.load();
 //		B11Items.load();
