@@ -13,8 +13,6 @@ import b11.content.*;
 
 public class b11 extends Mod{
 	public b11(){
-                Log.info("0011.");
-
                 //listen for game load event
                 Events.on(ClientLoadEvent.class, e -> {
                 //show dialog upon startup
@@ -28,7 +26,7 @@ public class b11 extends Mod{
         }
 	// load mod content
 	@Override
-	public void loadContent(){
+	public static void loadContent(){
 //		new B11Status().load();
 //	 	new B11Liquids().load();
 //		new B11Items().load();
