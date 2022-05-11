@@ -32,11 +32,10 @@ import mindustry.world.blocks.units.*;
 import mindustry.world.consumers.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
-import b11.world.blocks.defense.*;
 import b11.content.*;
 import static mindustry.type.ItemStack.*;
 
-public class B11Blocks implements ContentList{
+public class B11Blocks {
 	/*
 	public static Block
 	// experimental
