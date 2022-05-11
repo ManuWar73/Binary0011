@@ -39,7 +39,7 @@ public class B11Blocks {
 	public static Block eee;
 	@Override
 	public void load(){
-		eee = new AirBlock();
+		eee = new AirBlock("eee");
 	}
 	/*
 	public static Block
