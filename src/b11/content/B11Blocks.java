@@ -1,8 +1,43 @@
-package b11.content;
-/* arc */ import arc.graphics.*;import arc.math.*;import arc.struct.*;
-/* mindus */ import mindustry.*;import mindustry.ctype.*;import mindustry.entities.*;import mindustry.entities.bullet.*;import mindustry.gen.*;import mindustry.graphics.*;import mindustry.type.*;import mindustry.world.*;import mindustry.world.blocks.*;import mindustry.world.blocks.campaign.*;import mindustry.world.blocks.defense.*;import mindustry.world.blocks.defense.turrets.*;import mindustry.world.blocks.distribution.*;import mindustry.world.blocks.environment.*;import mindustry.world.blocks.legacy.*;import mindustry.world.blocks.liquid.*;import mindustry.world.blocks.logic.*;import mindustry.world.blocks.payloads.*;import mindustry.world.blocks.power.*;import mindustry.world.blocks.production.*;import mindustry.world.blocks.sandbox.*;import mindustry.world.blocks.storage.*;import mindustry.world.blocks.units.*;import mindustry.world.consumers.*;import mindustry.world.draw.*;import mindustry.world.draw.DrawRotator;import mindustry.world.meta.*;import static mindustry.type.ItemStack.*;import mindustry.content.*;
-/* binary */ import b11.content.*;import b11.world.blocks.defense.*;
+package mindustry.content;
+
+import arc.graphics.*;
+import arc.math.*;
+import arc.struct.*;
+import mindustry.*;
+import mindustry.entities.*;
+import mindustry.entities.bullet.*;
+import mindustry.entities.effect.*;
+import mindustry.entities.part.*;
+import mindustry.entities.pattern.*;
+import mindustry.gen.*;
+import mindustry.graphics.*;
+import mindustry.type.*;
+import mindustry.world.*;
+import mindustry.world.blocks.*;
+import mindustry.world.blocks.campaign.*;
+import mindustry.world.blocks.defense.*;
+import mindustry.world.blocks.defense.turrets.*;
+import mindustry.world.blocks.distribution.*;
+import mindustry.world.blocks.environment.*;
+import mindustry.world.blocks.heat.*;
+import mindustry.world.blocks.legacy.*;
+import mindustry.world.blocks.liquid.*;
+import mindustry.world.blocks.logic.*;
+import mindustry.world.blocks.payloads.*;
+import mindustry.world.blocks.power.*;
+import mindustry.world.blocks.production.*;
+import mindustry.world.blocks.sandbox.*;
+import mindustry.world.blocks.storage.*;
+import mindustry.world.blocks.units.*;
+import mindustry.world.consumers.*;
+import mindustry.world.draw.*;
+import mindustry.world.meta.*;
+import b11.world.blocks.defense.*;
+import b11.content.*;
+import static mindustry.type.ItemStack.*;
+
 public class B11Blocks implements ContentList{
+	/*
 	public static Block
 	// experimental
 	w0000, w0001,
@@ -31,7 +66,6 @@ public class B11Blocks implements ContentList{
 			shots = 3;
 			bullet = Bullets.standardDense;
 		}};
-		// power
 		e0000 = new BurnerGenerator("e0000"){{
 			requirements(Category.power, with(Items.copper, 35, Items.lead, 25));
 			localizedName = "e0000";
@@ -295,5 +329,5 @@ public class B11Blocks implements ContentList{
 	 	 	shootSound = Sounds.laser;
 	 	 	shootType = B11Bullets.biglaserbullet;
 		}};
-	}
+	} */
 }
