@@ -2,12 +2,11 @@ package b11.content;
 
 import arc.graphics.Color;
 import mindustry.content.*;
-import mindustry.ctype.ContentList;
 import mindustry.entities.bullet.*;
 import b11.*;
 import b11.content.*;
 
-public class B11Bullets implements ContentList {
+public class B11Bullets {
 /*
 	public static BulletType
 	// basic
