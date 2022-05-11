@@ -38,7 +38,7 @@ import static mindustry.type.ItemStack.*;
 public class B11Blocks {
 	public static Block eee;
 	@Override
-	public void load(){
+	public static void load(){
 		eee = new AirBlock("eee");
 	}
 	/*
