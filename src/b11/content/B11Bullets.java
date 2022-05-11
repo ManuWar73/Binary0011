@@ -8,6 +8,7 @@ import b11.*;
 import b11.content.*;
 
 public class B11Bullets implements ContentList {
+/*
 	public static BulletType
 	// basic
 	basicbullet1, basicbullet2, basicbullet3, basicbullet4,
@@ -196,5 +197,5 @@ public class B11Bullets implements ContentList {
 			explodeRange = 50f;
 		}};
 		// flak end
-	}
+	} */
 }
