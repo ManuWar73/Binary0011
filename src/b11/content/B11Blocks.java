@@ -5,7 +5,7 @@ import mindustry.content.Items;
 import mindustry.type.*;
 import mindustry.world.*;
 import mindustry.world.blocks.environment.*;
-import b11.content.expand.blocks.defense.*;
+import b11.blocks.defense.*;
 import static mindustry.type.ItemStack.*;
 
 public class B11Blocks {
