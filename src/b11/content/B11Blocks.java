@@ -48,10 +48,5 @@ public class B11Blocks {
 			health = 10;
 			shots = 8;
 		}};
-		test3 = new ManualPowerTurret("manual-power-turret"){{
-			requirements(Category.defense, with(Items.copper, 50000));
-			size = 2;
-			health = 10;
-		}};
 	}
 }
