@@ -27,7 +27,7 @@ public class BulletWall extends Wall {
         public class BulletWallBuild extends Building {
                 public boolean collision(Bullet bullet) {
                         for (int i = 0; i < shots * 3; i++) {
-                                shootType.create((Teamc) this.team, x, y,(Mathf.random(0, 4)) * 90);
+                                shootType.create(this.team, x, y,(Mathf.random(0, 4)) * 90);
                         }
                         return true;
                 }
