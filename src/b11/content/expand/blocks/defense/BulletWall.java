@@ -12,6 +12,7 @@ import mindustry.world.meta.Stat;
 
 public class BulletWall extends Wall {
         /**
+         * @author 1237
          * a wall that shoots bullets when destroyed. a hybrid wall turret.
          * @param name name of the object/block.
          */
@@ -20,15 +21,11 @@ public class BulletWall extends Wall {
                 group = BlockGroup.walls;
                 localizedName = name;
         }
-
         public BulletType shootType = B11Bullets.copperBulletWall;
         public int shots = 3;
 
         public void setStats(){
                 stats.add(Stat.range, (int) (shootType.lifetime * shootType.speed) / 8);
-                stats.add(Stat.damage, shootType.damage);
-                stats.add(Stat.drillSpeed, "What!?, Drill Speed!? I'm a Wall, Not a Drill. I can't drill any ores...");
-                stats.add(Stat.flammability, "I'm not a flammable Wall. 0%");
                 stats.add(Stat.damage, shootType.damage);
         }
         public class BulletWallBuild extends Building {
