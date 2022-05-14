@@ -1,4 +1,4 @@
-package b11.content.expand.blocks.defense;
+package b11.blocks.defense;
 
 import arc.math.Mathf;
 import b11.content.B11Bullets;
