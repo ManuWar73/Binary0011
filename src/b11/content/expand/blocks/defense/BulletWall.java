@@ -18,21 +18,25 @@ public class BulletWall extends Wall {
         public BulletWall(String name){
                 super(name);
                 group = BlockGroup.walls;
+                localizedName = name;
         }
 
         public BulletType shootType = B11Bullets.copperBulletWall;
         public int shots = 3;
 
+        public void setStats(){
+                stats.add(Stat.range, (int) (shootType.lifetime * shootType.speed) / 8);
+                stats.add(Stat.damage, shootType.damage);
+                stats.add(Stat.drillSpeed, "What!?, Drill Speed!? I'm a Wall, Not a Drill. I can't drill any ores...");
+                stats.add(Stat.flammability, "I'm not a flammable Wall. 0%");
+                stats.add(Stat.damage, shootType.damage);
+        }
         public class BulletWallBuild extends Building {
                 public void onDestroyed() {
                         super.onDestroyed();
                         for (int i = 0; i < shots * 3; i++) {
                                 shootType.create((Teamc) this, x, y,(Mathf.random(0, 4)) * 90);
                         }
-                }
-                public void setStats(){
-                        stats.add(Stat.range, (int) (shootType.lifetime * shootType.speed) / 8);
-                        stats.add(Stat.damage, shootType.damage);
                 }
         }
 }
