@@ -3,7 +3,6 @@ package b11.content;
 import arc.graphics.*;
 import arc.math.*;
 import arc.struct.*;
-import b11.content.expand.blocks.defense.BulletWall;
 import mindustry.*;
 import mindustry.content.Items;
 import mindustry.entities.*;
@@ -35,11 +34,12 @@ import mindustry.world.consumers.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
 import b11.content.*;
+import b11.content.expand.blocks.defense.*;
 import static mindustry.type.ItemStack.*;
 
 public class B11Blocks {
 	public static Block
-		test, test2;
+		test, test2, test3;
 	public static void load(){
 		test = new AirBlock("test");
 		test2 = new BulletWall("test2"){{
@@ -48,5 +48,6 @@ public class B11Blocks {
 			health = 10;
 			shots = 8;
 		}};
+		test3 = new ManualPowerTurret("manual-power-turret");
 	}
 }
