@@ -24,12 +24,11 @@ public class BulletWall extends Wall {
         public int shots = 3;
 
         public class BulletWallBuild extends Building {
-
-                public boolean collision(Bullet bullet) {
+                public void onDestroyed() {
+                        super.onDestroyed();
                         for (int i = 0; i < shots * 3; i++) {
                                 shootType.create((Teamc) this, x, y,(Mathf.random(0, 4)) * 90);
                         }
-                        return true;
                 }
                 public void setStats(){
                         stats.add(Stat.range, (int) (shootType.lifetime * shootType.speed) / 8);
