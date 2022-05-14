@@ -33,7 +33,6 @@ public class BulletWall extends Wall {
                 public void setStats(){
                         stats.add(Stat.range, (int) (shootType.lifetime * shootType.speed) / 8);
                         stats.add(Stat.damage, shootType.damage);
-                        stats.add(Stat.flying, "I'm a wall, not an air unit. i can't fly.");
                 }
         }
 }
