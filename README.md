@@ -1,6 +1,6 @@
 # Binary0011
 
-an experimental, binary-themed mod for mindustry v7.135. the "Java port" and complete rework of my old mod "Binary0011". the way you can compile/implement is in the text below.
+an experimental mod for mindustry v7.136. the "Java port" and complete rework of my old mod "Binary0011". the way you can compile/implement is in the text below.
 
 ## Building for Desktop Testing
 
@@ -29,7 +29,3 @@ Building locally takes more time to set up, but shouldn't be a problem if you've
 
 *[1]: On Linux/Mac it's `./gradlew`, but if you're using Linux I assume you know how to run executables properly anyway.*  
 *[2]: Yes, I know this is stupid. It's a Github UI limitation - while the jar itself is uploaded unzipped, there is currently no way to download it as a single file.*
-
----
-
-_Binary0011 **0.0.6** is weird._ <br>- 1237
