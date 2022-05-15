@@ -33,7 +33,7 @@ public class TapCrafter extends GenericCrafter {
                 public void tapped(){
                         Drawf.square(x,y,5,tapColor);
                         counter++;
-                        if((outputItem != null || outputItems != null) && counter % tap == 0){
+                        if(shouldConsume() && (outputItem != null || outputItems != null) && counter % tap == 0){
                                 consume();
                                 craft();
                         }
