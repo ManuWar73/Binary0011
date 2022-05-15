@@ -3,6 +3,7 @@ package b11.content;
 import arc.audio.Sound;
 import arc.graphics.Color;
 import b11.blocks.defense.BulletWall;
+import b11.blocks.defense.E;
 import b11.blocks.defense.ManualTurret;
 import b11.content.*;
 import mindustry.content.Fx;
@@ -23,15 +24,13 @@ public class B11Blocks {
 		test, test2, test3;
 	public static void load(){
 		test = new AirBlock("test");
-		test2 = new ManualTurret("AAAAAAAAAAAAAAAAAAAAAAA"){{
-			range = 128f;
-			bullet1 = B11Bullets.lancerManual;
-			bullet2 = B11Bullets.lancerManual;
-			consumeItems(with(Items.sand, 1, Items.lead, 1));
-			shootSound = Sounds.wind3;
-			shots = 8;
+		test2 = new E("AAAAAAAAAAAAAA"){{
+                        bullet1 = bullet2 = B11Bullets.lancerManual;
+                        shots = 4;
+			size = 3;
+			health = 1000000;
 			requirements(Category.turret, with(Items.copper, 1));
+			consumeItems(with(Items.copper, 1, Items.lead, 3));
 		}};
-
 	}
 }
