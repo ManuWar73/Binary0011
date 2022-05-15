@@ -21,8 +21,9 @@ public class ManualTurret extends Wall{
          */
         public ManualTurret(String name) {
                 super(name);
-                solid = destructible = update = configurable = true;
+                solid = destructible = true;
                 hasItems = true;
+                acceptsItems = true;
                 itemCapacity = 100;
 
         }
