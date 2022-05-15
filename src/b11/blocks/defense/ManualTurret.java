@@ -25,6 +25,7 @@ public class ManualTurret extends Block {
         public ManualTurret(String name) {
                 super(name);
                 solid = destructible = hasItems = acceptsItems = true;
+                itemCapacity = 25;
         }
 
         @Override
@@ -50,13 +51,11 @@ public class ManualTurret extends Block {
                 }
                 @Override
                 public void tapped() {
-                        if(canConsume()) {
-                                consume();
-                                for (int i = 0; i < (shots + getProximityBlocks()); i++) {
-                                        bullet1.create(this, this.team, x, y, i * 45);
-                                        i++;
-                                        bullet2.create(this, this.team, x, y, i * 45);
-                                }
+                        consume();
+                        for (int i = 0; i < (shots + getProximityBlocks()); i++) {
+                                bullet1.create(this, this.team, x, y, i * 45);
+                                i++;
+                                bullet2.create(this, this.team, x, y, i * 45);
                                 shootSound.at(x, y, Mathf.random(-5, 2));
                         }
                         Drawf.square(x,y,range/8,Pal.placing);
