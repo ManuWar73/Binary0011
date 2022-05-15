@@ -1,16 +1,27 @@
 package b11.blocks.production;
 
 import arc.graphics.Color;
-import mindustry.type.ItemStack;
-import mindustry.type.LiquidStack;
-import mindustry.graphics.*;
-import mindustry.world.blocks.production.*;
-import mindustry.world.draw.*;
-import mindustry.world.meta.Stat;
+import arc.struct.EnumSet;
+import mindustry.gen.Sounds;
+import mindustry.graphics.Drawf;
+import mindustry.world.blocks.production.GenericCrafter;
+import mindustry.world.draw.DrawBlock;
+import mindustry.world.draw.DrawDefault;
+import mindustry.world.meta.BlockFlag;
 
 public class TapCrafter extends GenericCrafter {
+        /**
+         * @author 1237
+         * basically a manual crafter
+         * @param name name of the block/object
+         */
         public TapCrafter(String name) {
                 super(name);
+                solid = hasItems = sync = true;
+                ambientSound = Sounds.machine;
+                ambientSoundVolume = 0.03f;
+                flags = EnumSet.of(BlockFlag.factory);
+                drawArrow = false;
         }
         public DrawBlock drawer = new DrawDefault();
         public int tap = 3;
@@ -22,11 +33,9 @@ public class TapCrafter extends GenericCrafter {
                 public void tapped(){
                         Drawf.square(x,y,5,tapColor);
                         counter++;
-                        if(counter % tap == 0){
+                        if((outputItem != null || outputItems != null) && counter % tap == 0){
+                                consume();
                                 craft();
-                        } else if(counter % (tap * 10) == 0){
-                                craft();
-                                counter = 0; // reset counter, biar gak kena int limit.
                         }
                 }
         }

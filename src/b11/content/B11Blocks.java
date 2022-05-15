@@ -9,7 +9,6 @@ import mindustry.gen.Sounds;
 import mindustry.type.*;
 import mindustry.world.*;
 import mindustry.world.blocks.environment.*;
-import b11.blocks.defense.*;
 import mindustry.world.draw.DrawDefault;
 import mindustry.world.draw.DrawFlame;
 import mindustry.world.draw.DrawMulti;
