@@ -10,6 +10,7 @@ import mindustry.graphics.Drawf;
 import mindustry.graphics.Pal;
 import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.meta.Stat;
+import mindustry.world.meta.StatUnit;
 
 public class E extends GenericCrafter {
         public E(String name) {
@@ -24,7 +25,7 @@ public class E extends GenericCrafter {
 
         public void setStats(){
                 super.setStats();
-                stats.timePeriod = reload;
+                stats.add(Stat.reload, reload / 60, StatUnit.seconds);
                 stats.add(Stat.damage, (bullet1.damage + bullet2.damage) * shots);
         }
 
@@ -45,7 +46,6 @@ public class E extends GenericCrafter {
                         if(shoot == true && cooldown <= 0){
                                 craft();
                                 cooldown = reload;
-                                cooldown -= Time.delta;
                         }
                 }
 
@@ -74,6 +74,10 @@ public class E extends GenericCrafter {
                                 shoot = true;
                         } else {
                                 shoot = false;
+                        }
+
+                        if(cooldown >= 0){
+                                cooldown -= Time.delta;
                         }
                 }
         }
