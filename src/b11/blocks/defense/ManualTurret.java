@@ -12,8 +12,6 @@ import mindustry.world.blocks.defense.turrets.Turret;
 import mindustry.world.meta.Stat;
 import mindustry.world.meta.StatValues;
 
-import java.util.concurrent.TimeUnit;
-
 public class ManualTurret extends Wall{
         /**
          * @author 1237
@@ -48,23 +46,13 @@ public class ManualTurret extends Wall{
                 public void tapped() {
                         boolean E = false;
                         if(E == false){
-                                if(/*this.items.total() <= itemCapacity && this.items.has(ammo)*/
-                                        canConsume()
-                                ){
+                                if(canConsume() && this.items.total() == itemCapacity){
                                         for (int i = 0; i < shots;) {
+                                                consume();
                                                 shoot1.create(this, x, y,i * 45);
-                                                try {
-                                                        TimeUnit.SECONDS.sleep(1);
-                                                } catch (InterruptedException e) {
-                                                        e.printStackTrace();
-                                                }
                                                 i++;
                                                 shoot2.create(this, x, y,i * 45);
-                                                try {
-                                                        TimeUnit.SECONDS.sleep(1);
-                                                } catch (InterruptedException e) {
-                                                        e.printStackTrace();
-                                                }
+                                                consume();
                                                 i++;
                                                 E = true;
                                         }
