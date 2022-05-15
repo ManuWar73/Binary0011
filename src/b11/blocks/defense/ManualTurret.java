@@ -28,6 +28,8 @@ public class ManualTurret extends Block {
         public ManualTurret(String name) {
                 super(name);
                 solid = destructible = update = true;
+                hasPower = true;
+                consumesPower = true;
         }
 
         @Override
