@@ -42,7 +42,7 @@ public class E extends GenericCrafter {
                 }
                 int cooldown = 0;
                 public void tapped(){
-                        if(shoot == true && cooldown == 0){
+                        if(shoot == true && cooldown <= 0){
                                 craft();
                                 cooldown = reload;
                                 cooldown -= Time.delta;
