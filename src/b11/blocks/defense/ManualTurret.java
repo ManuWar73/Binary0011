@@ -1,71 +1,84 @@
 package b11.blocks.defense;
 
-import arc.audio.Sound;
+import arc.audio.*;
 import arc.math.Mathf;
+import arc.util.Time;
 import b11.content.B11Bullets;
 import mindustry.entities.bullet.BulletType;
-import mindustry.gen.Building;
 import mindustry.gen.Sounds;
 import mindustry.graphics.Drawf;
 import mindustry.graphics.Pal;
-import mindustry.world.Block;
+import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.meta.Stat;
 import mindustry.world.meta.StatUnit;
 
-public class ManualTurret extends Block {
-        /**
-         * an experiment. this class uses some code from uujuju's scatter silo.
-         */
-        public float range = 128f;
-        public BulletType bullet1 = B11Bullets.e; // empty bullet
-        public BulletType bullet2 = B11Bullets.e;
-        public Sound shootSound = Sounds.wind3;
-        public int shots = 8;
-
+public class ManualTurret extends GenericCrafter {
         public ManualTurret(String name) {
                 super(name);
-                solid = destructible = hasItems = acceptsItems = true;
-                itemCapacity = 25;
+                itemCapacity = 10;
         }
 
-        @Override
-        public void setStats() {
+        public int shots = 8;
+        public BulletType bullet1, bullet2  = B11Bullets.e;
+        public int reload = 30;
+        public Sound shootSound = Sounds.wind3;
+
+        public void setStats(){
                 super.setStats();
-                stats.add(Stat.range, range/8, StatUnit.blocks);
-        }
-        @Override
-        public void drawPlace(int x, int y, int rotation, boolean valid){
-                super.drawPlace(x, y, rotation, valid);
-                Drawf.dashCircle(x * 8, y * 8, range, Pal.placing);
+                stats.add(Stat.reload, reload / 60, StatUnit.seconds);
+                stats.add(Stat.damage, (bullet1.damage + bullet2.damage) * shots);
         }
 
-        public class ManualTurretBuild extends Building {
-                public int getProximityBlocks() {
-                        int add = 0;
-                        for (int i = 0; i < this.proximity.size; i++) {
-                                if (this.proximity.get(i) != null) {
-                                        add += 1;
-                                }
+        public class EBuild extends GenericCrafterBuild {
+                boolean shoot = false;
+                public void craft(){
+                        consume();
+                        for (int i = 0; i < shots; i++) {
+                                Drawf.square(x, y, 8, this.rotation, Pal.placing);
+                                bullet1.create(this, x, y, i * (int) (360 / shots));
+                                i++;
+                                bullet2.create(this, x, y, i * (int) (360 / shots));
+                                shootSound.at(x,y,1);
                         }
-                        return add;
                 }
-                @Override
-                public void tapped() {
-                        if(hasItems && this.efficiency > 0){
-                                this.consume();
-                                for (int i = 0; i < (shots + getProximityBlocks()); i++) {
-                                        bullet1.create(this, this.team, x, y, i * 45);
-                                        i++;
-                                        bullet2.create(this, this.team, x, y, i * 45);
-                                        shootSound.at(x, y, Mathf.random(-5, 2));
-                                }
-                                Drawf.square(x,y,range/8,Pal.placing);
+                int cooldown = 0;
+                public void tapped(){
+                        if(shoot == true && cooldown <= 0){
+                                craft();
+                                cooldown = reload;
                         }
                 }
 
-                @Override
-                public void drawSelect() {
-                        Drawf.dashCircle(x, y, range, Pal.placing);
+                public void updateTile(){
+                        if(efficiency > 0){
+                                progress += getProgressIncrease(reload);
+                                warmup = Mathf.approachDelta(warmup, warmupTarget(), warmupSpeed);
+
+                                if(outputLiquids != null){
+                                        float inc = getProgressIncrease(1f);
+                                        for(var output : outputLiquids){
+                                                handleLiquid(this, output.liquid, Math.min(output.amount * inc, liquidCapacity - liquids.get(output.liquid)));
+                                        }
+                                }
+
+                                if(wasVisible && Mathf.chanceDelta(updateEffectChance)){
+                                        updateEffect.at(x + Mathf.range(size * 4f), y + Mathf.range(size * 4));
+                                }
+                        }else{
+                                warmup = Mathf.approachDelta(warmup, 0f, warmupSpeed);
+                        }
+
+                        totalProgress += warmup * Time.delta;
+
+                        if(progress >= 1f){
+                                shoot = true;
+                        } else {
+                                shoot = false;
+                        }
+
+                        if(cooldown >= 0){
+                                cooldown -= Time.delta;
+                        }
                 }
         }
 }
