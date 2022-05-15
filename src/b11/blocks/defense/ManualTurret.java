@@ -30,7 +30,7 @@ public class ManualTurret extends Block {
         @Override
         public void setStats() {
                 super.setStats();
-                stats.add(Stat.range, range, StatUnit.blocks);
+                stats.add(Stat.range, range/8, StatUnit.blocks);
         }
         @Override
         public void drawPlace(int x, int y, int rotation, boolean valid){
@@ -48,21 +48,9 @@ public class ManualTurret extends Block {
                         }
                         return add;
                 }
-
                 @Override
                 public void tapped() {
-                        this.shoot();
-                        Drawf.square(x,y,range,Pal.placing);
-
-                }
-
-                @Override
-                public void drawSelect() {
-                        Drawf.dashCircle(x, y, range, Pal.placing);
-                }
-
-                public void shoot() {
-                        if (canConsume()) {
+                        if(canConsume()) {
                                 consume();
                                 for (int i = 0; i < (shots + getProximityBlocks()); i++) {
                                         bullet1.create(this, this.team, x, y, i * 45);
@@ -71,6 +59,12 @@ public class ManualTurret extends Block {
                                 }
                                 shootSound.at(x, y, Mathf.random(-5, 2));
                         }
+                        Drawf.square(x,y,range/8,Pal.placing);
+                }
+
+                @Override
+                public void drawSelect() {
+                        Drawf.dashCircle(x, y, range, Pal.placing);
                 }
         }
 }
