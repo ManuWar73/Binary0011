@@ -38,6 +38,7 @@ public class TapCrafter extends GenericCrafter {
                                 consume();
                                 craft();
                                 counter = 0;
+                                F = false;
                         }
                 }
                 public void craft(){
