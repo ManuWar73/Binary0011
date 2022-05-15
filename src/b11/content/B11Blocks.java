@@ -31,6 +31,7 @@ public class B11Blocks {
 			health = 1000000;
 			reload = 90;
 			itemCapacity = 30;
+			shootSound = Sounds.laser;
 			requirements(Category.turret, with(Items.copper, 1));
 			consumeItems(with(Items.copper, 1, Items.lead, 3));
 		}};

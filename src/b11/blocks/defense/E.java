@@ -40,10 +40,12 @@ public class E extends GenericCrafter {
                                 shootSound.at(x,y,1);
                         }
                 }
-
+                int cooldown = 0;
                 public void tapped(){
-                        if(shoot == true){
+                        if(shoot == true && cooldown == 0){
                                 craft();
+                                cooldown = reload;
+                                cooldown -= Time.delta;
                         }
                 }
 
