@@ -24,7 +24,6 @@ public class B11Blocks {
 	public static void load(){
 		test = new AirBlock("test");
 		test2 = new ManualTurret("AAAAAAAAAAAAAAAAAAAAAAA"){{
-			reload = 120f;
 			range = 128f;
 			bullet1 = B11Bullets.lancerManual;
 			bullet2 = B11Bullets.lancerManual;

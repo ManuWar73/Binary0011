@@ -1,9 +1,7 @@
 package b11.blocks.defense;
 
 import arc.audio.Sound;
-import arc.graphics.Color;
 import arc.math.Mathf;
-import arc.util.Time;
 import b11.content.B11Bullets;
 import mindustry.entities.bullet.BulletType;
 import mindustry.gen.Building;
@@ -18,7 +16,6 @@ public class ManualTurret extends Block {
         /**
          * an experiment. this class uses some code from uujuju's scatter silo.
          */
-        public float reload = 60f;
         public float range = 128f;
         public BulletType bullet1 = B11Bullets.e; // empty bullet
         public BulletType bullet2 = B11Bullets.e;
@@ -27,15 +24,12 @@ public class ManualTurret extends Block {
 
         public ManualTurret(String name) {
                 super(name);
-                solid = destructible = update = true;
-                hasPower = true;
-                consumesPower = true;
+                solid = destructible = hasPower = consumesPower = true;
         }
 
         @Override
         public void setStats() {
                 super.setStats();
-                stats.add(Stat.reload, reload, StatUnit.seconds);
                 stats.add(Stat.range, range, StatUnit.blocks);
         }
         @Override
@@ -45,7 +39,6 @@ public class ManualTurret extends Block {
         }
 
         public class ManualTurretBuild extends Building {
-                float timer = 0f;
                 public int getProximityBlocks() {
                         int add = 0;
                         for (int i = 0; i < this.proximity.size; i++) {
@@ -58,13 +51,9 @@ public class ManualTurret extends Block {
 
                 @Override
                 public void tapped() {
-                        if(timer >= 0){
-                                this.shoot();
-                                Drawf.square(x,y,range,Pal.placing);
-                                timer = reload;
-                        } else {
-                                Drawf.circles(x,y,5,Pal.placing);
-                        }
+                        this.shoot();
+                        Drawf.square(x,y,range,Pal.placing);
+
                 }
 
                 @Override
@@ -81,13 +70,6 @@ public class ManualTurret extends Block {
                                         bullet2.create(this, this.team, x, y, i * 45);
                                 }
                                 shootSound.at(x, y, Mathf.random(-5, 2));
-                        }
-                }
-
-                @Override
-                public void updateTile() {
-                        if (timer >= 0f) {
-                                timer -= Time.delta;
                         }
                 }
         }
