@@ -19,7 +19,7 @@ public class E extends GenericCrafter {
 
         public int shots = 8;
         public BulletType bullet1, bullet2  = B11Bullets.e;
-        public int reload = (int) craftTime;
+        public int reload = 30;
         public Sound shootSound = Sounds.wind3;
 
         public void setStats(){
