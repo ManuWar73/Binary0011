@@ -31,6 +31,7 @@ public class B11Blocks {
 			consumePower(1);
 			shootSound = Sounds.wind3;
 			shots = 8;
+			requirements(Category.turret, with(Items.copper, 1));
 		}};
 
 	}
