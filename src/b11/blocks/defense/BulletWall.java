@@ -1,10 +1,12 @@
 package b11.blocks.defense;
 
+import arc.audio.Sound;
 import arc.math.Mathf;
 import b11.content.B11Bullets;
 import mindustry.entities.bullet.BulletType;
 import mindustry.gen.Building;
 import mindustry.gen.Bullet;
+import mindustry.gen.Sounds;
 import mindustry.gen.Teamc;
 import mindustry.world.blocks.defense.Wall;
 import mindustry.world.meta.BlockGroup;
@@ -23,6 +25,7 @@ public class BulletWall extends Wall {
         }
         public BulletType shootType = B11Bullets.copperBulletWall;
         public int shots = 3;
+        public Sound shootSound = Sounds.corexplode;
 
         public void setStats(){
                 stats.add(Stat.range, (int) (shootType.lifetime * shootType.speed) / 8);
@@ -33,6 +36,7 @@ public class BulletWall extends Wall {
                         super.onDestroyed();
                         for (int i = 0; i < shots * 3; i++) {
                                 shootType.create((Teamc) this, x, y,(Mathf.random(0, 4)) * 90);
+                                shootSound.at(x,y,1);
                         }
                 }
         }

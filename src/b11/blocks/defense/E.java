@@ -1,18 +1,15 @@
 package b11.blocks.defense;
 
-import arc.audio.Sound;
+import arc.audio.*;
 import arc.math.Mathf;
 import arc.util.Time;
 import b11.content.B11Bullets;
 import mindustry.entities.bullet.BulletType;
-import mindustry.gen.Building;
 import mindustry.gen.Sounds;
 import mindustry.graphics.Drawf;
 import mindustry.graphics.Pal;
-import mindustry.world.Block;
 import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.meta.Stat;
-import mindustry.world.meta.StatUnit;
 
 public class E extends GenericCrafter {
         public E(String name) {
@@ -23,7 +20,7 @@ public class E extends GenericCrafter {
         public int shots = 8;
         public BulletType bullet1, bullet2  = B11Bullets.e;
         public int reload = (int) craftTime;
-        public Sound sound = Sounds.wind3;
+        public Sound shootSound = Sounds.wind3;
 
         public void setStats(){
                 super.setStats();
@@ -40,7 +37,7 @@ public class E extends GenericCrafter {
                                 bullet1.create(this, x, y, i * (int) (360 / shots));
                                 i++;
                                 bullet2.create(this, x, y, i * (int) (360 / shots));
-                                sound.at(x, y, Mathf.random(-5, 2));
+                                shootSound.at(x,y,1);
                         }
                 }
 
