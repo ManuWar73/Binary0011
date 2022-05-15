@@ -1,11 +1,13 @@
 package b11.content;
 
+import arc.audio.Sound;
 import arc.graphics.Color;
 import b11.blocks.defense.BulletWall;
 import b11.blocks.defense.ManualTurret;
 import b11.content.*;
 import mindustry.content.Fx;
 import mindustry.content.Items;
+import mindustry.entities.bullet.BulletType;
 import mindustry.gen.Sounds;
 import mindustry.type.*;
 import mindustry.world.*;
@@ -22,12 +24,13 @@ public class B11Blocks {
 	public static void load(){
 		test = new AirBlock("test");
 		test2 = new ManualTurret("AAAAAAAAAAAAAAAAAAAAAAA"){{
-			localizedName = this.name;
-			ammo = Items.sand;
-			shoot1 = B11Bullets.copperBulletWall;
-			shoot2 = B11Bullets.lancerManual;
-			size = 3;
-			requirements(Category.defense, with(Items.copper, 1));
+			reload = 120f;
+			range = 128f;
+			bullet1 = B11Bullets.lancerManual;
+			bullet2 = B11Bullets.lancerManual;
+			consumePower(1);
+			shootSound = Sounds.wind3;
+			shots = 8;
 		}};
 
 	}
