@@ -25,5 +25,6 @@ public class B11Blocks {
 			health = 10;
 			shots = 8;
 		}};
+                String a = "hello world";
 	}
 }

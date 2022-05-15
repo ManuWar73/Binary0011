@@ -8,12 +8,16 @@ import mindustry.graphics.*;
 
 public class B11Bullets {
         public static BulletType
+                // empty bullet for placeholder
+                e,
                 // bullet wall
                 copperBulletWall,
                 // manual power turret
                 lancerManual;
 
         public static void load() {
+                // reg empty
+                e = new BasicBulletType(0,0);
                 // reg bullet wall
                 copperBulletWall = new BasicBulletType(2.5f, 10){{
                         width = height = 8;
