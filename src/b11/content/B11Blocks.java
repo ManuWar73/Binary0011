@@ -27,7 +27,7 @@ public class B11Blocks {
 			range = 128f;
 			bullet1 = B11Bullets.lancerManual;
 			bullet2 = B11Bullets.lancerManual;
-			consumePower(1);
+			consumeItems(with(Items.sand, 1, Items.lead, 1));
 			shootSound = Sounds.wind3;
 			shots = 8;
 			requirements(Category.turret, with(Items.copper, 1));
