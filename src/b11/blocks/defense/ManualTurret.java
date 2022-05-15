@@ -51,8 +51,8 @@ public class ManualTurret extends Block {
                 }
                 @Override
                 public void tapped() {
-                        if(canConsume()){
-                                consume();
+                        if(hasItems && this.efficiency > 0){
+                                this.consume();
                                 for (int i = 0; i < (shots + getProximityBlocks()); i++) {
                                         bullet1.create(this, this.team, x, y, i * 45);
                                         i++;
