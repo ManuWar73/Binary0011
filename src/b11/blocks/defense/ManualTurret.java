@@ -13,6 +13,13 @@ import mindustry.world.meta.Stat;
 import mindustry.world.meta.StatUnit;
 
 public class ManualTurret extends GenericCrafter {
+	/** 
+	 *
+	 * basically a manual crafter but instead of outputting items, this block creates bullets instead.
+	 * and yes, this class extends the GenericCrafter class because i want to inherit/override all the
+	 * methods/fields from that class.
+	 * @author 1237
+	 */
         public ManualTurret(String name) {
                 super(name);
                 itemCapacity = 10;
