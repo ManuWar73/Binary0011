@@ -16,8 +16,9 @@ public class ManualTurret extends GenericCrafter {
 	/** 
 	 *
 	 * basically a manual crafter but instead of outputting items, this block creates bullets instead.
-	 * and yes, this class extends the GenericCrafter class because i want to inherit/override all the
+	 * and yes, this class extends the GenericCrafter class because i want to inherit/use all the
 	 * methods/fields from that class.
+	 * this class also uses some code from uujuju1's scatter silo.
 	 * @author 1237
 	 */
         public ManualTurret(String name) {
@@ -26,7 +27,7 @@ public class ManualTurret extends GenericCrafter {
         }
 
         public int shots = 8;
-        public BulletType bullet1, bullet2  = B11Bullets.e;
+        public BulletType bullet1, bullet2 = B11Bullets.e;
         public int reload = 30;
         public Sound shootSound = Sounds.wind3;
 
