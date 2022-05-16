@@ -20,6 +20,7 @@ public class ManualTurret extends GenericCrafter {
 	 * methods/fields from that class.
 	 * this class also uses some code from uujuju1's scatter silo.
 	 * @author 1237
+	 *
 	 */
         public ManualTurret(String name) {
                 super(name);
