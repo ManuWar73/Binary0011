@@ -13,16 +13,15 @@ public class B11Blocks {
 	public static Block
 		root;
 	public static void load(){
-		test = new AirBlock("test");
 		root = new ManualTurret("root"){{
                         bullet1 = bullet2 = B11Bullets.copperBulletWall;
                         shots = 4;
-			size = 3;
+			size = 1;
 			health = 100;
 			itemCapacity = 30;
 			shootSound = Sounds.shoot;
 			requirements(Category.turret, with(Items.copper, 28, Items.lead, 15));
-			consumeItems(with(Items.copper, 3));
+			consumeItems(with(Items.copper, 4));
 		}};
 	}
 }
