@@ -11,18 +11,18 @@ import static mindustry.type.ItemStack.*;
 
 public class B11Blocks {
 	public static Block
-		test, test2, test3;
+		root;
 	public static void load(){
 		test = new AirBlock("test");
-		test2 = new ManualTurret("AAAAAAAAAAAAAA"){{
+		root = new ManualTurret("root"){{
                         bullet1 = bullet2 = B11Bullets.copperBulletWall;
                         shots = 4;
 			size = 3;
-			health = 1000000;
+			health = 100;
 			itemCapacity = 30;
-			shootSound = Sounds.laser;
-			requirements(Category.turret, with(Items.copper, 1));
-			consumeItems(with(Items.copper, 1, Items.lead, 3));
+			shootSound = Sounds.shoot;
+			requirements(Category.turret, with(Items.copper, 28, Items.lead, 15));
+			consumeItems(with(Items.copper, 3));
 		}};
 	}
 }
