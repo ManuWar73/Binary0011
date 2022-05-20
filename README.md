@@ -1,6 +1,7 @@
 # Binary0011
 
-an experimental mod for mindustry v7.136. the "Java port" and complete rework of my old mod "Binary0011". the way you can compile/implement is in the text below.
+an experimental mod for mindustry v7.136. the "Java port" and complete rework of my old mod "Binary0011". 
+<br> the way you can compile/implement is in the text below.
 
 ## Building for Desktop Testing
 
