@@ -1,5 +1,3 @@
-# Compiling
-
 ## Building for Desktop Testing
 
 1. Install JDK **17**.
