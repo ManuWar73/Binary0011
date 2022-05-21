@@ -13,6 +13,8 @@ import b11.content.*;
 
 public class b11 extends Mod{
 	public b11(){
+                Log.info("0011.");
+
                 //listen for game load event
                 Events.on(ClientLoadEvent.class, e -> {
                 //show dialog upon startup
@@ -25,14 +27,15 @@ public class b11 extends Mod{
             	});
         }
 	// load mod content
+	@Override
 	public void loadContent(){
-//		B11Status.load();
-//	 	B11Liquids.load();
-		B11Items.load();
-		B11Bullets.load();
-//		B11Units.load();
-		B11Blocks.load();
-//		B11Planets.load();
-//		B11Tree.load();
+//		new B11Status().load();
+//	 	new B11Liquids().load();
+//		new B11Items().load();
+		new B11Bullets().load();
+//		new B11Units().load();
+		new B11Blocks().load();
+//		new B11Planets().load();
+		new B11Tree().load();
 	}
 }
