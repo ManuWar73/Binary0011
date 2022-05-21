@@ -17,7 +17,7 @@ public class ManualTurret extends GenericCrafter {
 	 *
 	 * basically a manual crafter but instead of outputting items, this block creates bullets instead.
 	 * and yes, this class extends the GenericCrafter class because i want to inherit/use all the
-	 * methods/fields from that class.
+	 * methods/fields from that class. yes, my codes are weird.
 	 * this class also uses some code from uujuju1's scatter silo.
 	 * @author 1237
 	 *
@@ -25,28 +25,27 @@ public class ManualTurret extends GenericCrafter {
         public ManualTurret(String name) {
                 super(name);
                 itemCapacity = 10;
+                warmupSpeed = 0;
         }
 
         public int shots = 8;
-        public BulletType bullet1, bullet2 = B11Bullets.e;
+        public BulletType bullet1 = B11Bullets.e;
         public int reload = 30;
-        public Sound shootSound = Sounds.wind3;
+        public Sound shootSound = Sounds.shoot;
 
         public void setStats(){
                 super.setStats();
                 stats.add(Stat.reload, reload / 60, StatUnit.seconds);
-                stats.add(Stat.damage, (bullet1.damage + bullet2.damage) * shots);
+                stats.add(Stat.damage, (bullet1.damage) * shots);
         }
 
-        public class EBuild extends GenericCrafterBuild {
+        public class ManualTurretBuild extends GenericCrafterBuild {
                 boolean shoot = false;
                 public void craft(){
                         consume();
                         for (int i = 0; i < shots; i++) {
                                 Drawf.square(x, y, 8, this.rotation, Pal.placing);
                                 bullet1.create(this, x, y, i * (int) (360 / shots));
-                                i++;
-                                bullet2.create(this, x, y, i * (int) (360 / shots));
                                 shootSound.at(x,y,1);
                         }
                 }
