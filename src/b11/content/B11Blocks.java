@@ -29,7 +29,7 @@ public class B11Blocks {
 			shootType= B11Bullets.copperBulletWall;
 			shots = 5;
 			size = 3;
-			health = 100;
+			health = 1000;
 			itemCapacity = 30;
 			shootSound = Sounds.shoot;
 			requirements(Category.turret, with(Items.copper, 28, Items.lead, 15));
