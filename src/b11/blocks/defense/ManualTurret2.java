@@ -23,6 +23,7 @@ public class ManualTurret2 extends Block {
         public ManualTurret2(String name) {
                 super(name);
                 itemCapacity = 10;
+                hasItems = acceptsItems = true;
         }
 
         public int shots = 8;
