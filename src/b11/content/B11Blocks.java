@@ -1,12 +1,10 @@
 package b11.content;
 
-import b11.blocks.defense.ManualTurret;
-import b11.blocks.defense.ManualTurret2;
-import mindustry.content.Items;
-import mindustry.gen.Sounds;
+import b11.blocks.defense.*;
+import mindustry.content.*;
+import mindustry.gen.*;
 import mindustry.type.*;
 import mindustry.world.*;
-import mindustry.world.blocks.environment.*;
 
 import static mindustry.type.ItemStack.*;
 
