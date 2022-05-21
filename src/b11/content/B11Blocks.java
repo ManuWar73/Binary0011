@@ -12,10 +12,12 @@ import static mindustry.type.ItemStack.*;
 
 public class B11Blocks {
 	public static Block
-		root, o;
+		root;
 	public static void load(){
+		// region turrets
+		// turret - manual
 		root = new ManualTurret("root"){{
-                        bullet1 = B11Bullets.copperBulletWall;
+                        bullet1 = B11Bullets.e;
                         shots = 4;
 			size = 1;
 			health = 100;
@@ -24,16 +26,7 @@ public class B11Blocks {
 			requirements(Category.turret, with(Items.copper, 28, Items.lead, 15));
 			consumeItems(with(Items.copper, 4));
 		}};
-
-		o = new ManualTurret2("wqejfhc89dwfwryhdigvbuwf"){{
-			shootType= B11Bullets.copperBulletWall;
-			shots = 5;
-			size = 3;
-			health = 1000;
-			itemCapacity = 30;
-			shootSound = Sounds.shoot;
-			requirements(Category.turret, with(Items.copper, 28, Items.lead, 15));
-			consumeItems(with(Items.copper, 1));
-		}};
+		// end turret - manual
+		// end turrets
 	}
 }
