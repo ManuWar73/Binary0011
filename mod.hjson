@@ -1,10 +1,6 @@
 displayName: "Binary0011"
-name: "b11" 
-author: "1237"
-main: "b11.b11"
-description: "a binary themed mod for mindustry 7.135."
-version: 0.0.6
-minGameVersion: 135
-hideBrowser: true
-java: true
-# ok
+name: "b11"
+author: "Drifted Notes & 1237"
+description: "binary0011 reworked and ported to 7.136.\n\nmade by Drifted Notes & 1237."
+version: 0.0.7
+minGameVersion: 137
