@@ -1,0 +1,8 @@
+type: Router
+category: distribution
+requirements: [
+  Items.titanium/1
+]
+localizedName: d0001
+health: 200
+speed: 0.2
