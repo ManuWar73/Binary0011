@@ -1,3 +1,10 @@
 type: StackConveyor
+requirements: [
+  titanium/1
+]
+localizedName: d0000
+health: 50
+speed: 0.05
+itemCapacity: 10
 category: distribution
 research: titanium-conveyor
