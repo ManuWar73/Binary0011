@@ -1,7 +1,7 @@
 type: Router
 category: distribution
 requirements: [
-  Items.titanium/1
+  titanium/1
 ]
 localizedName: d0001
 health: 200
