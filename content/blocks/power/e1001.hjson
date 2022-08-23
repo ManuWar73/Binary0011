@@ -1,5 +1,6 @@
 type: ConsumeGenerator
 category: power
+research: e1000
 requirements: [
 	 lead/70
 	 silicon/25
