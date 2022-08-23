@@ -1,21 +1,3 @@
-package b11.content;
-/* arc */ import arc.graphics.*;import arc.math.*;import arc.struct.*;
-/* mindus */ import mindustry.*;import mindustry.ctype.*;import mindustry.entities.*;import mindustry.entities.bullet.*;import mindustry.gen.*;import mindustry.graphics.*;import mindustry.type.*;import mindustry.world.*;import mindustry.world.blocks.*;import mindustry.world.blocks.campaign.*;import mindustry.world.blocks.defense.*;import mindustry.world.blocks.defense.turrets.*;import mindustry.world.blocks.distribution.*;import mindustry.world.blocks.environment.*;import mindustry.world.blocks.legacy.*;import mindustry.world.blocks.liquid.*;import mindustry.world.blocks.logic.*;import mindustry.world.blocks.payloads.*;import mindustry.world.blocks.power.*;import mindustry.world.blocks.production.*;import mindustry.world.blocks.sandbox.*;import mindustry.world.blocks.storage.*;import mindustry.world.blocks.units.*;import mindustry.world.consumers.*;import mindustry.world.draw.*;import mindustry.world.draw.DrawRotator;import mindustry.world.meta.*;import static mindustry.type.ItemStack.*;import mindustry.content.*;
-/* binary */ import b11.content.*;import b11.world.blocks.defense.*;
-public class B11Blocks implements ContentList{
-	public static Block
-	// experimental
-	w0000, w0001,
-        // power
-	e0000, e0001, e0010, e0011, e0100, e0101,
-	e0110, e0111, e1000, e1001,
-	// distribution
-	d0000, d0001, d0010,
-	// turret
-	t0000, t0001, t0010, t0011, t0100, t0101,
-	t0110, t0111, t1000, t1001;
-	@Override
-	public void load(){
 		w0000 = new BulletWall("w0000"){{
 			requirements(Category.defense, with(Items.copper, 8));
 	 	 	health = 150;
@@ -128,17 +110,6 @@ public class B11Blocks implements ContentList{
 			itemDuration = 60 * 14f;
 		}};
 		// end power
-		// distribution
-		d0000 = new StackConveyor("d0000"){{
-			requirements(Category.distribution, with(Items.titanium, 1));
-			localizedName = "d0000";
-			health = 50;
-			speed = 3f / 60f;
-			itemCapacity = 10;
-		}};
-		d0001 = new Router("d0001"){{requirements(Category.distribution, with(Items.titanium, 1));localizedName = "d0001";health = 200;speed = 0.2f;}}; // compact™
-		d0010 = new Junction("d0010"){{requirements(Category.distribution, with(Items.titanium, 1));localizedName = "d0010";health = 150;speed = 0.2f;itemCapacity = 20;}};
-		// end distribution
 		// turret
 		t0000 = new ItemTurret("t0000"){{
 			requirements(Category.turret, with(Items.copper, 28), true);
