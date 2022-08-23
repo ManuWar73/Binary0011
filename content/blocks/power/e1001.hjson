@@ -1,0 +1,23 @@
+type: ConsumeGenerator
+category: power
+research: e1000
+requirements: [
+	 lead/70
+	 silicon/25
+	 copper/85
+]
+size: 2
+localizedName: e1001
+powerProduction: 5
+itemDuration: 420
+consumes: {
+	itemRadioactive: {}
+}
+drawer: [
+	{
+		type: DrawDefault
+	}
+	{
+		type: DrawWarmupRegion
+	}
+]

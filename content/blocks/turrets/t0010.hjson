@@ -1,0 +1,52 @@
+type: ItemTurret
+category: turret
+research: hail
+requirements: [
+	 copper/48
+	 graphite/20
+]
+ammoTypes: {
+	silicon: {
+		type: ArtilleryBulletType
+		speed: 5
+		damage: 20
+	 	hitEffect: flakExplosion
+		knockback: 1f
+		lifetime: 180
+		width: 11
+		height: 11
+		collidesTiles: false
+		splashDamageRadius: 128
+		splashDamage: 40f
+		reloadMultiplier: 1.2
+		ammoMultiplier: 2
+		homingPower: 1 
+		homingRange: 128
+	}
+	blast-compound: {
+		type: ArtilleryBulletType
+		speed: 5
+		damage: 25
+		type: ArtilleryBulletType
+		speed: 5
+		damage: 20
+	 	hitEffect: flakExplosion
+		knockback: 1f
+		lifetime: 180
+		width: 11
+		height: 11
+		collidesTiles: false
+		splashDamageRadius: 128
+		splashDamage: 45.75
+		ammoMultiplier: 2
+		status: blasted
+	}
+}
+targetAir: false
+localizedName: t0010
+reload: 60f
+recoil: 2
+range: 248
+shootCone: 10
+health: 260
+shootSound: bang

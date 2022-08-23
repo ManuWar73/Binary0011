@@ -1,0 +1,30 @@
+type: ConsumeGenerator
+category: power
+research: differential-generator
+requirements: [
+	copper/135
+	lead/56
+	silicon/30
+	titanium/35
+]
+localizedName: e0010
+powerProduction: 21.75
+itemDuration: 240
+ambientSound: smelter
+ambientSoundVolume: 0.03
+size: 3
+consumes: {
+	liquids: [
+		water/0.75
+	]
+	itemFlammable: {}
+	itemExplode: {}
+}
+drawer: [
+	{
+		type: DrawDefault
+	}
+	{
+		type: DrawWarmupRegion
+	}
+]

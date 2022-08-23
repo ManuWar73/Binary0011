@@ -1,0 +1,26 @@
+type: ConsumeGenerator
+category: power
+research: steam-generator
+requirements: [
+	copper/65
+	lead/35
+	silicon/15
+]
+size: 2
+localizedName: e0001
+powerProduction: 8.16
+itemDuration: 240
+ambientSound: smelter
+ambientSoundVolume: 0.03
+consumes: {
+	itemFlammable: {}
+	itemExplode: {}
+}
+drawer: [
+	{
+		type: DrawDefault
+	}
+	{
+		type: DrawWarmupRegion
+	}
+]

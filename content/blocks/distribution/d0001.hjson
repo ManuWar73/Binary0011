@@ -1,0 +1,9 @@
+type: Router
+category: distribution
+requirements: [
+  titanium/1
+]
+localizedName: d0001
+health: 200
+speed: 0.2
+research: d0000

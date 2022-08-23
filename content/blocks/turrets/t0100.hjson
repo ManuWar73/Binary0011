@@ -1,0 +1,34 @@
+type: PowerTurret
+research: t0011
+category: turret
+requirements: [
+	 copper/60
+	 lead/70
+	 silicon/50
+]
+range: 165
+localizedName: t0110
+chargeTime: 40f;
+chargeMaxDelay: 30
+chargeEffects: 7;
+chargeEffect: lancerLaserCharge
+chargeBeginEffect: lancerLaserChargeBegin
+recoil: 2
+reload: 160
+consumes: {
+	power: 6
+}
+shootEffect: lancerLaserShoot
+smokeEffect: none
+size: 2
+health: 1250
+targetAir: true
+shootSound: laser
+shootType: {
+	type: LaserBulletType
+	lifetime: 16
+	hitSize: 4
+	drawSize: 400
+	collidesAir: true
+	length: 192
+}

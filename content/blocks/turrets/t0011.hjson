@@ -1,0 +1,26 @@
+type: PowerTurret
+category: turret
+requirements: [
+	copper/65
+	lead/35
+]
+research: arc
+shootType: {
+	type: LightningBulletType
+	collidesAir: true
+	damage: 35
+	lightningLength: 25
+}
+reload: 25
+shootCone: 40
+rotateSpeed: 8
+consumes: {
+	 power: 3.5
+}
+targetAir: true
+range: 128
+shootEffect: lightningShoot
+recoil: 1
+size: 1
+health: 300
+shootSound: Sounds.spark

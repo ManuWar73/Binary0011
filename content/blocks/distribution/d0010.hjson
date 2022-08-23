@@ -1,0 +1,10 @@
+type: Junction
+category: distribution
+requirements: [
+  titanium/1
+]
+localizedName: "d0010"
+health: 150
+speed: 0.2
+itemCapacity: 20
+research: d0000

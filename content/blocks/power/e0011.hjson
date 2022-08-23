@@ -1,0 +1,30 @@
+type: ConsumeGenerator
+category: power
+requirements: [
+	copper/275
+	lead/120
+	silicon/65
+	titanium/40
+]
+research: e0010
+localizedName: e0011
+size: 4
+powerProduction: 43.5
+itemDuration: 240
+ambientSound: smelter
+ambientSoundVolume: 0.03
+consumes: {
+	liquids: [
+		water/3.5
+	]
+	itemFlammable: {}
+	itemExplode: {}
+}
+drawer: [
+	{
+		type: DrawDefault
+	}
+	{
+		type: DrawWarmupRegion
+	}
+]
