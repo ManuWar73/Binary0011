@@ -14,7 +14,7 @@ chargeEffects: 7;
 chargeEffect: lancerLaserCharge
 chargeBeginEffect: lancerLaserChargeBegin
 recoil: 2
-reload: 160f;
+reload: 160
 consumes: {
 	power: 6
 }
