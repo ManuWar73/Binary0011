@@ -20,7 +20,7 @@ consumes: {
 targetAir: true
 range: 128
 shootEffect: lightningShoot
-recoilAmount: 1
+recoil: 1
 size: 1
 health: 300
 shootSound: Sounds.spark
