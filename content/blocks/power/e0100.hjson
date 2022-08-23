@@ -7,7 +7,7 @@ requirements: [
 ]
 powerProduction: 1
 localizedName: "e0100"
-generateEffect: redgeneratespark;
+generateEffect: redgeneratespark
 effectChance: 0.008
 size: 1
 floating: true
