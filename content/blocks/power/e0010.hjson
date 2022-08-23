@@ -11,6 +11,7 @@ powerProduction: 21.75
 itemDuration: 240
 ambientSound: smelter
 ambientSoundVolume: 0.03
+size: 3
 consumes: {
 	liquids: [
 		water/0.75
