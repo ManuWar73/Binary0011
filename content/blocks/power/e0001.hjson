@@ -1,5 +1,6 @@
 type: ConsumeGenerator
 category: power
+research: steam-generator
 requirements: [
 	copper/65
 	lead/35
