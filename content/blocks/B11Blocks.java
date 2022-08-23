@@ -1,61 +1,4 @@
-		t0001 = new ItemTurret("t0001"){{
-			requirements(Category.turret, with(Items.copper, 40, Items.lead, 15), true);
-			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3);
-			spread = 4.5f;
-			shots = 2;
-			localizedName = "t0001";
-			alternate = true;
-			reloadTime = 24f;
-			range = 160;
-			shootCone = 15f;
-			ammoUseEffect = Fx.casing2;
-			health = 300;
-			inaccuracy = 0f;
-			rotateSpeed = 12f;
-		}};
-		t0010 = new ItemTurret("t0010"){{
-			requirements(Category.turret, with(Items.copper, 45, Items.lead, 20), true);
-			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3);
-			spread = 4.5f;
-			shots = 2;
-			localizedName = "t0010";
-			alternate = true;
-			reloadTime = 18f;
-			range = 192;
-			shootCone = 15f;
-			ammoUseEffect = Fx.casing2;
-			health = 350;
-			inaccuracy = 0f;
-			rotateSpeed = 12f;
-		}};
-		t0011 = new ItemTurret("t0011"){{
-			requirements(Category.turret, with(Items.copper, 45, Items.graphite, 18), true);
-			ammo(Items.lead, B11Bullets.basicbullet1, Items.graphite, B11Bullets.basicbullet2, Items.silicon, B11Bullets.basicbullet3);
-			spread = 4.5f;
-			shots = 2;
-			localizedName = "t0010";
-			alternate = true;
-			reloadTime = 18f;
-			range = 192;
-			shootCone = 15f;
-			ammoUseEffect = Fx.casing2;
-			health = 350;
-			inaccuracy = 0f;
-			rotateSpeed = 12f;
-		}};
-		t0100 = new ItemTurret("t0100"){{
-			requirements(Category.turret, with(Items.copper, 48, Items.graphite, 20));
-			ammo(Items.silicon, B11Bullets.artillerybullet1, Items.blastCompound, B11Bullets.artillerybullet2);
-			targetAir = false;
-			localizedName = "t0100";
-			reloadTime = 60f;
-			recoilAmount = 2f;
-			range = 248f;
-			shootCone = 10f;
-			health = 260;
-			shootSound = Sounds.bang;
-		}};
-		t0101 = new PowerTurret("t0101"){{
+		t0011 = new PowerTurret("t0101"){{
 			requirements(Category.turret, with(Items.copper, 65, Items.lead, 35));
 			shootType = B11Bullets.lightningbullet1;
 			reloadTime = 25f;
@@ -70,7 +13,7 @@
 	 	 	health = 300;
 	 	 	shootSound = Sounds.spark;
 		}};
-		t0110 = new PowerTurret("t0110"){{
+		t0100 = new PowerTurret("t0110"){{
 			requirements(Category.turret, with(Items.copper, 60, Items.lead, 70, Items.silicon, 50));
 			range = 165f;
 			localizedName = "t0110";
@@ -87,7 +30,6 @@
 	 	 	shootSound = Sounds.laser;
 	 	 	shootType = B11Bullets.laserbullet1;
 		}};
-		// end turret
 		t0111 = new ItemTurret("t0111"){{
 	 	 	requirements(Category.turret, with(Items.copper, 65, Items.lead, 65));
 	 	 	ammo(Items.scrap, B11Bullets.flak1,Items.lead, B11Bullets.flak2,Items.metaglass, B11Bullets.flak3);
@@ -121,22 +63,6 @@
 			shootCone = 35f;
 			health = 350 * size * size;
 			shootSound = Sounds.shootSnap;
-		}};
-		t1001 = new PowerTurret("t1001"){{
-			requirements(Category.turret, with(Items.copper, 2000, Items.lead, 1500, Items.silicon, 1750, Items.surgeAlloy, 575, Items.titanium, 800, Items.thorium, 250, Items.plastanium, 850));
-			range = 460;
-			localizedName = "t1000";
-			details = "an endgame turret that ends your game, and the development of this mod.";
-			recoilAmount = 2f;
-	 	 	reloadTime = 180f;
-			cooldown = 1f;
-			powerUse = 12f;
-			shootShake = 2f;
-	 	 	size = 4;
-	 	 	health = 2500 * size * size;
-	 	 	targetAir = true;
-	 	 	shootSound = Sounds.laser;
-	 	 	shootType = B11Bullets.biglaserbullet;
 		}};
 	}
 }
