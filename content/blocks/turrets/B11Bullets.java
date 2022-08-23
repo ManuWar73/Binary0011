@@ -1,28 +1,3 @@
-package b11.content;
-
-import arc.graphics.Color;
-import mindustry.content.*;
-import mindustry.ctype.ContentList;
-import mindustry.entities.bullet.*;
-import b11.*;
-import b11.content.*;
-
-public class B11Bullets implements ContentList {
-	public static BulletType
-	// basic
-	basicbullet1, basicbullet2, basicbullet3, basicbullet4,
-	// pawer
-	lightningbullet1, laserbullet1, laserbullet2, biglaserbullet,
-	// artillery
-	artillerybullet1, artillerybullet2, artillerybullet3,
-	// missile
-	missile1, missile2,
-	// flak
-	flak1, flak2, flak3
-	;
-	@Override
-	public void load(){
-		// basic start
 		basicbullet1 = new BasicBulletType(2.5f, 14){{
 			width = height = 7.5f;
 			lifetime = 60 * 2f;
