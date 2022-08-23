@@ -1,4 +1,5 @@
 type: PowerTurret
+research: t0011
 category: turret
 requirements: [
 	 copper/60
