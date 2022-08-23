@@ -1,5 +1,6 @@
 type: PowerTurret
 category: turret
+localizedName: t0011
 requirements: [
 	copper/65
 	lead/35
