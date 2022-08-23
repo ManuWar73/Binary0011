@@ -1,0 +1,15 @@
+type: ThermalGenerator
+category: power
+requirements: [
+	 copper/75
+	 graphite/40
+	 lead/65
+]
+powerProduction: 2.2
+localizedName: e0101
+generateEffect: redgeneratespark
+effectChance: 0.009
+size: 2
+floating: true
+ambientSound: hum
+ambientSoundVolume: 0.03
