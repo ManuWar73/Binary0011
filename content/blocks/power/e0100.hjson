@@ -1,5 +1,6 @@
 type: ThermalGenerator
 category: power
+research: thermal-generator
 requirements: [
 	 copper/30
 	 graphite/16
