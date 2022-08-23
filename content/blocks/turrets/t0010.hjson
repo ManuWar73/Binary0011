@@ -1,7 +1,8 @@
 type: ItemTurret
 category: turret
 requirements: [
-	 copper/48 graphite/20
+	 copper/48
+	 graphite/20
 ]
 ammoTypes: {
 	silicon: {
