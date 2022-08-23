@@ -1,5 +1,6 @@
 type: ThermalGenerator
 category: power
+research: e0101
 requirements: [
 	copper/120
 	graphite/64
