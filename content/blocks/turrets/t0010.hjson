@@ -1,5 +1,6 @@
 type: ItemTurret
 category: turret
+research: hail
 requirements: [
 	 copper/48
 	 graphite/20
