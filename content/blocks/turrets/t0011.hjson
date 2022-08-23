@@ -4,6 +4,7 @@ requirements: [
 	copper/65
 	lead/35
 ]
+research: arc
 shootType: {
 	type: LightningBulletType
 	collidesAir: true
