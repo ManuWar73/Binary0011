@@ -1,5 +1,6 @@
 type: ConsumeGenerator
 category: power
+research: differential-generator
 requirements: [
 	copper/135
 	lead/56
