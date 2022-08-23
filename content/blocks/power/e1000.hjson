@@ -9,6 +9,7 @@ size: 1
 localizedName: e1000
 powerProduction: 2.5
 itemDuration: 420
+research: rtg-generator
 consumes: {
 	itemRadioactive: {}
 }
