@@ -45,7 +45,7 @@ spread: 4.5
 shots: 2
 localizedName: t0001
 alternate: true
-reloadTime: 24
+reload: 18
 range: 128
 shootCone: 15
 ammoUseEffect: casing2
