@@ -6,6 +6,7 @@ requirements: [
 	silicon/65
 	titanium/40
 ]
+research: e0010
 localizedName: e0011
 size: 4
 powerProduction: 43.5
