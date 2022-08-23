@@ -29,7 +29,7 @@ ammoTypes: {
 }
 spread: 4.5
 localizedName: t0000
-reloadTime: 24
+reload: 24
 range: 128
 shootCone: 15
 ammoUseEffect: casing1
