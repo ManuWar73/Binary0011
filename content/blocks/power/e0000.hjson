@@ -8,7 +8,7 @@ localizedName: e0000
 powerProduction: 1.3
 itemDuration: 180
 ambientSound: smelter
-ambientSoundVolume: 0.0.3
+ambientSoundVolume: 0.03
 consumes: {
 	itemFlammable: {}
 	itemExplode: {}
