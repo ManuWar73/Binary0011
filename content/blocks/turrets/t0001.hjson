@@ -1,5 +1,6 @@
 type: ItemTurret
 category: turret
+research: t0000
 requirements: [
 	copper/40
 	lead/15
