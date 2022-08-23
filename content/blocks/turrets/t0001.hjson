@@ -1,0 +1,53 @@
+type: ItemTurret
+category: turret
+requirements: [
+	copper/40
+	lead/15
+]
+ammoTypes: {
+	lead: {
+		type: BasicBulletType
+		speed: 6
+		damage: 14
+		width: 7.5
+		height: 7.5
+		shootEffect: shootSmall
+		smokeEffect: shootSmallSmoke
+		ammoMultiplier: 2
+		lifetime: 100
+	}
+	graphite: {
+		type: BasicBulletType
+		speed: 7
+		damage: 18
+		width: 7.5
+		height: 7.5
+		shootEffect: shootSmall
+		smokeEffect: shootSmallSmoke
+		ammoMultiplier: 2
+		lifetime: 100
+	}
+	silicon: {
+		type: BasicBulletType
+		speed: 8
+		damage: 22
+		width: 7.5
+		height: 7.5
+		shootEffect: shootSmall
+		smokeEffect: shootSmallSmoke
+		ammoMultiplier: 2
+		lifetime: 90
+		homingPower: 0.75
+		homingRange: 96
+	}
+}
+spread: 4.5
+shots: 2
+localizedName: t0001
+alternate: true
+reloadTime: 24
+range: 128
+shootCone: 15
+ammoUseEffect: casing2
+health: 315
+rotateSpeed: 10
