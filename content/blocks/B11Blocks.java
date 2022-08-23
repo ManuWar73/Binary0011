@@ -1,27 +1,3 @@
-		w0000 = new BulletWall("w0000"){{
-			requirements(Category.defense, with(Items.copper, 8));
-	 	 	health = 150;
-			localizedName = "w0000";
-			shots = 2;
-			bullet = Bullets.standardCopper;
-		}};
-		w0001 = new BulletWall("w0001"){{
-			requirements(Category.defense, with(Items.copper, 16, Items.graphite, 5));
-	 	 	health = 150 * size * size;
-			localizedName = "w0000";
-			size = 2;
-			shots = 3;
-			bullet = Bullets.standardDense;
-		}};
-		// power
-		e0000 = new BurnerGenerator("e0000"){{
-			requirements(Category.power, with(Items.copper, 35, Items.lead, 25));
-			localizedName = "e0000";
-			powerProduction = 1.3f;
-			itemDuration = 180f;
-			ambientSound = Sounds.smelter;
-			ambientSoundVolume = 0.03f;
-		}};
 		e0001 = new BurnerGenerator("e0001"){{
 			requirements(Category.power, with(Items.copper, 65, Items.lead, 50, Items.silicon, 35));
 			localizedName = "e0001";
