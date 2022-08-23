@@ -1,5 +1,6 @@
 type: ItemTurret
 category: turret
+research: duo
 requirements: [
 	 copper/28
 ]
